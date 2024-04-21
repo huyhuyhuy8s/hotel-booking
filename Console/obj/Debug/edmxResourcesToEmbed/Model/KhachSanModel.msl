@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KhachSanModelStoreContainer" CdmEntityContainer="KhachSanContext">
+    <EntitySetMapping Name="Hotels">
+      <EntityTypeMapping TypeName="KhachSanModel.Hotel">
+        <MappingFragment StoreEntitySet="Hotel">
+          <ScalarProperty Name="HotelId" ColumnName="HotelId" />
+          <ScalarProperty Name="HotelName" ColumnName="HotelName" />
+          <ScalarProperty Name="HotelAddress" ColumnName="HotelAddress" />
+          <ScalarProperty Name="HotelProvince" ColumnName="HotelProvince" />
+          <ScalarProperty Name="HotelDescription" ColumnName="HotelDescription" />
+          <ScalarProperty Name="HotelType" ColumnName="HotelType" />
+          <ScalarProperty Name="HotelImage" ColumnName="HotelImage" />
+          <ScalarProperty Name="HotelHotline" ColumnName="HotelHotline" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="KhachSanModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="PersonPhonenumber" ColumnName="PersonPhonenumber" />
+          <ScalarProperty Name="PersonEmail" ColumnName="PersonEmail" />
+          <ScalarProperty Name="PersonPassword" ColumnName="PersonPassword" />
+          <ScalarProperty Name="PersonDOB" ColumnName="PersonDOB" />
+          <ScalarProperty Name="PersonManager" ColumnName="PersonManager" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonOrders">
+      <EntityTypeMapping TypeName="KhachSanModel.PersonOrder">
+        <MappingFragment StoreEntitySet="PersonOrder">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="OrderStart" ColumnName="OrderStart" />
+          <ScalarProperty Name="OrderEnd" ColumnName="OrderEnd" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provinces">
+      <EntityTypeMapping TypeName="KhachSanModel.Province">
+        <MappingFragment StoreEntitySet="Province">
+          <ScalarProperty Name="ProvinceId" ColumnName="ProvinceId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Location1" ColumnName="Location1" />
+          <ScalarProperty Name="Location2" ColumnName="Location2" />
+          <ScalarProperty Name="Location3" ColumnName="Location3" />
+          <ScalarProperty Name="Location4" ColumnName="Location4" />
+          <ScalarProperty Name="Location5" ColumnName="Location5" />
+          <ScalarProperty Name="Location6" ColumnName="Location6" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="KhachSanModel.Room">
+        <MappingFragment StoreEntitySet="Room">
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+          <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+          <ScalarProperty Name="RoomBed" ColumnName="RoomBed" />
+          <ScalarProperty Name="RoomPerson" ColumnName="RoomPerson" />
+          <ScalarProperty Name="RoomPrice" ColumnName="RoomPrice" />
+          <ScalarProperty Name="RoomArea" ColumnName="RoomArea" />
+          <ScalarProperty Name="RoomPicture" ColumnName="RoomPicture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeHotels">
+      <EntityTypeMapping TypeName="KhachSanModel.TypeHotel">
+        <MappingFragment StoreEntitySet="TypeHotel">
+          <ScalarProperty Name="HotelType" ColumnName="HotelType" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeRooms">
+      <EntityTypeMapping TypeName="KhachSanModel.TypeRoom">
+        <MappingFragment StoreEntitySet="TypeRoom">
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="NameRoom" ColumnName="NameRoom" />
+          <ScalarProperty Name="AC" ColumnName="AC" />
+          <ScalarProperty Name="Hairdryer" ColumnName="Hairdryer" />
+          <ScalarProperty Name="Chair" ColumnName="Chair" />
+          <ScalarProperty Name="Desk" ColumnName="Desk" />
+          <ScalarProperty Name="Refrigerator" ColumnName="Refrigerator" />
+          <ScalarProperty Name="Balcony" ColumnName="Balcony" />
+          <ScalarProperty Name="Bathtub" ColumnName="Bathtub" />
+          <ScalarProperty Name="Minibar" ColumnName="Minibar" />
+          <ScalarProperty Name="CoffeeMaker" ColumnName="CoffeeMaker" />
+          <ScalarProperty Name="SafetyBox" ColumnName="SafetyBox" />
+          <ScalarProperty Name="Champage" ColumnName="Champage" />
+          <ScalarProperty Name="Kitchen" ColumnName="Kitchen" />
+          <ScalarProperty Name="Bidet" ColumnName="Bidet" />
+          <ScalarProperty Name="Throne" ColumnName="Throne" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="HotelOwn" TypeName="KhachSanModel.HotelOwn" StoreEntitySet="HotelOwn">
+      <EndProperty Name="Hotel">
+        <ScalarProperty Name="HotelId" ColumnName="HotelId" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Console</RootNamespace>
+    <AssemblyName>Console</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\FBookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FBookingForm.Designer.cs">
+      <DependentUpon>FBookingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\CodeEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\FBookingRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FBookingRoom.Designer.cs">
+      <DependentUpon>FBookingRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FDisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FDisplayForm.Designer.cs">
+      <DependentUpon>FDisplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FManageRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FManageRoom.designer.cs">
+      <DependentUpon>FManageRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FSearchForm.Designer.cs">
+      <DependentUpon>FSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\SearchFunction.cs" />
+    <Compile Include="Forms\HotelAssignmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HotelAssignmentForm.Designer.cs">
+      <DependentUpon>HotelAssignmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FManagerForm.Designer.cs">
+      <DependentUpon>FManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FShowRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FShowRoom.designer.cs">
+      <DependentUpon>FShowRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FOrder.Designer.cs">
+      <DependentUpon>FOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Hotel.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KhachSanModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KhachSanModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KhachSanModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KhachSanModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KhachSanModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Person.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PersonOrder.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Province.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Room.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TypeHotel.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TypeRoom.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCManageRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCManageRoom.Designer.cs">
+      <DependentUpon>UCManageRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCShowroom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCShowroom.Designer.cs">
+      <DependentUpon>UCShowroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCShowhotel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCShowhotel.Designer.cs">
+      <DependentUpon>UCShowhotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\UCExplore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCExplore.Designer.cs">
+      <DependentUpon>UCExplore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCExploreValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCExploreValue.Designer.cs">
+      <DependentUpon>UCExploreValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCPromotion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCPromotion.Designer.cs">
+      <DependentUpon>UCPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCPromotionValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCPromotionValue.Designer.cs">
+      <DependentUpon>UCPromotionValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCRoomSetup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCRoomSetup.Designer.cs">
+      <DependentUpon>UCRoomSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCLocation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCLocation.Designer.cs">
+      <DependentUpon>UCLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCPeople.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCPeople.Designer.cs">
+      <DependentUpon>UCPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCTerminal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCTerminal.Designer.cs">
+      <DependentUpon>UCTerminal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\FBookingForm.resx">
+      <DependentUpon>FBookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FBookingRoom.resx">
+      <DependentUpon>FBookingRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FDisplayForm.resx">
+      <DependentUpon>FDisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FManageRoom.resx">
+      <DependentUpon>FManageRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FSearchForm.resx">
+      <DependentUpon>FSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HotelAssignmentForm.resx">
+      <DependentUpon>HotelAssignmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FManagerForm.resx">
+      <DependentUpon>FManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FShowRoom.resx">
+      <DependentUpon>FShowRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FOrder.resx">
+      <DependentUpon>FOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCManageRoom.resx">
+      <DependentUpon>UCManageRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCShowhotel.resx">
+      <DependentUpon>UCShowhotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UC\UCExplore.resx">
+      <DependentUpon>UCExplore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCExploreValue.resx">
+      <DependentUpon>UCExploreValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCPromotion.resx">
+      <DependentUpon>UCPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCPromotionValue.resx">
+      <DependentUpon>UCPromotionValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCRoomSetup.resx">
+      <DependentUpon>UCRoomSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCLocation.resx">
+      <DependentUpon>UCLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCPeople.resx">
+      <DependentUpon>UCPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCShowroom.resx">
+      <DependentUpon>UCShowroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCTerminal.resx">
+      <DependentUpon>UCTerminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <EntityDeploy Include="Model\KhachSanModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KhachSanModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\KhachSanModel.edmx.diagram">
+      <DependentUpon>KhachSanModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color palette 2.jpg" />
+    <None Include="Resources\banana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\169301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\637219.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\862091-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air-conditioner-icon-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-914459252-170667a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitchen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ori_3587553_lyi2hdpr6587maek56ev5gcvqo79hxxslk80xan7_office-chair-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-fridge-line-icon-vector-png-image_6656049.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swimming-pool-icon-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\throne-icon-design-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\KhachSanModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KhachSanModel.edmx</DependentUpon>
+      <LastGenOutput>KhachSanModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\KhachSanModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KhachSanModel.edmx</DependentUpon>
+      <LastGenOutput>KhachSanModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
