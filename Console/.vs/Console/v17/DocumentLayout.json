@@ -1,0 +1,119 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\huyhuyhuy8s\\hotel-booking\\Console\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\source\\repos\\huyhuyhuy8s\\hotel-booking\\console\\forms\\fdisplayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fdisplayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\source\\repos\\huyhuyhuy8s\\hotel-booking\\console\\forms\\fbookingroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fbookingroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\source\\repos\\huyhuyhuy8s\\hotel-booking\\console\\forms\\fbookingroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fbookingroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|C:\\Users\\DELL\\source\\repos\\huyhuyhuy8s\\hotel-booking\\Console\\forms\\fbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\source\\repos\\huyhuyhuy8s\\hotel-booking\\console\\forms\\fbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 262,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FDisplayForm.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\huyhuyhuy8s\\hotel-booking\\Console\\Forms\\FDisplayForm.cs",
+              "RelativeDocumentMoniker": "Forms\\FDisplayForm.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\huyhuyhuy8s\\hotel-booking\\Console\\Forms\\FDisplayForm.cs",
+              "RelativeToolTip": "Forms\\FDisplayForm.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAEsAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T05:20:13.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FBookingRoom.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\huyhuyhuy8s\\hotel-booking\\Console\\Forms\\FBookingRoom.cs",
+              "RelativeDocumentMoniker": "Forms\\FBookingRoom.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\huyhuyhuy8s\\hotel-booking\\Console\\Forms\\FBookingRoom.cs",
+              "RelativeToolTip": "Forms\\FBookingRoom.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T05:18:21.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FBookingRoom.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\huyhuyhuy8s\\hotel-booking\\Console\\Forms\\FBookingRoom.cs",
+              "RelativeDocumentMoniker": "Forms\\FBookingRoom.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\huyhuyhuy8s\\hotel-booking\\Console\\Forms\\FBookingRoom.cs [Design]",
+              "RelativeToolTip": "Forms\\FBookingRoom.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T05:18:13.679Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FBookingForm.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\huyhuyhuy8s\\hotel-booking\\Console\\Forms\\FBookingForm.cs",
+              "RelativeDocumentMoniker": "Forms\\FBookingForm.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\huyhuyhuy8s\\hotel-booking\\Console\\Forms\\FBookingForm.cs",
+              "RelativeToolTip": "Forms\\FBookingForm.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAEcAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T06:54:27.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FBookingForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\huyhuyhuy8s\\hotel-booking\\Console\\Forms\\FBookingForm.cs",
+              "RelativeDocumentMoniker": "Forms\\FBookingForm.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\huyhuyhuy8s\\hotel-booking\\Console\\Forms\\FBookingForm.cs [Design]",
+              "RelativeToolTip": "Forms\\FBookingForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T06:52:38.133Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
