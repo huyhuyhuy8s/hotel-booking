@@ -48,6 +48,13 @@ namespace Console
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
+                    if (!reader.GetBoolean(5))
+                    {
+                        dtCheckIn.Enabled = false;
+                        dtCheckOut.Enabled = false;
+                        btnCancel.Enabled = false;
+                        btnUpdate.Enabled = false;
+                    }
                     txtPersonId.Text = reader.GetValue(1).ToString();
                     txtRoomId.Text = reader.GetValue(2).ToString();
                     dtCheckIn.Value = reader.GetDateTime(3);
@@ -111,33 +118,16 @@ namespace Console
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            try
+            FOrderReason fOrderReason = new FOrderReason();
+            if (fOrderReason.FOrderReason_Open(string.Format("UPDATE PersonOrder SET OrderStatus = {0} WHERE OrderId = {1}", 0, orderid)))
             {
-                // Ket noi
-                connection.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = connection;
-                cmd.CommandText = string.Format("UPDATE PersonOrder SET OrderStatus = {0} WHERE OrderId = {1}", 0, orderid);
-
-                if (cmd.ExecuteNonQuery() > 0)
-                {
-                    MessageBox.Show("Cancelled");
-                    check = true;
-                }
-                else
-                {
-                    MessageBox.Show("Something goes wrong");
-                }
+                check = true;
+                this.Dispose();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Unable to cancel\n" + ex);
-            }
-            finally
-            {
-                connection.Close();
+                MessageBox.Show("Cancelled Cancellation");
             }
         }
-
     }
 }

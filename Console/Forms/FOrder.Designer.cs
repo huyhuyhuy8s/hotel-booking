@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.panelSignIn = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblCheckOut = new System.Windows.Forms.Label();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.lblCheckIn = new System.Windows.Forms.Label();
             this.cbClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblTerm = new System.Windows.Forms.Label();
             this.lblRoomId = new System.Windows.Forms.Label();
@@ -40,8 +42,6 @@
             this.titleBar = new Guna.UI2.WinForms.Guna2Panel();
             this.lblSubTitle = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lblCheckOut = new System.Windows.Forms.Label();
-            this.lblCheckIn = new System.Windows.Forms.Label();
             this.dtCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtCheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panelSignIn.SuspendLayout();
@@ -76,6 +76,19 @@
             this.panelSignIn.TabIndex = 2;
             this.panelSignIn.UseTransparentBackground = true;
             // 
+            // lblCheckOut
+            // 
+            this.lblCheckOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCheckOut.AutoSize = true;
+            this.lblCheckOut.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCheckOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.lblCheckOut.Location = new System.Drawing.Point(49, 401);
+            this.lblCheckOut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCheckOut.Name = "lblCheckOut";
+            this.lblCheckOut.Size = new System.Drawing.Size(76, 20);
+            this.lblCheckOut.TabIndex = 26;
+            this.lblCheckOut.Text = "Check Out";
+            // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -96,6 +109,19 @@
             this.btnCancel.TabIndex = 27;
             this.btnCancel.Text = "Want to cancel your trip? Cancel here for free!";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // lblCheckIn
+            // 
+            this.lblCheckIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCheckIn.AutoSize = true;
+            this.lblCheckIn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCheckIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.lblCheckIn.Location = new System.Drawing.Point(50, 314);
+            this.lblCheckIn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCheckIn.Name = "lblCheckIn";
+            this.lblCheckIn.Size = new System.Drawing.Size(64, 20);
+            this.lblCheckIn.TabIndex = 25;
+            this.lblCheckIn.Text = "Check In";
             // 
             // cbClose
             // 
@@ -252,32 +278,6 @@
             this.lblTitle.TabIndex = 17;
             this.lblTitle.Text = "Manage Your Order";
             // 
-            // lblCheckOut
-            // 
-            this.lblCheckOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCheckOut.AutoSize = true;
-            this.lblCheckOut.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.lblCheckOut.Location = new System.Drawing.Point(49, 401);
-            this.lblCheckOut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCheckOut.Name = "lblCheckOut";
-            this.lblCheckOut.Size = new System.Drawing.Size(76, 20);
-            this.lblCheckOut.TabIndex = 26;
-            this.lblCheckOut.Text = "Check Out";
-            // 
-            // lblCheckIn
-            // 
-            this.lblCheckIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCheckIn.AutoSize = true;
-            this.lblCheckIn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.lblCheckIn.Location = new System.Drawing.Point(50, 314);
-            this.lblCheckIn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCheckIn.Name = "lblCheckIn";
-            this.lblCheckIn.Size = new System.Drawing.Size(64, 20);
-            this.lblCheckIn.TabIndex = 25;
-            this.lblCheckIn.Text = "Check In";
-            // 
             // dtCheckIn
             // 
             this.dtCheckIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -331,7 +331,7 @@
             this.Controls.Add(this.panelSignIn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FOrder";
-            this.Text = "SignIn";
+            this.Text = "FOrder";
             this.Load += new System.EventHandler(this.FOrder_Load);
             this.panelSignIn.ResumeLayout(false);
             this.panelSignIn.PerformLayout();

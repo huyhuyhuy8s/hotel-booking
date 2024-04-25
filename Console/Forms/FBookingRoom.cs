@@ -1,9 +1,11 @@
-﻿using Guna.UI2.WinForms;
+﻿using Console.Model;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -45,22 +47,22 @@ namespace Console
                 string query = string.Format("SELECT PersonName, PersonEmail, PersonNumberphone" +
                     " FROM Person WHERE PersonId = {0}", personid);
                 DataSet dt = fc.GetData(query);
+
                 if (dt.Tables[0].Rows.Count > 0)
                 {
                     DataRow row = dt.Tables[0].Rows[0];
                     txtName.Text = row["PersonName"].ToString();
                     txtEmail.Text = row["PersonEmail"].ToString();
                     txtPhone.Text = row["PersonNumberphone"].ToString();
-
                 }
             }
         }
 
         private void GetData()
         {
-            string sqlStr = string.Format("SELECT Room.RoomId, Room.RoomPrice, Room.RoomName, hotel.HotelName, hotel.HotelAddress" +
-                " FROM (Room " +
-                "JOIN hotel ON HotelId = (RoomId / POWER (10, DATALENGTH (CAST (RoomNo AS VARCHAR(MAX))))))" +
+            string sqlStr = string.Format("SELECT Room.RoomId, Room.RoomPrice, Room.RoomName, hotel.HotelName, hotel.HotelAddress " +
+                "FROM (Room " +
+                "JOIN hotel ON HotelId = (RoomId / POWER (10, DATALENGTH (CAST (RoomNo AS VARCHAR(MAX)))))) " +
                 "WHERE Room.RoomId = {0}", roomid);
             DataSet dt = fc.GetData(sqlStr);
 
