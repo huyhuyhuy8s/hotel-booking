@@ -47,6 +47,7 @@ namespace Console
             bool hotelCheck = false;
             int count = 0;
             UCShowroom[] ucshowrooms = new UCShowroom[0];
+            flowPanel.Controls.Clear();
             while (reader.Read())
             {
                 //Hotel Properties
@@ -61,7 +62,7 @@ namespace Console
                         pbPicture.Image = System.Drawing.Image.FromStream(stream);
                     }
                     string province = reader.GetString(3);
-                    ucshowrooms = new UCShowroom[Int32.Parse(reader.GetValue(41).ToString())];
+                    ucshowrooms = new UCShowroom[reader.GetInt32(42)];
                     List<Label> labels = new List<Label> { lblLocation1, lblLocation2, lblLocation3, lblLocation4, lblLocation5, lblLocation6 };
                     for (int i = 0; i < 6; i++) 
                     {
@@ -74,20 +75,24 @@ namespace Console
                 UCShowroom sr = ucshowrooms[count] = new UCShowroom();
                 sr.LblHotelId = reader.GetValue(16).ToString(); //Room ID
                 sr.LblHotelName = (++count).ToString();
-                byte[] roompic = (byte[])reader.GetValue(24);
-                using (var stream = new MemoryStream(roompic))
+                byte[] roompic;
+                if (!(reader.GetValue(25) is DBNull))
                 {
-                    sr.PbRoomPic = System.Drawing.Image.FromStream(stream);
+                    roompic = (byte[])reader.GetValue(25);
+                    using (var stream = new MemoryStream(roompic))
+                    {
+                        sr.PbRoomPic = System.Drawing.Image.FromStream(stream);
+                    }
                 }
-                sr.LblRoomName = reader.GetString(18);
-                sr.LblRoomBed = reader.GetValue(20).ToString();
-                sr.LblRoomPerson = reader.GetValue(21).ToString();
+                sr.LblRoomName = reader.GetString(19);
+                sr.LblRoomBed = reader.GetValue(21).ToString();
+                sr.LblRoomPerson = reader.GetValue(22).ToString();
 
                 // Room Interiors 
                 int interior_index = 0;
                 for (int i = 13; i >= 0 && interior_index < 6; i--)
                 {
-                    if (!reader.GetBoolean(27 + i))
+                    if (reader.GetBoolean(28 + i))
                     switch (interior_index)
                     {
                         case 0:
@@ -122,7 +127,7 @@ namespace Console
                             break;
                     }
                 }
-                sr.LblRoomPrice = reader.GetValue(22).ToString();
+                sr.LblRoomPrice = reader.GetValue(23).ToString();
                 if (sr.LblRoomName != null) flowPanel.Controls.Add(sr);
             }
             reader.Close();

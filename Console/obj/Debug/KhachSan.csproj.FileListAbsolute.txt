@@ -79,3 +79,5 @@ C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\KhachSan.csproj.Up2
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.exe
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.pdb
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.FOrderReason.resources
+C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.UCFavoriteProvince.resources
+C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.UCShowHotel2.resources

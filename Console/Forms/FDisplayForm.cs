@@ -49,6 +49,11 @@ namespace Console
             UCShowroom uc = btn.Parent.Parent as UCShowroom;
             fBookingRoom.InsertData(Int32.Parse(uc.LblHotelId)); //Room ID
             fBookingRoom.BTNReturn.Click += new EventHandler(BookingForm_Click);
+            if (logged)
+            {
+                fBookingRoom.Id = id;
+                fBookingRoom.FBookingForm_ReLoad();
+            }
             LoadForm(fBookingRoom, panelShow);
         }
         #endregion

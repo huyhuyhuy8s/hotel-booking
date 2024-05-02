@@ -30,14 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBookingRoom));
             this.pnTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.cbClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ccTop = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.btnReturn = new Guna.UI2.WinForms.Guna2Button();
             this.lblBrand = new System.Windows.Forms.Label();
             this.fpnCenter = new System.Windows.Forms.FlowLayoutPanel();
             this.ccWelcome = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.pbAvt = new System.Windows.Forms.PictureBox();
             this.ccGreatChoice = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.pnColor1 = new System.Windows.Forms.Panel();
             this.lblGreatChoice = new System.Windows.Forms.Label();
@@ -45,7 +43,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblCard = new System.Windows.Forms.Label();
             this.lblCard1 = new System.Windows.Forms.Label();
-            this.pbCard = new System.Windows.Forms.PictureBox();
             this.ccContact = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
@@ -69,7 +66,7 @@
             this.lblTotalPrices = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.llbPriceDiscount = new System.Windows.Forms.Label();
+            this.lblPriceDiscount = new System.Windows.Forms.Label();
             this.lblRoomPrice = new System.Windows.Forms.Label();
             this.lblRoomType = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
@@ -78,42 +75,34 @@
             this.btBookNow = new Guna.UI2.WinForms.Guna2Button();
             this.pnCenter = new Guna.UI2.WinForms.Guna2Panel();
             this.lblBooking = new System.Windows.Forms.Label();
+            this.pbAvt = new System.Windows.Forms.PictureBox();
+            this.pbCard = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnTop.SuspendLayout();
             this.ccTop.SuspendLayout();
             this.fpnCenter.SuspendLayout();
             this.ccWelcome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvt)).BeginInit();
             this.ccGreatChoice.SuspendLayout();
             this.ccCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCard)).BeginInit();
             this.ccContact.SuspendLayout();
             this.ccRoomDetail.SuspendLayout();
             this.ccPrice.SuspendLayout();
             this.pnCenter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCard)).BeginInit();
             this.SuspendLayout();
             // 
             // pnTop
             // 
             this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pnTop.Controls.Add(this.cbClose);
             this.pnTop.Controls.Add(this.ccTop);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1584, 165);
             this.pnTop.TabIndex = 0;
-            // 
-            // cbClose
-            // 
-            this.cbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbClose.BackColor = System.Drawing.Color.Transparent;
-            this.cbClose.BorderRadius = 5;
-            this.cbClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.cbClose.IconColor = System.Drawing.Color.White;
-            this.cbClose.Location = new System.Drawing.Point(1539, 0);
-            this.cbClose.Name = "cbClose";
-            this.cbClose.Size = new System.Drawing.Size(45, 29);
-            this.cbClose.TabIndex = 25;
             // 
             // ccTop
             // 
@@ -195,16 +184,6 @@
             this.lblWelcome.TabIndex = 1;
             this.lblWelcome.Text = "Welcome!";
             // 
-            // pbAvt
-            // 
-            this.pbAvt.Image = ((System.Drawing.Image)(resources.GetObject("pbAvt.Image")));
-            this.pbAvt.Location = new System.Drawing.Point(1, 0);
-            this.pbAvt.Name = "pbAvt";
-            this.pbAvt.Size = new System.Drawing.Size(48, 48);
-            this.pbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAvt.TabIndex = 0;
-            this.pbAvt.TabStop = false;
-            // 
             // ccGreatChoice
             // 
             this.ccGreatChoice.BackColor = System.Drawing.Color.White;
@@ -278,16 +257,6 @@
             this.lblCard1.TabIndex = 1;
             this.lblCard1.Text = "You can book now without providing payment details, and pay at the property durin" +
     "g your stay.";
-            // 
-            // pbCard
-            // 
-            this.pbCard.Image = ((System.Drawing.Image)(resources.GetObject("pbCard.Image")));
-            this.pbCard.Location = new System.Drawing.Point(11, 3);
-            this.pbCard.Name = "pbCard";
-            this.pbCard.Size = new System.Drawing.Size(37, 30);
-            this.pbCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCard.TabIndex = 3;
-            this.pbCard.TabStop = false;
             // 
             // ccContact
             // 
@@ -550,10 +519,13 @@
             this.ccPrice.BackColor = System.Drawing.Color.Gainsboro;
             this.ccPrice.BorderColor = System.Drawing.Color.Gainsboro;
             this.ccPrice.BorderThickness = 1;
+            this.ccPrice.Controls.Add(this.label3);
+            this.ccPrice.Controls.Add(this.label2);
+            this.ccPrice.Controls.Add(this.label1);
             this.ccPrice.Controls.Add(this.lblTotalPrices);
             this.ccPrice.Controls.Add(this.lblTotal);
             this.ccPrice.Controls.Add(this.panel1);
-            this.ccPrice.Controls.Add(this.llbPriceDiscount);
+            this.ccPrice.Controls.Add(this.lblPriceDiscount);
             this.ccPrice.Controls.Add(this.lblRoomPrice);
             this.ccPrice.Controls.Add(this.lblRoomType);
             this.ccPrice.Controls.Add(this.lblDiscount);
@@ -594,17 +566,17 @@
             this.panel1.Size = new System.Drawing.Size(920, 2);
             this.panel1.TabIndex = 6;
             // 
-            // llbPriceDiscount
+            // lblPriceDiscount
             // 
-            this.llbPriceDiscount.AutoSize = true;
-            this.llbPriceDiscount.BackColor = System.Drawing.Color.Transparent;
-            this.llbPriceDiscount.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llbPriceDiscount.Location = new System.Drawing.Point(826, 128);
-            this.llbPriceDiscount.Name = "llbPriceDiscount";
-            this.llbPriceDiscount.Size = new System.Drawing.Size(50, 20);
-            this.llbPriceDiscount.TabIndex = 5;
-            this.llbPriceDiscount.Text = "label1";
-            this.llbPriceDiscount.Visible = false;
+            this.lblPriceDiscount.AutoSize = true;
+            this.lblPriceDiscount.BackColor = System.Drawing.Color.Transparent;
+            this.lblPriceDiscount.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceDiscount.Location = new System.Drawing.Point(826, 128);
+            this.lblPriceDiscount.Name = "lblPriceDiscount";
+            this.lblPriceDiscount.Size = new System.Drawing.Size(50, 20);
+            this.lblPriceDiscount.TabIndex = 5;
+            this.lblPriceDiscount.Text = "label1";
+            this.lblPriceDiscount.Visible = false;
             // 
             // lblRoomPrice
             // 
@@ -702,6 +674,62 @@
             this.lblBooking.TabIndex = 2;
             this.lblBooking.Text = "Your Accommodation Booking";
             // 
+            // pbAvt
+            // 
+            this.pbAvt.Image = ((System.Drawing.Image)(resources.GetObject("pbAvt.Image")));
+            this.pbAvt.Location = new System.Drawing.Point(1, 0);
+            this.pbAvt.Name = "pbAvt";
+            this.pbAvt.Size = new System.Drawing.Size(48, 48);
+            this.pbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAvt.TabIndex = 0;
+            this.pbAvt.TabStop = false;
+            // 
+            // pbCard
+            // 
+            this.pbCard.Image = ((System.Drawing.Image)(resources.GetObject("pbCard.Image")));
+            this.pbCard.Location = new System.Drawing.Point(11, 3);
+            this.pbCard.Name = "pbCard";
+            this.pbCard.Size = new System.Drawing.Size(37, 30);
+            this.pbCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCard.TabIndex = 3;
+            this.pbCard.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(882, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "%";
+            this.label1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(882, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "VND";
+            this.label2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(881, 180);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "VND";
+            this.label3.Visible = false;
+            // 
             // FBookingRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -713,19 +741,17 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FBookingRoom";
             this.Text = "FBookingRoom";
-            this.Load += new System.EventHandler(this.FRequestBooking_Load);
+            this.Load += new System.EventHandler(this.FBookingForm_Load);
             this.pnTop.ResumeLayout(false);
             this.ccTop.ResumeLayout(false);
             this.ccTop.PerformLayout();
             this.fpnCenter.ResumeLayout(false);
             this.ccWelcome.ResumeLayout(false);
             this.ccWelcome.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvt)).EndInit();
             this.ccGreatChoice.ResumeLayout(false);
             this.ccGreatChoice.PerformLayout();
             this.ccCard.ResumeLayout(false);
             this.ccCard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCard)).EndInit();
             this.ccContact.ResumeLayout(false);
             this.ccContact.PerformLayout();
             this.ccRoomDetail.ResumeLayout(false);
@@ -734,6 +760,8 @@
             this.ccPrice.PerformLayout();
             this.pnCenter.ResumeLayout(false);
             this.pnCenter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCard)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -764,7 +792,7 @@
         private System.Windows.Forms.Label lblRoomPrice;
         private System.Windows.Forms.Label lblTotalPrices;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label llbPriceDiscount;
+        private System.Windows.Forms.Label lblPriceDiscount;
         private Guna.UI2.WinForms.Guna2ContainerControl ccWelcome;
         private Guna.UI2.WinForms.Guna2ContainerControl ccGreatChoice;
         private System.Windows.Forms.Panel pnColor1;
@@ -782,12 +810,14 @@
         private System.Windows.Forms.Label lblRoomDetails;
         private System.Windows.Forms.Label lblRType;
         private System.Windows.Forms.Label lblAddress;
-        private Guna.UI2.WinForms.Guna2ControlBox cbClose;
         private Guna.UI2.WinForms.Guna2Button btBookNow;
         private Guna.UI2.WinForms.Guna2Panel pnCenter;
         private System.Windows.Forms.Label lblBooking;
         private Guna.UI2.WinForms.Guna2ContainerControl ccTop;
         private Guna.UI2.WinForms.Guna2Button btnReturn;
         private System.Windows.Forms.Label lblBrand;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

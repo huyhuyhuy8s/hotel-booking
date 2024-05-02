@@ -185,11 +185,23 @@
     <Compile Include="Model\TypeRoom.cs">
       <DependentUpon>KhachSanModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCFavoriteProvince.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCFavoriteProvince.Designer.cs">
+      <DependentUpon>UCFavoriteProvince.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCManageRoom.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\UCManageRoom.Designer.cs">
       <DependentUpon>UCManageRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCShowHotel2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCShowHotel2.Designer.cs">
+      <DependentUpon>UCShowHotel2.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCShowroom.cs">
       <SubType>UserControl</SubType>
@@ -295,6 +307,9 @@
     <EmbeddedResource Include="Forms\FOrder.resx">
       <DependentUpon>FOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCFavoriteProvince.resx">
+      <DependentUpon>UCFavoriteProvince.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCManageRoom.resx">
       <DependentUpon>UCManageRoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -337,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCPeople.resx">
       <DependentUpon>UCPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCShowHotel2.resx">
+      <DependentUpon>UCShowHotel2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCShowroom.resx">
       <DependentUpon>UCShowroom.cs</DependentUpon>
@@ -450,6 +468,13 @@
       <DependentUpon>KhachSanModel.edmx</DependentUpon>
       <LastGenOutput>KhachSanModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Hotel 7.jpg" />
+    <None Include="Resources\Hotel 6.jpg" />
+    <None Include="Resources\Hotel 5.jpg" />
+    <None Include="Resources\Hotel 4.jpg" />
+    <None Include="Resources\Hotel 3.jpg" />
+    <None Include="Resources\Hotel 2.jpg" />
+    <None Include="Resources\Hotel 1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
