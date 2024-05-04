@@ -39,8 +39,8 @@
             this.lblCheckOut = new System.Windows.Forms.Label();
             this.lblCheckinDate = new System.Windows.Forms.Label();
             this.ccManageRoom = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.ccInfor = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.lblOrderId = new System.Windows.Forms.Label();
+            this.ccInfor = new Guna.UI2.WinForms.Guna2ContainerControl();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoomPicture)).BeginInit();
             this.ccManageRoom.SuspendLayout();
             this.ccInfor.SuspendLayout();
@@ -106,12 +106,12 @@
             // lblCanceled
             // 
             this.lblCanceled.AutoSize = true;
-            this.lblCanceled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lblCanceled.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCanceled.BackColor = System.Drawing.Color.Transparent;
+            this.lblCanceled.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblCanceled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(224)))), ((int)(((byte)(94)))));
-            this.lblCanceled.Location = new System.Drawing.Point(73, 183);
+            this.lblCanceled.Location = new System.Drawing.Point(59, 173);
             this.lblCanceled.Name = "lblCanceled";
-            this.lblCanceled.Size = new System.Drawing.Size(75, 20);
+            this.lblCanceled.Size = new System.Drawing.Size(102, 25);
             this.lblCanceled.TabIndex = 8;
             this.lblCanceled.Text = "Cancelled";
             // 
@@ -189,6 +189,19 @@
             this.ccManageRoom.Text = "guna2ContainerControl1";
             this.ccManageRoom.UseTransparentBackground = true;
             // 
+            // lblOrderId
+            // 
+            this.lblOrderId.AutoSize = true;
+            this.lblOrderId.BackColor = System.Drawing.Color.Transparent;
+            this.lblOrderId.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblOrderId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.lblOrderId.Location = new System.Drawing.Point(803, 49);
+            this.lblOrderId.Name = "lblOrderId";
+            this.lblOrderId.Size = new System.Drawing.Size(108, 37);
+            this.lblOrderId.TabIndex = 7;
+            this.lblOrderId.Text = "OrderId";
+            this.lblOrderId.Visible = false;
+            // 
             // ccInfor
             // 
             this.ccInfor.BorderRadius = 10;
@@ -205,19 +218,6 @@
             this.ccInfor.Size = new System.Drawing.Size(638, 240);
             this.ccInfor.TabIndex = 6;
             this.ccInfor.Text = "guna2ContainerControl2";
-            // 
-            // lblOrderId
-            // 
-            this.lblOrderId.AutoSize = true;
-            this.lblOrderId.BackColor = System.Drawing.Color.Transparent;
-            this.lblOrderId.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblOrderId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.lblOrderId.Location = new System.Drawing.Point(803, 49);
-            this.lblOrderId.Name = "lblOrderId";
-            this.lblOrderId.Size = new System.Drawing.Size(108, 37);
-            this.lblOrderId.TabIndex = 7;
-            this.lblOrderId.Text = "OrderId";
-            this.lblOrderId.Visible = false;
             // 
             // UCManageRoom
             // 

@@ -72,6 +72,7 @@ namespace Console
                     {
                         uc.PBPictureBox.Image = System.Drawing.Image.FromStream(stream);
                     }
+                    uc.Status.Text = (reader.GetBoolean(12)) ? "Booked" : "Cancelled";
                     uc.CheckIn.Text = reader.GetDateTime(10).ToLongDateString();
                     uc.CheckOut.Text = end.ToLongDateString();
                     uc.ManageBooking.Click += new EventHandler(ManageBooking_Click);

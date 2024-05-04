@@ -32,9 +32,9 @@ namespace Console
         private void ShowHotel_Click(object sender, EventArgs e)
         {
             Guna2Button btn = (Guna2Button)sender;
-            UCShowroom ucshowroom = (UCShowroom)btn.Parent.Parent;
+            UCShowHotel2 ucshowhotel = (UCShowHotel2)btn.Parent.Parent;
             FDisplayForm fdisplayForm = this.Parent.Parent as FDisplayForm;
-            fdisplayForm.ShowRoom_Load(ucshowroom.LblHotelId);
+            fdisplayForm.ShowRoom_Load(ucshowhotel.LblHotelId);
         }
 
         public void InsertData(string location, DateTime checkin, DateTime checkout)
@@ -42,43 +42,45 @@ namespace Console
             ucTerminal.CBProvince.SelectedItem = location;
             ucTerminal.DTCheckIn.Value = checkin;
             ucTerminal.DTCheckOut.Value = checkout;
-            string query = String.Format("SELECT HotelId, RoomPrice, HotelName, RoomPicture, RoomName, RoomPerson, RoomBed, AC, Chair, Hairdryer, Desk, Refrigerator, Balcony, Bathtub, Champage, CoffeeMaker, Kitchen, SafetyBox, Minibar, Bidet, Throne " +
-                "FROM ((Hotel " +
-                "JOIN (Room JOIN TypeRoom ON Room.TypeId = TypeRoom.TypeId) ON Hotel.HotelId = (Room.RoomId / POWER (10, DATALENGTH (CAST (Room.RoomNo AS VARCHAR(MAX))))))" +
-                "LEFT JOIN PersonOrder ON Room.RoomId = PersonOrder.RoomId)" +
-                "WHERE Hotel.HotelProvince = '{0}' AND (OrderEnd < '{1}' OR OrderEnd IS NULL);", location, checkin.Date.ToString("MM/dd/yyyy"));
+            string query = String.Format("SELECT HotelId, HotelName, HotelImage, HotelAddress, HotelHotline, HotelDescription, COUNT(1) OVER () AS Id " +
+                "FROM Hotel " +
+                "WHERE Hotel.HotelProvince = '{0}';", location);
 
             outsideCommand = query;
         }
 
         public void Control()
         {
-            int numberOfHotel = 6;
-            flowPanel.Controls.Clear();
-            UCShowroom[] uc = new UCShowroom[numberOfHotel];
-
-            string query = (outsideCommand == null) ? "SELECT HotelId, RoomPrice, HotelName, RoomPicture, RoomName, RoomPerson, RoomBed, AC, Chair, Hairdryer, Desk, Refrigerator, Balcony, Bathtub, Champage, CoffeeMaker, Kitchen, SafetyBox, Minibar, Bidet, Throne " +
-                "FROM ((Room JOIN TypeRoom ON Room.TypeId = TypeRoom.TypeId)" +
-                "JOIN Hotel ON Hotel.HotelId = (Room.RoomId / POWER (10, DATALENGTH (CAST (Room.RoomNo AS VARCHAR(MAX))))))" : outsideCommand;
+            string query = (outsideCommand == null) ? "SELECT HotelId, HotelName, HotelImage, HotelAddress, HotelHotline, HotelDescription, COUNT(1) OVER () AS Id FROM Hotel" : outsideCommand;
             DataSet dt = fc.GetData(query);
 
             SqlDataReader reader = fc.getForCombo(query);
 
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
+            conn.Open();
+            SqlCommand command = new SqlCommand(query, conn);
+            SqlDataReader tempReader = command.ExecuteReader();
+            tempReader.Read();
+            int numberOfHotel = Int32.Parse(tempReader["Id"].ToString());
+            conn.Close();
+
+            flowPanel.Controls.Clear();
+            UCShowHotel2[] uc = new UCShowHotel2[numberOfHotel];
+
+
             System.Drawing.Image[] pbroompic = new System.Drawing.Image[numberOfHotel];
             string[] HotelId = new string[numberOfHotel];
             string[] HotelName = new string[numberOfHotel];
-            string[] RoomName = new string[numberOfHotel];
-            string[] RoomBed = new string[numberOfHotel];
-            string[] RoomPerson = new string[numberOfHotel];
-            string[] RoomPrice = new string[numberOfHotel];
-            string[,] InteriorArray = new string[numberOfHotel, 14];
+            string[] HotelAddress = new string[numberOfHotel];
+            string[] HotelHotline = new string[numberOfHotel];
+            string[] HotelDescription = new string[numberOfHotel];
 
             int index = 0;
             while (reader.Read() && index < HotelName.Length)
             {
-                if (!reader.IsDBNull(reader.GetOrdinal("RoomPicture")))
+                if (!reader.IsDBNull(reader.GetOrdinal("HotelImage")))
                 {
-                    byte[] pic = (byte[])reader["RoomPicture"];
+                    byte[] pic = (byte[])reader["HotelImage"];
                     using (var stream = new MemoryStream(pic))
                     {
                         pbroompic[index] = System.Drawing.Image.FromStream(stream);
@@ -87,79 +89,27 @@ namespace Console
 
                 HotelId[index] = reader["HotelId"].ToString();
                 HotelName[index] = reader["HotelName"].ToString();
-                RoomName[index] = reader["RoomName"].ToString();
-                RoomBed[index] = reader["RoomBed"].ToString() + " Bed";
-                RoomPerson[index] = reader["RoomPerson"].ToString() + " Person";
-                RoomPrice[index] = reader["RoomPrice"].ToString() + "000 VND";
-                InteriorArray[index, 0] = reader["AC"].ToString();
-                InteriorArray[index, 1] = reader["Chair"].ToString();
-                InteriorArray[index, 2] = reader["Hairdryer"].ToString();
-                InteriorArray[index, 3] = reader["Desk"].ToString();
-                InteriorArray[index, 4] = reader["Refrigerator"].ToString();
-                InteriorArray[index, 5] = reader["Balcony"].ToString();
-                InteriorArray[index, 6] = reader["Bathtub"].ToString();
-                InteriorArray[index, 7] = reader["Champage"].ToString();
-                InteriorArray[index, 8] = reader["CoffeeMaker"].ToString();
-                InteriorArray[index, 9] = reader["Kitchen"].ToString();
-                InteriorArray[index, 10] = reader["SafetyBox"].ToString();
-                InteriorArray[index, 11] = reader["Minibar"].ToString();
-                InteriorArray[index, 12] = reader["Bidet"].ToString();
-                InteriorArray[index, 13] = reader["Throne"].ToString();
+                HotelAddress[index] = reader["HotelAddress"].ToString();
+                HotelHotline[index] = reader["HotelHotline"].ToString();
+                HotelDescription[index] = reader["HotelDescription"].ToString();
                 index++;
             }
 
             for (int i = 0; i < uc.Length; i++)
             {
 
-                uc[i] = new UCShowroom();
+                uc[i] = new UCShowHotel2();
                 uc[i].LblHotelId = HotelId[i];
                 uc[i].LblHotelName = HotelName[i];
                 uc[i].PbRoomPic = pbroompic[i];
-                uc[i].LblRoomName = RoomName[i];
-                uc[i].LblRoomBed = RoomBed[i];
-                uc[i].LblRoomPerson = RoomPerson[i];
-                uc[i].LblRoomPrice = RoomPrice[i];
+                uc[i].LblHotelAddress = HotelAddress[i];
+                uc[i].LblHotelHotline = HotelHotline[i];
+                uc[i].LblHotelDescription = HotelDescription[i];
                 //Add click button event to the Show Hotel Button
                 uc[i].ShowHotel.Click += new EventHandler(ShowHotel_Click);
-                int count = 0;
-                for (int j = 13; j > 0 && count < 6; j--)
-                {
-                    if (InteriorArray[i, j] != "False")
-                    switch (count)
-                    {
-                        case 0:
-                            uc[i].LblInterior1 = CodeEdit.InteriorCheck(j);
-                            uc[i].PBInterior1.Image = CodeEdit.InteriorPicture(j);
-                            count++;
-                            break;
-                        case 1:
-                            uc[i].LblInterior2 = CodeEdit.InteriorCheck(j);
-                            uc[i].PBInterior2.Image = CodeEdit.InteriorPicture(j);
-                            count++;
-                            break;
-                        case 2:
-                            uc[i].LblInterior3 = CodeEdit.InteriorCheck(j);
-                            uc[i].PBInterior3.Image = CodeEdit.InteriorPicture(j);
-                            count++;
-                            break;
-                        case 3:
-                            uc[i].LblInterior4 = CodeEdit.InteriorCheck(j);
-                            uc[i].PBInterior4.Image = CodeEdit.InteriorPicture(j);
-                            count++;
-                            break;
-                        case 4:
-                            uc[i].LblInterior5 = CodeEdit.InteriorCheck(j);
-                            uc[i].PBInterior5.Image = CodeEdit.InteriorPicture(j);
-                            count++;
-                            break;
-                        case 5:
-                            uc[i].LblInterior6 = CodeEdit.InteriorCheck(j);
-                            uc[i].PBInterior6.Image = CodeEdit.InteriorPicture(j);
-                            count++;
-                            break;
-                        }
-                }
-                if (uc[i].LblHotelName != null) flowPanel.Controls.Add(uc[i]);
+
+
+                flowPanel.Controls.Add(uc[i]);
             }
             reader.Close();
 

@@ -32,6 +32,7 @@
             this.ccTop = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.btnReturn = new Guna.UI2.WinForms.Guna2Button();
             this.lblBrand = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.ccDescription = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.lblDescription = new System.Windows.Forms.Label();
             this.ccNear = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -43,18 +44,27 @@
             this.lblLocation1 = new System.Windows.Forms.Label();
             this.lblInArea = new System.Windows.Forms.Label();
             this.lblRoomType = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.ucShowroom1 = new Console.UCShowroom();
             this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
             this.ccAvaliable = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pbPicture = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ccTop.SuspendLayout();
             this.ccDescription.SuspendLayout();
             this.ccNear.SuspendLayout();
+            this.flowPanel.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.ccAvaliable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +73,7 @@
             this.ccTop.BackColor = System.Drawing.Color.Transparent;
             this.ccTop.Controls.Add(this.btnReturn);
             this.ccTop.Controls.Add(this.lblBrand);
+            this.ccTop.Controls.Add(this.lblName);
             this.ccTop.FillColor = System.Drawing.Color.Transparent;
             this.ccTop.Location = new System.Drawing.Point(132, 1);
             this.ccTop.Name = "ccTop";
@@ -99,6 +110,18 @@
             this.lblBrand.TabIndex = 2;
             this.lblBrand.Text = "Travelgoda.com";
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.White;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
+            this.lblName.Location = new System.Drawing.Point(3, 91);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(205, 25);
+            this.lblName.TabIndex = 5;
+            this.lblName.Text = "Davue Hotel Da Nang";
+            // 
             // ccDescription
             // 
             this.ccDescription.BackColor = System.Drawing.Color.Transparent;
@@ -106,9 +129,9 @@
             this.ccDescription.BorderThickness = 1;
             this.ccDescription.Controls.Add(this.lblDescription);
             this.ccDescription.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.ccDescription.Location = new System.Drawing.Point(380, 98);
+            this.ccDescription.Location = new System.Drawing.Point(140, 451);
             this.ccDescription.Name = "ccDescription";
-            this.ccDescription.Size = new System.Drawing.Size(1075, 105);
+            this.ccDescription.Size = new System.Drawing.Size(221, 298);
             this.ccDescription.TabIndex = 1;
             this.ccDescription.Text = "guna2ContainerControl2";
             this.ccDescription.UseTransparentBackground = true;
@@ -118,10 +141,10 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.lblDescription.Location = new System.Drawing.Point(48, 20);
-            this.lblDescription.MaximumSize = new System.Drawing.Size(1000, 0);
+            this.lblDescription.Location = new System.Drawing.Point(10, 16);
+            this.lblDescription.MaximumSize = new System.Drawing.Size(200, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(979, 60);
+            this.lblDescription.Size = new System.Drawing.Size(199, 240);
             this.lblDescription.TabIndex = 10;
             this.lblDescription.Text = resources.GetString("lblDescription.Text");
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,9 +162,9 @@
             this.ccNear.Controls.Add(this.lblLocation1);
             this.ccNear.Controls.Add(this.lblInArea);
             this.ccNear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.ccNear.Location = new System.Drawing.Point(380, 219);
+            this.ccNear.Location = new System.Drawing.Point(1216, 156);
             this.ccNear.Name = "ccNear";
-            this.ccNear.Size = new System.Drawing.Size(1075, 167);
+            this.ccNear.Size = new System.Drawing.Size(239, 284);
             this.ccNear.TabIndex = 2;
             this.ccNear.Text = "guna2ContainerControl3";
             this.ccNear.UseTransparentBackground = true;
@@ -152,7 +175,8 @@
             this.lblLocation6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.lblLocation6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.lblLocation6.Location = new System.Drawing.Point(708, 132);
+            this.lblLocation6.Location = new System.Drawing.Point(138, 234);
+            this.lblLocation6.MaximumSize = new System.Drawing.Size(90, 0);
             this.lblLocation6.Name = "lblLocation6";
             this.lblLocation6.Size = new System.Drawing.Size(90, 17);
             this.lblLocation6.TabIndex = 4;
@@ -165,7 +189,8 @@
             this.lblLocation5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.lblLocation5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.lblLocation5.Location = new System.Drawing.Point(708, 92);
+            this.lblLocation5.Location = new System.Drawing.Point(138, 166);
+            this.lblLocation5.MaximumSize = new System.Drawing.Size(90, 0);
             this.lblLocation5.Name = "lblLocation5";
             this.lblLocation5.Size = new System.Drawing.Size(90, 17);
             this.lblLocation5.TabIndex = 4;
@@ -178,7 +203,8 @@
             this.lblLocation4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.lblLocation4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.lblLocation4.Location = new System.Drawing.Point(708, 53);
+            this.lblLocation4.Location = new System.Drawing.Point(138, 97);
+            this.lblLocation4.MaximumSize = new System.Drawing.Size(90, 0);
             this.lblLocation4.Name = "lblLocation4";
             this.lblLocation4.Size = new System.Drawing.Size(90, 17);
             this.lblLocation4.TabIndex = 8;
@@ -191,7 +217,8 @@
             this.lblLocation3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.lblLocation3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.lblLocation3.Location = new System.Drawing.Point(223, 132);
+            this.lblLocation3.Location = new System.Drawing.Point(10, 234);
+            this.lblLocation3.MaximumSize = new System.Drawing.Size(90, 0);
             this.lblLocation3.Name = "lblLocation3";
             this.lblLocation3.Size = new System.Drawing.Size(90, 17);
             this.lblLocation3.TabIndex = 5;
@@ -204,7 +231,8 @@
             this.lblLocation2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.lblLocation2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.lblLocation2.Location = new System.Drawing.Point(223, 92);
+            this.lblLocation2.Location = new System.Drawing.Point(10, 166);
+            this.lblLocation2.MaximumSize = new System.Drawing.Size(90, 0);
             this.lblLocation2.Name = "lblLocation2";
             this.lblLocation2.Size = new System.Drawing.Size(90, 17);
             this.lblLocation2.TabIndex = 4;
@@ -217,7 +245,8 @@
             this.lblLocation1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.lblLocation1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.lblLocation1.Location = new System.Drawing.Point(223, 53);
+            this.lblLocation1.Location = new System.Drawing.Point(10, 97);
+            this.lblLocation1.MaximumSize = new System.Drawing.Size(90, 0);
             this.lblLocation1.Name = "lblLocation1";
             this.lblLocation1.Size = new System.Drawing.Size(90, 17);
             this.lblLocation1.TabIndex = 3;
@@ -230,11 +259,13 @@
             this.lblInArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.lblInArea.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.lblInArea.Location = new System.Drawing.Point(47, 14);
+            this.lblInArea.Location = new System.Drawing.Point(12, 8);
+            this.lblInArea.MaximumSize = new System.Drawing.Size(220, 0);
             this.lblInArea.Name = "lblInArea";
-            this.lblInArea.Size = new System.Drawing.Size(305, 30);
+            this.lblInArea.Size = new System.Drawing.Size(208, 60);
             this.lblInArea.TabIndex = 3;
             this.lblInArea.Text = "Famous locations in the area: ";
+            this.lblInArea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblRoomType
             // 
@@ -242,24 +273,11 @@
             this.lblRoomType.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomType.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.lblRoomType.Location = new System.Drawing.Point(45, 6);
+            this.lblRoomType.Location = new System.Drawing.Point(45, 4);
             this.lblRoomType.Name = "lblRoomType";
             this.lblRoomType.Size = new System.Drawing.Size(229, 30);
             this.lblRoomType.TabIndex = 7;
             this.lblRoomType.Text = "Availble Room Types: ";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.BackColor = System.Drawing.Color.White;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.lblName.Location = new System.Drawing.Point(135, 400);
-            this.lblName.MaximumSize = new System.Drawing.Size(250, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(205, 25);
-            this.lblName.TabIndex = 5;
-            this.lblName.Text = "Davue Hotel Da Nang";
             // 
             // lblAddress
             // 
@@ -267,10 +285,9 @@
             this.lblAddress.BackColor = System.Drawing.Color.White;
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.lblAddress.Location = new System.Drawing.Point(136, 442);
-            this.lblAddress.MaximumSize = new System.Drawing.Size(250, 0);
+            this.lblAddress.Location = new System.Drawing.Point(136, 129);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(234, 40);
+            this.lblAddress.Size = new System.Drawing.Size(446, 20);
             this.lblAddress.TabIndex = 6;
             this.lblAddress.Text = "7B Cong Hoa phuong 4, quan Tan Binh, Ho Chi Minh City, VietNam";
             // 
@@ -287,17 +304,40 @@
             // 
             this.flowPanel.AutoScroll = true;
             this.flowPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
-            this.flowPanel.Location = new System.Drawing.Point(380, 456);
+            this.flowPanel.Controls.Add(this.ucShowroom1);
+            this.flowPanel.Location = new System.Drawing.Point(380, 485);
             this.flowPanel.Margin = new System.Windows.Forms.Padding(3, 40, 3, 3);
             this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.flowPanel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
             this.flowPanel.Size = new System.Drawing.Size(1075, 305);
             this.flowPanel.TabIndex = 25;
+            // 
+            // ucShowroom1
+            // 
+            this.ucShowroom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.ucShowroom1.LblHotelId = null;
+            this.ucShowroom1.LblHotelName = null;
+            this.ucShowroom1.LblInterior1 = null;
+            this.ucShowroom1.LblInterior2 = null;
+            this.ucShowroom1.LblInterior3 = null;
+            this.ucShowroom1.LblInterior4 = null;
+            this.ucShowroom1.LblInterior5 = null;
+            this.ucShowroom1.LblInterior6 = null;
+            this.ucShowroom1.LblRoomBed = null;
+            this.ucShowroom1.LblRoomName = null;
+            this.ucShowroom1.LblRoomPerson = null;
+            this.ucShowroom1.LblRoomPrice = null;
+            this.ucShowroom1.Location = new System.Drawing.Point(13, 3);
+            this.ucShowroom1.Name = "ucShowroom1";
+            this.ucShowroom1.PbRoomPic = null;
+            this.ucShowroom1.Size = new System.Drawing.Size(1051, 278);
+            this.ucShowroom1.TabIndex = 0;
             // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panelTop.Controls.Add(this.ccTop);
+            this.panelTop.Controls.Add(this.lblAddress);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
@@ -309,11 +349,67 @@
             this.ccAvaliable.BorderRadius = 10;
             this.ccAvaliable.Controls.Add(this.lblRoomType);
             this.ccAvaliable.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
-            this.ccAvaliable.Location = new System.Drawing.Point(380, 414);
+            this.ccAvaliable.Location = new System.Drawing.Point(380, 450);
             this.ccAvaliable.Name = "ccAvaliable";
             this.ccAvaliable.Size = new System.Drawing.Size(1075, 42);
             this.ccAvaliable.TabIndex = 27;
             this.ccAvaliable.Text = "guna2ContainerControl1";
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.BorderRadius = 10;
+            this.guna2PictureBox3.Image = global::Console.Properties.Resources.Hotel_4;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(952, 306);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(243, 135);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 34;
+            this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox4.BorderRadius = 10;
+            this.guna2PictureBox4.Image = global::Console.Properties.Resources.Hotel_2;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(952, 156);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(243, 135);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox4.TabIndex = 33;
+            this.guna2PictureBox4.TabStop = false;
+            this.guna2PictureBox4.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.BorderRadius = 10;
+            this.guna2PictureBox2.Image = global::Console.Properties.Resources.Hotel_3;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(686, 305);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(246, 135);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 32;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.BorderRadius = 10;
+            this.guna2PictureBox1.Image = global::Console.Properties.Resources.Hotel_1;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(686, 155);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(246, 135);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 31;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
             // 
             // pbPicture
             // 
@@ -321,9 +417,9 @@
             this.pbPicture.BorderRadius = 10;
             this.pbPicture.Image = ((System.Drawing.Image)(resources.GetObject("pbPicture.Image")));
             this.pbPicture.ImageRotate = 0F;
-            this.pbPicture.Location = new System.Drawing.Point(140, 98);
+            this.pbPicture.Location = new System.Drawing.Point(140, 155);
             this.pbPicture.Name = "pbPicture";
-            this.pbPicture.Size = new System.Drawing.Size(221, 288);
+            this.pbPicture.Size = new System.Drawing.Size(527, 285);
             this.pbPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPicture.TabIndex = 3;
             this.pbPicture.TabStop = false;
@@ -335,13 +431,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1584, 761);
+            this.Controls.Add(this.ccNear);
+            this.Controls.Add(this.guna2PictureBox3);
+            this.Controls.Add(this.guna2PictureBox4);
+            this.Controls.Add(this.guna2PictureBox2);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.flowPanel);
             this.Controls.Add(this.label39);
-            this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.lblName);
             this.Controls.Add(this.pbPicture);
             this.Controls.Add(this.ccDescription);
-            this.Controls.Add(this.ccNear);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.ccAvaliable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -353,9 +451,15 @@
             this.ccDescription.PerformLayout();
             this.ccNear.ResumeLayout(false);
             this.ccNear.PerformLayout();
+            this.flowPanel.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
             this.ccAvaliable.ResumeLayout(false);
             this.ccAvaliable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -384,6 +488,11 @@
         private Guna.UI2.WinForms.Guna2Panel panelTop;
         private System.Windows.Forms.Label lblDescription;
         private Guna.UI2.WinForms.Guna2ContainerControl ccAvaliable;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
+        private UCShowroom ucShowroom1;
     }
 }
 

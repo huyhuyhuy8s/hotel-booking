@@ -13,8 +13,8 @@ namespace Console
     {
         protected SqlConnection getConnection()
         {
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Data Source=DESKTOP-1HVDVK8;Initial Catalog=KhachSan;Integrated Security=True;";
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
+            //conn.ConnectionString = "Data Source=DESKTOP-1HVDVK8;Initial Catalog=KhachSan;Integrated Security=True;";
             return conn;
         }
 
@@ -46,12 +46,11 @@ namespace Console
         public SqlDataReader getForCombo(string query)
         {
             SqlConnection conn = getConnection();
-            SqlCommand cmd = new SqlCommand(); 
-            cmd.Connection = conn;
             conn.Open();
-            cmd= new SqlCommand(query,conn); 
-            SqlDataReader sdr = cmd.ExecuteReader();
-            return sdr;
+            SqlCommand command = new SqlCommand();
+            command.Connection = conn;
+            command.CommandText = query;
+            return command.ExecuteReader();
         }
         
     }

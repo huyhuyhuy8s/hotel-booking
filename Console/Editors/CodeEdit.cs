@@ -64,9 +64,9 @@ namespace Console
                 case 0:
                     return Console.Properties.Resources.AC;
                 case 1:
-                    return Console.Properties.Resources.Chair;
-                case 2:
                     return Console.Properties.Resources.Hairdryer;
+                case 2:
+                    return Console.Properties.Resources.Chair;
                 case 3:
                     return Console.Properties.Resources.Desk;
                 case 4:
@@ -100,9 +100,9 @@ namespace Console
                 case 0:
                     return "AC";
                 case 1:
-                    return "Chair";
-                case 2:
                     return "Hairdryer";
+                case 2:
+                    return "Chair";
                 case 3:
                     return "Desk";
                 case 4:

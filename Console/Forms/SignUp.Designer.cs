@@ -212,7 +212,6 @@
             this.btnSignIn.Size = new System.Drawing.Size(406, 44);
             this.btnSignIn.TabIndex = 15;
             this.btnSignIn.Text = "Already have an accout? Sign in";
-            //this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // btnSignUp
             // 
@@ -362,6 +361,7 @@
             // 
             // SignUp
             // 
+            this.AcceptButton = this.btnSignUp;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;

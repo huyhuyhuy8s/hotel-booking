@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Console.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,7 @@ namespace Console
     public partial class HotelAssignmentForm : Form
     {
         SqlConnection connection = new SqlConnection(Properties.Settings.Default.conn);
+        private KhachSanContext ksContext;
         public HotelAssignmentForm()
         {
             InitializeComponent();
@@ -44,26 +46,13 @@ namespace Console
 
         private void Load_TypeHotel()
         {
-            try
+            ksContext = new KhachSanContext();
+
+            var typehotels = ksContext.TypeHotels.ToList();
+            
+            foreach (var typehotel in typehotels)
             {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "SELECT TypeName FROM TypeHotel;";
-                cmd.Connection = connection;
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    cbType.Items.Add(dr[0]);
-                }
-                
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-            finally
-            {
-                connection.Close();
+                cbType.Items.Add(typehotel.ToString());
             }
         }
 
