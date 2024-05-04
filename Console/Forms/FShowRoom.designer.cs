@@ -47,6 +47,7 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.ucShowroom1 = new Console.UCShowroom();
             this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
             this.ccAvaliable = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -54,7 +55,6 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pbPicture = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.ucShowroom1 = new Console.UCShowroom();
             this.ccTop.SuspendLayout();
             this.ccDescription.SuspendLayout();
             this.ccNear.SuspendLayout();
@@ -262,7 +262,7 @@
             this.lblInArea.Location = new System.Drawing.Point(12, 8);
             this.lblInArea.MaximumSize = new System.Drawing.Size(220, 0);
             this.lblInArea.Name = "lblInArea";
-            this.lblInArea.Size = new System.Drawing.Size(214, 60);
+            this.lblInArea.Size = new System.Drawing.Size(208, 60);
             this.lblInArea.TabIndex = 3;
             this.lblInArea.Text = "Famous locations in the area: ";
             this.lblInArea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -312,6 +312,27 @@
             this.flowPanel.Size = new System.Drawing.Size(1075, 305);
             this.flowPanel.TabIndex = 25;
             // 
+            // ucShowroom1
+            // 
+            this.ucShowroom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.ucShowroom1.LblHotelId = null;
+            this.ucShowroom1.LblHotelName = null;
+            this.ucShowroom1.LblInterior1 = null;
+            this.ucShowroom1.LblInterior2 = null;
+            this.ucShowroom1.LblInterior3 = null;
+            this.ucShowroom1.LblInterior4 = null;
+            this.ucShowroom1.LblInterior5 = null;
+            this.ucShowroom1.LblInterior6 = null;
+            this.ucShowroom1.LblRoomBed = null;
+            this.ucShowroom1.LblRoomName = null;
+            this.ucShowroom1.LblRoomPerson = null;
+            this.ucShowroom1.LblRoomPrice = null;
+            this.ucShowroom1.Location = new System.Drawing.Point(13, 3);
+            this.ucShowroom1.Name = "ucShowroom1";
+            this.ucShowroom1.PbRoomPic = null;
+            this.ucShowroom1.Size = new System.Drawing.Size(1051, 278);
+            this.ucShowroom1.TabIndex = 0;
+            // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -336,6 +357,7 @@
             // 
             // guna2PictureBox3
             // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.BorderRadius = 10;
             this.guna2PictureBox3.Image = global::Console.Properties.Resources.Hotel_4;
             this.guna2PictureBox3.ImageRotate = 0F;
@@ -345,9 +367,11 @@
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 34;
             this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.UseTransparentBackground = true;
             // 
             // guna2PictureBox4
             // 
+            this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox4.BorderRadius = 10;
             this.guna2PictureBox4.Image = global::Console.Properties.Resources.Hotel_2;
             this.guna2PictureBox4.ImageRotate = 0F;
@@ -357,9 +381,11 @@
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox4.TabIndex = 33;
             this.guna2PictureBox4.TabStop = false;
+            this.guna2PictureBox4.UseTransparentBackground = true;
             // 
             // guna2PictureBox2
             // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.BorderRadius = 10;
             this.guna2PictureBox2.Image = global::Console.Properties.Resources.Hotel_3;
             this.guna2PictureBox2.ImageRotate = 0F;
@@ -369,9 +395,11 @@
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 32;
             this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.UseTransparentBackground = true;
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.BorderRadius = 10;
             this.guna2PictureBox1.Image = global::Console.Properties.Resources.Hotel_1;
             this.guna2PictureBox1.ImageRotate = 0F;
@@ -381,6 +409,7 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 31;
             this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
             // 
             // pbPicture
             // 
@@ -395,27 +424,6 @@
             this.pbPicture.TabIndex = 3;
             this.pbPicture.TabStop = false;
             this.pbPicture.UseTransparentBackground = true;
-            // 
-            // ucShowroom1
-            // 
-            this.ucShowroom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.ucShowroom1.LblHotelId = null;
-            this.ucShowroom1.LblHotelName = null;
-            this.ucShowroom1.LblInterior1 = null;
-            this.ucShowroom1.LblInterior2 = null;
-            this.ucShowroom1.LblInterior3 = null;
-            this.ucShowroom1.LblInterior4 = null;
-            this.ucShowroom1.LblInterior5 = null;
-            this.ucShowroom1.LblInterior6 = null;
-            this.ucShowroom1.LblRoomBed = null;
-            this.ucShowroom1.LblRoomName = null;
-            this.ucShowroom1.LblRoomPerson = null;
-            this.ucShowroom1.LblRoomPrice = null;
-            this.ucShowroom1.Location = new System.Drawing.Point(13, 3);
-            this.ucShowroom1.Name = "ucShowroom1";
-            this.ucShowroom1.PbRoomPic = null;
-            this.ucShowroom1.Size = new System.Drawing.Size(1051, 278);
-            this.ucShowroom1.TabIndex = 0;
             // 
             // FShowRoom
             // 
