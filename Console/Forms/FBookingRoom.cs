@@ -23,8 +23,6 @@ namespace Console
         int roomid = 412;
 
         int? personid = CodeEdit.id;
-        DateTime start = CodeEdit.start;
-        DateTime end = CodeEdit.end;
 
         public FBookingRoom()
         {
@@ -54,6 +52,7 @@ namespace Console
 
                 }
             }
+            GetData();
         }
 
         private void GetData()
@@ -71,9 +70,9 @@ namespace Console
                 roomid = int.Parse(row["RoomId"].ToString());
                 lblHotelName.Text = row["HotelName"].ToString();
                 lblAddress.Text = row["HotelAddress"].ToString();
-                lblRType.Text = row["RoomName"].ToString();
-                lblCInDay.Text = start.ToShortDateString();
-                lblCOutDay.Text = end.ToShortDateString();
+                lblRName.Text = row["RoomName"].ToString();
+                lblCInDay.Text = CodeEdit.start.ToShortDateString();
+                lblCOutDay.Text = CodeEdit.end.ToShortDateString();
                 lblRoomPrice.Text = row["RoomPrice"].ToString();
                 lblRoomType.Text = row["RoomName"].ToString();
             }
@@ -93,12 +92,37 @@ namespace Console
                 connection.Close();
 
 
-                string sqlStr = string.Format("INSERT INTO PersonOrder(PersonId, RoomId, OrderStart, OrderEnd) VALUES ({0}, {1}, '{2}', '{3}')", personid, roomid, start.ToShortDateString(), end.ToShortDateString());
+                string sqlStr = string.Format("INSERT INTO PersonOrder(PersonId, RoomId, OrderStart, OrderEnd) VALUES ({0}, {1}, '{2}', '{3}')", personid, roomid, CodeEdit.start.ToShortDateString(), CodeEdit.end.ToShortDateString());
                 fc.setData(sqlStr, "Da Them Phong");
             }
 
         }
         #region GET & SET
+<<<<<<< Updated upstream
+=======
+        public int? Id
+        {
+            get { return personid; }
+            set { personid = value; }
+        }
+        //public DateTime Start
+        //{
+        //    get { return start; }
+        //    set { start = value; }
+        //}
+        //public DateTime End
+        //{
+        //    get { return end; }
+        //    set { end = value; }
+        //}
+
+        public Guna2Button Back
+        {
+            get { return btnBack; }
+            set { btnBack = value; }
+        }
+
+>>>>>>> Stashed changes
         public Guna2Button BTNReturn
         {
             get { return btnReturn; }

@@ -56,13 +56,13 @@
             this.lblContact = new System.Windows.Forms.Label();
             this.ccRoomDetail = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.lblRType = new System.Windows.Forms.Label();
+            this.lblRName = new System.Windows.Forms.Label();
             this.lblCOutDay = new System.Windows.Forms.Label();
             this.lblCheckOut = new System.Windows.Forms.Label();
             this.lblCInDay = new System.Windows.Forms.Label();
             this.lblCheckIn = new System.Windows.Forms.Label();
             this.lblHAddress = new System.Windows.Forms.Label();
-            this.lbltype = new System.Windows.Forms.Label();
+            this.lblroomname = new System.Windows.Forms.Label();
             this.lblHotelName = new System.Windows.Forms.Label();
             this.lblRoomDetails = new System.Windows.Forms.Label();
             this.ccPrice = new Guna.UI2.WinForms.Guna2ContainerControl();
@@ -81,6 +81,7 @@
             this.btBookNow = new Guna.UI2.WinForms.Guna2Button();
             this.pnCenter = new Guna.UI2.WinForms.Guna2Panel();
             this.lblBooking = new System.Windows.Forms.Label();
+            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.pnTop.SuspendLayout();
             this.ccTop.SuspendLayout();
             this.fpnCenter.SuspendLayout();
@@ -120,6 +121,7 @@
             // 
             // ccTop
             // 
+            this.ccTop.Controls.Add(this.btnBack);
             this.ccTop.Controls.Add(this.btnReturn);
             this.ccTop.Controls.Add(this.lblBrand);
             this.ccTop.FillColor = System.Drawing.Color.Transparent;
@@ -192,6 +194,7 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblWelcome.Location = new System.Drawing.Point(69, 17);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(75, 20);
@@ -233,6 +236,7 @@
             // 
             this.lblGreatChoice.AutoSize = true;
             this.lblGreatChoice.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblGreatChoice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblGreatChoice.Location = new System.Drawing.Point(26, 14);
             this.lblGreatChoice.Name = "lblGreatChoice";
             this.lblGreatChoice.Size = new System.Drawing.Size(531, 20);
@@ -265,6 +269,7 @@
             // 
             this.lblCard.AutoSize = true;
             this.lblCard.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblCard.Location = new System.Drawing.Point(54, 13);
             this.lblCard.Name = "lblCard";
             this.lblCard.Size = new System.Drawing.Size(218, 20);
@@ -275,6 +280,7 @@
             // 
             this.lblCard1.AutoSize = true;
             this.lblCard1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblCard1.Location = new System.Drawing.Point(11, 36);
             this.lblCard1.Name = "lblCard1";
             this.lblCard1.Size = new System.Drawing.Size(638, 20);
@@ -322,6 +328,7 @@
             this.txtPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhone.Location = new System.Drawing.Point(523, 142);
             this.txtPhone.Name = "txtPhone";
@@ -343,6 +350,7 @@
             this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Location = new System.Drawing.Point(30, 142);
             this.txtEmail.Name = "txtEmail";
@@ -364,6 +372,7 @@
             this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Location = new System.Drawing.Point(30, 70);
             this.txtName.Name = "txtName";
@@ -378,6 +387,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.BackColor = System.Drawing.Color.Transparent;
             this.lblPhone.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblPhone.Location = new System.Drawing.Point(519, 119);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(105, 20);
@@ -389,6 +399,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblEmail.Location = new System.Drawing.Point(26, 119);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(46, 20);
@@ -400,6 +411,7 @@
             this.lblName.AutoSize = true;
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblName.Location = new System.Drawing.Point(26, 47);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(76, 20);
@@ -411,6 +423,7 @@
             this.lblContact.AutoSize = true;
             this.lblContact.BackColor = System.Drawing.Color.Transparent;
             this.lblContact.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblContact.Location = new System.Drawing.Point(6, 9);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(167, 28);
@@ -423,13 +436,13 @@
             this.ccRoomDetail.BorderColor = System.Drawing.Color.Gainsboro;
             this.ccRoomDetail.BorderThickness = 1;
             this.ccRoomDetail.Controls.Add(this.lblAddress);
-            this.ccRoomDetail.Controls.Add(this.lblRType);
+            this.ccRoomDetail.Controls.Add(this.lblRName);
             this.ccRoomDetail.Controls.Add(this.lblCOutDay);
             this.ccRoomDetail.Controls.Add(this.lblCheckOut);
             this.ccRoomDetail.Controls.Add(this.lblCInDay);
             this.ccRoomDetail.Controls.Add(this.lblCheckIn);
             this.ccRoomDetail.Controls.Add(this.lblHAddress);
-            this.ccRoomDetail.Controls.Add(this.lbltype);
+            this.ccRoomDetail.Controls.Add(this.lblroomname);
             this.ccRoomDetail.Controls.Add(this.lblHotelName);
             this.ccRoomDetail.Controls.Add(this.lblRoomDetails);
             this.ccRoomDetail.Location = new System.Drawing.Point(13, 406);
@@ -443,28 +456,31 @@
             this.lblAddress.AutoSize = true;
             this.lblAddress.BackColor = System.Drawing.Color.Transparent;
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblAddress.Location = new System.Drawing.Point(139, 96);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(60, 20);
             this.lblAddress.TabIndex = 10;
             this.lblAddress.Text = "address";
             // 
-            // lblRType
+            // lblRName
             // 
-            this.lblRType.AutoSize = true;
-            this.lblRType.BackColor = System.Drawing.Color.Transparent;
-            this.lblRType.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblRType.Location = new System.Drawing.Point(662, 47);
-            this.lblRType.Name = "lblRType";
-            this.lblRType.Size = new System.Drawing.Size(80, 20);
-            this.lblRType.TabIndex = 9;
-            this.lblRType.Text = "Type room";
+            this.lblRName.AutoSize = true;
+            this.lblRName.BackColor = System.Drawing.Color.Transparent;
+            this.lblRName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblRName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.lblRName.Location = new System.Drawing.Point(662, 47);
+            this.lblRName.Name = "lblRName";
+            this.lblRName.Size = new System.Drawing.Size(90, 20);
+            this.lblRName.TabIndex = 9;
+            this.lblRName.Text = "Room name";
             // 
             // lblCOutDay
             // 
             this.lblCOutDay.AutoSize = true;
             this.lblCOutDay.BackColor = System.Drawing.Color.Transparent;
             this.lblCOutDay.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCOutDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblCOutDay.Location = new System.Drawing.Point(662, 148);
             this.lblCOutDay.Name = "lblCOutDay";
             this.lblCOutDay.Size = new System.Drawing.Size(35, 20);
@@ -476,6 +492,7 @@
             this.lblCheckOut.AutoSize = true;
             this.lblCheckOut.BackColor = System.Drawing.Color.Transparent;
             this.lblCheckOut.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCheckOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblCheckOut.Location = new System.Drawing.Point(530, 148);
             this.lblCheckOut.Name = "lblCheckOut";
             this.lblCheckOut.Size = new System.Drawing.Size(79, 20);
@@ -487,6 +504,7 @@
             this.lblCInDay.AutoSize = true;
             this.lblCInDay.BackColor = System.Drawing.Color.Transparent;
             this.lblCInDay.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCInDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblCInDay.Location = new System.Drawing.Point(139, 148);
             this.lblCInDay.Name = "lblCInDay";
             this.lblCInDay.Size = new System.Drawing.Size(35, 20);
@@ -498,6 +516,7 @@
             this.lblCheckIn.AutoSize = true;
             this.lblCheckIn.BackColor = System.Drawing.Color.Transparent;
             this.lblCheckIn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCheckIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblCheckIn.Location = new System.Drawing.Point(27, 148);
             this.lblCheckIn.Name = "lblCheckIn";
             this.lblCheckIn.Size = new System.Drawing.Size(71, 20);
@@ -509,28 +528,31 @@
             this.lblHAddress.AutoSize = true;
             this.lblHAddress.BackColor = System.Drawing.Color.Transparent;
             this.lblHAddress.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblHAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblHAddress.Location = new System.Drawing.Point(26, 96);
             this.lblHAddress.Name = "lblHAddress";
             this.lblHAddress.Size = new System.Drawing.Size(69, 20);
             this.lblHAddress.TabIndex = 3;
             this.lblHAddress.Text = "Address: ";
             // 
-            // lbltype
+            // lblroomname
             // 
-            this.lbltype.AutoSize = true;
-            this.lbltype.BackColor = System.Drawing.Color.Transparent;
-            this.lbltype.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbltype.Location = new System.Drawing.Point(530, 47);
-            this.lbltype.Name = "lbltype";
-            this.lbltype.Size = new System.Drawing.Size(83, 20);
-            this.lbltype.TabIndex = 2;
-            this.lbltype.Text = "Type room:";
+            this.lblroomname.AutoSize = true;
+            this.lblroomname.BackColor = System.Drawing.Color.Transparent;
+            this.lblroomname.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblroomname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.lblroomname.Location = new System.Drawing.Point(530, 47);
+            this.lblroomname.Name = "lblroomname";
+            this.lblroomname.Size = new System.Drawing.Size(96, 20);
+            this.lblroomname.TabIndex = 2;
+            this.lblroomname.Text = "Room Name:";
             // 
             // lblHotelName
             // 
             this.lblHotelName.AutoSize = true;
             this.lblHotelName.BackColor = System.Drawing.Color.Transparent;
             this.lblHotelName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblHotelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblHotelName.Location = new System.Drawing.Point(26, 47);
             this.lblHotelName.Name = "lblHotelName";
             this.lblHotelName.Size = new System.Drawing.Size(84, 20);
@@ -542,6 +564,7 @@
             this.lblRoomDetails.AutoSize = true;
             this.lblRoomDetails.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomDetails.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblRoomDetails.Location = new System.Drawing.Point(6, 9);
             this.lblRoomDetails.Name = "lblRoomDetails";
             this.lblRoomDetails.Size = new System.Drawing.Size(148, 28);
@@ -573,42 +596,43 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.label3.Location = new System.Drawing.Point(881, 180);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 20);
             this.label3.TabIndex = 11;
             this.label3.Text = "VND";
-            this.label3.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.label2.Location = new System.Drawing.Point(882, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "VND";
-            this.label2.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.label1.Location = new System.Drawing.Point(882, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "%";
-            this.label1.Visible = false;
             // 
             // lblTotalPrices
             // 
             this.lblTotalPrices.AutoSize = true;
             this.lblTotalPrices.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalPrices.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblTotalPrices.Location = new System.Drawing.Point(826, 180);
             this.lblTotalPrices.Name = "lblTotalPrices";
             this.lblTotalPrices.Size = new System.Drawing.Size(50, 20);
@@ -620,6 +644,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft YaHei UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblTotal.Location = new System.Drawing.Point(632, 178);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(113, 23);
@@ -635,6 +660,7 @@
             // 
             // llbPriceDiscount
             // 
+<<<<<<< Updated upstream
             this.llbPriceDiscount.AutoSize = true;
             this.llbPriceDiscount.BackColor = System.Drawing.Color.Transparent;
             this.llbPriceDiscount.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -644,12 +670,25 @@
             this.llbPriceDiscount.TabIndex = 5;
             this.llbPriceDiscount.Text = "label1";
             this.llbPriceDiscount.Visible = false;
+=======
+            this.lblPriceDiscount.AutoSize = true;
+            this.lblPriceDiscount.BackColor = System.Drawing.Color.Transparent;
+            this.lblPriceDiscount.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.lblPriceDiscount.Location = new System.Drawing.Point(826, 128);
+            this.lblPriceDiscount.Name = "lblPriceDiscount";
+            this.lblPriceDiscount.Size = new System.Drawing.Size(50, 20);
+            this.lblPriceDiscount.TabIndex = 5;
+            this.lblPriceDiscount.Text = "label1";
+            this.lblPriceDiscount.Visible = false;
+>>>>>>> Stashed changes
             // 
             // lblRoomPrice
             // 
             this.lblRoomPrice.AutoSize = true;
             this.lblRoomPrice.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomPrice.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblRoomPrice.Location = new System.Drawing.Point(826, 47);
             this.lblRoomPrice.Name = "lblRoomPrice";
             this.lblRoomPrice.Size = new System.Drawing.Size(60, 20);
@@ -661,6 +700,7 @@
             this.lblRoomType.AutoSize = true;
             this.lblRoomType.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomType.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblRoomType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblRoomType.Location = new System.Drawing.Point(27, 77);
             this.lblRoomType.Name = "lblRoomType";
             this.lblRoomType.Size = new System.Drawing.Size(73, 13);
@@ -672,6 +712,7 @@
             this.lblDiscount.AutoSize = true;
             this.lblDiscount.BackColor = System.Drawing.Color.Transparent;
             this.lblDiscount.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblDiscount.Location = new System.Drawing.Point(26, 128);
             this.lblDiscount.Name = "lblDiscount";
             this.lblDiscount.Size = new System.Drawing.Size(67, 20);
@@ -683,6 +724,7 @@
             this.lblPrice.AutoSize = true;
             this.lblPrice.BackColor = System.Drawing.Color.Transparent;
             this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblPrice.Location = new System.Drawing.Point(26, 47);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(85, 20);
@@ -694,6 +736,7 @@
             this.lblPriceDetails.AutoSize = true;
             this.lblPriceDetails.BackColor = System.Drawing.Color.Transparent;
             this.lblPriceDetails.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblPriceDetails.Location = new System.Drawing.Point(6, 9);
             this.lblPriceDetails.Name = "lblPriceDetails";
             this.lblPriceDetails.Size = new System.Drawing.Size(138, 28);
@@ -719,7 +762,7 @@
             // 
             // pnCenter
             // 
-            this.pnCenter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.pnCenter.BackColor = System.Drawing.Color.Transparent;
             this.pnCenter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.pnCenter.BorderRadius = 10;
             this.pnCenter.BorderThickness = 2;
@@ -734,12 +777,29 @@
             // 
             this.lblBooking.AutoSize = true;
             this.lblBooking.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblBooking.ForeColor = System.Drawing.Color.Black;
+            this.lblBooking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblBooking.Location = new System.Drawing.Point(48, 31);
             this.lblBooking.Name = "lblBooking";
             this.lblBooking.Size = new System.Drawing.Size(316, 30);
             this.lblBooking.TabIndex = 2;
             this.lblBooking.Text = "Your Accommodation Booking";
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.BorderRadius = 10;
+            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBack.FillColor = System.Drawing.Color.White;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
+            this.btnBack.Location = new System.Drawing.Point(1090, 13);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(117, 50);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Text = "Back to Searching";
             // 
             // FBookingRoom
             // 
@@ -817,10 +877,10 @@
         private System.Windows.Forms.Label lblCInDay;
         private System.Windows.Forms.Label lblCheckIn;
         private System.Windows.Forms.Label lblHAddress;
-        private System.Windows.Forms.Label lbltype;
+        private System.Windows.Forms.Label lblroomname;
         private System.Windows.Forms.Label lblHotelName;
         private System.Windows.Forms.Label lblRoomDetails;
-        private System.Windows.Forms.Label lblRType;
+        private System.Windows.Forms.Label lblRName;
         private System.Windows.Forms.Label lblAddress;
         private Guna.UI2.WinForms.Guna2ControlBox cbClose;
         private Guna.UI2.WinForms.Guna2Button btBookNow;
@@ -829,5 +889,12 @@
         private Guna.UI2.WinForms.Guna2ContainerControl ccTop;
         private Guna.UI2.WinForms.Guna2Button btnReturn;
         private System.Windows.Forms.Label lblBrand;
+<<<<<<< Updated upstream
+=======
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button btnBack;
+>>>>>>> Stashed changes
     }
 }

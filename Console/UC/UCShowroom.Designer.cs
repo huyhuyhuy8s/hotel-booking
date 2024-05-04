@@ -67,10 +67,11 @@
             // lblHotelName
             // 
             this.lblHotelName.AutoSize = true;
-            this.lblHotelName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblHotelName.Location = new System.Drawing.Point(30, 23);
+            this.lblHotelName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblHotelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.lblHotelName.Location = new System.Drawing.Point(27, 6);
             this.lblHotelName.Name = "lblHotelName";
-            this.lblHotelName.Size = new System.Drawing.Size(50, 20);
+            this.lblHotelName.Size = new System.Drawing.Size(65, 25);
             this.lblHotelName.TabIndex = 0;
             this.lblHotelName.Text = "label1";
             // 
@@ -78,6 +79,7 @@
             // 
             this.lblRoomName.AutoSize = true;
             this.lblRoomName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblRoomName.Location = new System.Drawing.Point(14, 12);
             this.lblRoomName.Name = "lblRoomName";
             this.lblRoomName.Size = new System.Drawing.Size(50, 20);
@@ -88,6 +90,7 @@
             // 
             this.lblRoomBed.AutoSize = true;
             this.lblRoomBed.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblRoomBed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblRoomBed.Location = new System.Drawing.Point(47, 39);
             this.lblRoomBed.Name = "lblRoomBed";
             this.lblRoomBed.Size = new System.Drawing.Size(50, 20);
@@ -98,6 +101,7 @@
             // 
             this.lblRoomPerson.AutoSize = true;
             this.lblRoomPerson.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblRoomPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblRoomPerson.Location = new System.Drawing.Point(234, 39);
             this.lblRoomPerson.Name = "lblRoomPerson";
             this.lblRoomPerson.Size = new System.Drawing.Size(50, 20);
@@ -108,6 +112,7 @@
             // 
             this.lblInterior1.AutoSize = true;
             this.lblInterior1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInterior1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblInterior1.Location = new System.Drawing.Point(41, 90);
             this.lblInterior1.Name = "lblInterior1";
             this.lblInterior1.Size = new System.Drawing.Size(0, 20);
@@ -136,7 +141,7 @@
             this.panelInfor.Controls.Add(this.lblInterior2);
             this.panelInfor.Controls.Add(this.pbInterior1);
             this.panelInfor.Controls.Add(this.lblInterior1);
-            this.panelInfor.Location = new System.Drawing.Point(241, 55);
+            this.panelInfor.Location = new System.Drawing.Point(241, 43);
             this.panelInfor.Name = "panelInfor";
             this.panelInfor.Size = new System.Drawing.Size(768, 199);
             this.panelInfor.TabIndex = 16;
@@ -145,6 +150,7 @@
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblPrice.Location = new System.Drawing.Point(644, 116);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(50, 20);
@@ -173,7 +179,7 @@
             this.btnShowHotel.Name = "btnShowHotel";
             this.btnShowHotel.Size = new System.Drawing.Size(113, 36);
             this.btnShowHotel.TabIndex = 16;
-            this.btnShowHotel.Text = "Show more";
+            this.btnShowHotel.Text = "Book Now!";
             // 
             // pbRoomBed
             // 
@@ -211,6 +217,7 @@
             // 
             this.lblInterior6.AutoSize = true;
             this.lblInterior6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInterior6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblInterior6.Location = new System.Drawing.Point(234, 146);
             this.lblInterior6.Name = "lblInterior6";
             this.lblInterior6.Size = new System.Drawing.Size(0, 20);
@@ -230,6 +237,7 @@
             // 
             this.lblInterior5.AutoSize = true;
             this.lblInterior5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInterior5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblInterior5.Location = new System.Drawing.Point(234, 118);
             this.lblInterior5.Name = "lblInterior5";
             this.lblInterior5.Size = new System.Drawing.Size(0, 20);
@@ -249,6 +257,7 @@
             // 
             this.lblInterior4.AutoSize = true;
             this.lblInterior4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblInterior4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblInterior4.Location = new System.Drawing.Point(234, 90);
             this.lblInterior4.Name = "lblInterior4";
             this.lblInterior4.Size = new System.Drawing.Size(0, 20);
@@ -268,6 +277,7 @@
             // 
             this.lblInterior3.AutoSize = true;
             this.lblInterior3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInterior3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblInterior3.Location = new System.Drawing.Point(41, 148);
             this.lblInterior3.Name = "lblInterior3";
             this.lblInterior3.Size = new System.Drawing.Size(0, 20);
@@ -287,6 +297,7 @@
             // 
             this.lblInterior2.AutoSize = true;
             this.lblInterior2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInterior2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblInterior2.Location = new System.Drawing.Point(41, 118);
             this.lblInterior2.Name = "lblInterior2";
             this.lblInterior2.Size = new System.Drawing.Size(0, 20);
@@ -305,7 +316,7 @@
             // pbRoomPic
             // 
             this.pbRoomPic.BackColor = System.Drawing.Color.White;
-            this.pbRoomPic.Location = new System.Drawing.Point(34, 55);
+            this.pbRoomPic.Location = new System.Drawing.Point(34, 43);
             this.pbRoomPic.Name = "pbRoomPic";
             this.pbRoomPic.Size = new System.Drawing.Size(158, 199);
             this.pbRoomPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -316,7 +327,7 @@
             // 
             this.lblHotelId.AutoSize = true;
             this.lblHotelId.Enabled = false;
-            this.lblHotelId.Location = new System.Drawing.Point(974, 23);
+            this.lblHotelId.Location = new System.Drawing.Point(974, 11);
             this.lblHotelId.Name = "lblHotelId";
             this.lblHotelId.Size = new System.Drawing.Size(35, 13);
             this.lblHotelId.TabIndex = 17;
@@ -333,7 +344,7 @@
             this.Controls.Add(this.pbRoomPic);
             this.Controls.Add(this.lblHotelName);
             this.Name = "UCShowroom";
-            this.Size = new System.Drawing.Size(1051, 278);
+            this.Size = new System.Drawing.Size(1051, 257);
             this.panelInfor.ResumeLayout(false);
             this.panelInfor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoomBed)).EndInit();

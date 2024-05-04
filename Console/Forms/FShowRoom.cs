@@ -72,10 +72,18 @@ namespace Console
 
                 // x Room Properties
                 UCShowroom sr = ucshowrooms[count] = new UCShowroom();
+<<<<<<< Updated upstream
                 sr.LblHotelId = reader.GetValue(16).ToString(); //Room ID
                 sr.LblHotelName = (++count).ToString();
                 byte[] roompic = (byte[])reader.GetValue(24);
                 using (var stream = new MemoryStream(roompic))
+=======
+                sr.LblHotelId = reader.GetValue(17).ToString(); //Room ID
+                ++count;
+                sr.LblHotelName = reader.GetString(19);
+                byte[] roompic;
+                if (!(reader.GetValue(25) is DBNull))
+>>>>>>> Stashed changes
                 {
                     sr.PbRoomPic = System.Drawing.Image.FromStream(stream);
                 }
@@ -164,6 +172,11 @@ namespace Console
         {
             get { return flowPanel; }
             set { flowPanel = value; }
+        }
+        public Guna2Button Back
+        {
+            get { return btnBack; }
+            set {  btnBack = value; }
         }
         public Guna2Button Return
         {

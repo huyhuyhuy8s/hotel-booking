@@ -54,6 +54,8 @@ namespace Console
             this.cbType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.titleBar.SuspendLayout();
             this.panelHotel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -274,6 +276,7 @@ namespace Console
             // titleBar
             // 
             this.titleBar.BackColor = System.Drawing.Color.Transparent;
+            this.titleBar.Controls.Add(this.btnClose);
             this.titleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.titleBar.Location = new System.Drawing.Point(0, 0);
             this.titleBar.Name = "titleBar";
@@ -449,17 +452,35 @@ namespace Console
             this.guna2PictureBox2.TabIndex = 3;
             this.guna2PictureBox2.TabStop = false;
             // 
+            // btnClose
+            // 
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(482, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(15, 18);
+            this.btnClose.TabIndex = 27;
+            this.btnClose.Text = "guna2Button1";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // HotelAssignmentForm
             // 
             this.AcceptButton = this.btnSignUp;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(509, 852);
             this.Controls.Add(this.panelHotel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HotelAssignmentForm";
             this.Text = "Form2";
+            this.titleBar.ResumeLayout(false);
             this.panelHotel.ResumeLayout(false);
             this.panelHotel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
@@ -494,5 +515,6 @@ namespace Console
         private System.Windows.Forms.PictureBox pbPicture;
         private System.Windows.Forms.Label lblProvince;
         private Guna.UI2.WinForms.Guna2ComboBox cbProvince;
+        private Guna.UI2.WinForms.Guna2Button btnClose;
     }
 }

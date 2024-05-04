@@ -139,5 +139,12 @@ namespace Console
             }
         }
 
+<<<<<<< Updated upstream
+=======
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+>>>>>>> Stashed changes
     }
 }

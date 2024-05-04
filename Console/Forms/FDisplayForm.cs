@@ -48,6 +48,7 @@ namespace Console
             Guna2Button btn = sender as Guna2Button;
             UCShowroom uc = btn.Parent.Parent as UCShowroom;
             fBookingRoom.InsertData(Int32.Parse(uc.LblHotelId)); //Room ID
+            fBookingRoom.Back.Click += new EventHandler(SearchForm_SearchClick);
             fBookingRoom.BTNReturn.Click += new EventHandler(BookingForm_Click);
             LoadForm(fBookingRoom, panelShow);
         }
@@ -83,6 +84,7 @@ namespace Console
         public void ShowRoom_Load(string hotelId)
         {
             fshowRoom.InsertData(hotelId);
+            fshowRoom.Back.Click += new EventHandler(SearchForm_SearchClick);
             foreach (UCShowroom uc in fshowRoom.FlowPanel.Controls)
             {
                 uc.ShowHotel.Click += new EventHandler(BookingRoom_Click);
@@ -116,7 +118,7 @@ namespace Console
             RemoveEvent(fsearchForm.SignUp);
             fsearchForm.SignUp.Click += new System.EventHandler(ManagerForm_Click);
         }
-        private void SearchForm_SearchClick(object sender, EventArgs e)
+        public void SearchForm_SearchClick(object sender, EventArgs e)
         {
             if (fsearchForm.Terminal.CBProvince.SelectedItem == null) { MessageBox.Show("Please select Location"); return; }
             if (fsearchForm.Terminal.DTCheckIn.Value.Date < DateTime.Now.Date || fsearchForm.Terminal.DTCheckOut.Value.Date < DateTime.Now.Date) { MessageBox.Show("Your Check in/out date are in the pass\n Please check again"); return; }

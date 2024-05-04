@@ -139,5 +139,10 @@ namespace Console
                 MessageBox.Show("Please choose a reason!");
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
     }
 }

@@ -90,5 +90,10 @@ namespace Console
             SignUp signup = new SignUp();
             signup.ShowDialog();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
