@@ -3,32 +3,79 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FShowRoom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Forms\\FShowRoom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\desktop\\github\\hotel-booking\\console\\forms\\fshowroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fshowroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\uc\\ucshowroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:uc\\ucshowroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\desktop\\github\\hotel-booking\\console\\forms\\fshowroom.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fshowroom.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\forms\\fshowroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:forms\\fshowroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\forms\\fshowroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fshowroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\forms\\fbookingroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:forms\\fbookingroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\desktop\\github\\hotel-booking\\console\\forms\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\forms\\fdisplayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:forms\\fdisplayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\desktop\\github\\hotel-booking\\console\\forms\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\forms\\fbookingroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:forms\\fbookingroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\desktop\\github\\hotel-booking\\console\\forms\\hotelassignmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\hotelassignmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\forms\\fbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:forms\\fbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\desktop\\github\\hotel-booking\\console\\forms\\fsearchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fsearchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\desktop\\github\\hotel-booking\\console\\forms\\forder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\forder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\desktop\\github\\hotel-booking\\console\\forms\\fmanageroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fmanageroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\desktop\\github\\hotel-booking\\console\\forms\\fmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\forms\\fbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fbookingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\desktop\\github\\hotel-booking\\console\\forms\\fdisplayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fdisplayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\forms\\fbookingroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fbookingroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\uc\\ucshowroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:uc\\ucshowroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|KhachSan||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\desktop\\github\\hotel-booking\\console\\forms\\fbookingroom.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fbookingroom.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\forms\\fdisplayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fdisplayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\forms\\fbookingroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:forms\\fbookingroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|c:\\users\\dell\\desktop\\github\\hotel-booking\\console\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}|KhachSan.csproj|solutionrelative:properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +85,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 262,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,13 +106,148 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FShowRoom.designer.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FShowRoom.designer.cs",
+              "RelativeDocumentMoniker": "Forms\\FShowRoom.designer.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FShowRoom.designer.cs",
+              "RelativeToolTip": "Forms\\FShowRoom.designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8CAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:11:16.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SignUp.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\SignUp.cs",
+              "RelativeDocumentMoniker": "Forms\\SignUp.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\SignUp.cs [Design]",
+              "RelativeToolTip": "Forms\\SignUp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:10:51.277Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HotelAssignmentForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\HotelAssignmentForm.cs",
+              "RelativeDocumentMoniker": "Forms\\HotelAssignmentForm.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\HotelAssignmentForm.cs [Design]",
+              "RelativeToolTip": "Forms\\HotelAssignmentForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:10:48.048Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FSearchForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FSearchForm.cs",
+              "RelativeDocumentMoniker": "Forms\\FSearchForm.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FSearchForm.cs [Design]",
+              "RelativeToolTip": "Forms\\FSearchForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:10:46.198Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FManagerForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FManagerForm.cs",
+              "RelativeDocumentMoniker": "Forms\\FManagerForm.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FManagerForm.cs [Design]",
+              "RelativeToolTip": "Forms\\FManagerForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:10:43.275Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FDisplayForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FDisplayForm.cs",
+              "RelativeDocumentMoniker": "Forms\\FDisplayForm.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FDisplayForm.cs [Design]",
+              "RelativeToolTip": "Forms\\FDisplayForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:10:40.105Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FOrder.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FOrder.cs",
+              "RelativeDocumentMoniker": "Forms\\FOrder.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FOrder.cs [Design]",
+              "RelativeToolTip": "Forms\\FOrder.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:10:37.31Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FManageRoom.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FManageRoom.cs",
+              "RelativeDocumentMoniker": "Forms\\FManageRoom.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FManageRoom.cs [Design]",
+              "RelativeToolTip": "Forms\\FManageRoom.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:10:36.363Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SignIn.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\SignIn.cs",
+              "RelativeDocumentMoniker": "Forms\\SignIn.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\SignIn.cs [Design]",
+              "RelativeToolTip": "Forms\\SignIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:10:26.945Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "KhachSan",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\KhachSan.csproj",
+              "RelativeDocumentMoniker": "KhachSan.csproj",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\KhachSan.csproj",
+              "RelativeToolTip": "KhachSan.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-04T11:09:54.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FBookingRoom.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FBookingRoom.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\FBookingRoom.Designer.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FBookingRoom.Designer.cs",
+              "RelativeToolTip": "Forms\\FBookingRoom.Designer.cs",
+              "ViewState": "AQIAACkCAAAAAAAAAAAwwEUCAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T11:09:14.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "UCShowroom.cs [Design]",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\UC\\UCShowroom.cs",
               "RelativeDocumentMoniker": "UC\\UCShowroom.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\UC\\UCShowroom.cs [Design]",
               "RelativeToolTip": "UC\\UCShowroom.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T10:15:59.893Z"
+              "WhenOpened": "2024-05-04T10:15:59.893Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -75,7 +257,7 @@
               "RelativeDocumentMoniker": "Forms\\FShowRoom.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FShowRoom.cs",
               "RelativeToolTip": "Forms\\FShowRoom.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T09:48:20.07Z",
               "EditorCaption": ""
@@ -94,49 +276,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "FBookingRoom.cs [Design]",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FBookingRoom.cs",
               "RelativeDocumentMoniker": "Forms\\FBookingRoom.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FBookingRoom.cs [Design]",
               "RelativeToolTip": "Forms\\FBookingRoom.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T09:45:38.929Z"
+              "WhenOpened": "2024-05-04T09:45:38.929Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 16,
               "Title": "FDisplayForm.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FDisplayForm.cs",
               "RelativeDocumentMoniker": "Forms\\FDisplayForm.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FDisplayForm.cs",
               "RelativeToolTip": "Forms\\FDisplayForm.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAApwFsAAABNAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T09:33:51.276Z"
+              "WhenOpened": "2024-05-04T09:33:51.276Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 17,
               "Title": "FBookingRoom.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FBookingRoom.cs",
               "RelativeDocumentMoniker": "Forms\\FBookingRoom.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FBookingRoom.cs",
               "RelativeToolTip": "Forms\\FBookingRoom.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAqwG4AAAAIAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAuwGMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T09:32:18.81Z"
+              "WhenOpened": "2024-05-04T09:32:18.81Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "FBookingForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FBookingForm.cs",
               "RelativeDocumentMoniker": "Forms\\FBookingForm.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\Github\\hotel-booking\\Console\\Forms\\FBookingForm.cs [Design]",
               "RelativeToolTip": "Forms\\FBookingForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T09:29:08.213Z"
+              "WhenOpened": "2024-05-04T09:29:08.213Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -72,7 +72,7 @@
             this.lblTotalPrices = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.llbPriceDiscount = new System.Windows.Forms.Label();
+            this.lblPriceDiscount = new System.Windows.Forms.Label();
             this.lblRoomPrice = new System.Windows.Forms.Label();
             this.lblRoomType = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
@@ -579,7 +579,7 @@
             this.ccPrice.Controls.Add(this.lblTotalPrices);
             this.ccPrice.Controls.Add(this.lblTotal);
             this.ccPrice.Controls.Add(this.panel1);
-            this.ccPrice.Controls.Add(this.llbPriceDiscount);
+            this.ccPrice.Controls.Add(this.lblPriceDiscount);
             this.ccPrice.Controls.Add(this.lblRoomPrice);
             this.ccPrice.Controls.Add(this.lblRoomType);
             this.ccPrice.Controls.Add(this.lblDiscount);
@@ -660,17 +660,6 @@
             // 
             // llbPriceDiscount
             // 
-<<<<<<< Updated upstream
-            this.llbPriceDiscount.AutoSize = true;
-            this.llbPriceDiscount.BackColor = System.Drawing.Color.Transparent;
-            this.llbPriceDiscount.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llbPriceDiscount.Location = new System.Drawing.Point(826, 128);
-            this.llbPriceDiscount.Name = "llbPriceDiscount";
-            this.llbPriceDiscount.Size = new System.Drawing.Size(50, 20);
-            this.llbPriceDiscount.TabIndex = 5;
-            this.llbPriceDiscount.Text = "label1";
-            this.llbPriceDiscount.Visible = false;
-=======
             this.lblPriceDiscount.AutoSize = true;
             this.lblPriceDiscount.BackColor = System.Drawing.Color.Transparent;
             this.lblPriceDiscount.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -681,7 +670,6 @@
             this.lblPriceDiscount.TabIndex = 5;
             this.lblPriceDiscount.Text = "label1";
             this.lblPriceDiscount.Visible = false;
->>>>>>> Stashed changes
             // 
             // lblRoomPrice
             // 
@@ -864,7 +852,7 @@
         private System.Windows.Forms.Label lblRoomPrice;
         private System.Windows.Forms.Label lblTotalPrices;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label llbPriceDiscount;
+        private System.Windows.Forms.Label lblPriceDiscount;
         private Guna.UI2.WinForms.Guna2ContainerControl ccWelcome;
         private Guna.UI2.WinForms.Guna2ContainerControl ccGreatChoice;
         private System.Windows.Forms.Panel pnColor1;
@@ -889,12 +877,9 @@
         private Guna.UI2.WinForms.Guna2ContainerControl ccTop;
         private Guna.UI2.WinForms.Guna2Button btnReturn;
         private System.Windows.Forms.Label lblBrand;
-<<<<<<< Updated upstream
-=======
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnBack;
->>>>>>> Stashed changes
     }
 }

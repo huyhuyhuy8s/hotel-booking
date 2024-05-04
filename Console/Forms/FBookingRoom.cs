@@ -98,8 +98,6 @@ namespace Console
 
         }
         #region GET & SET
-<<<<<<< Updated upstream
-=======
         public int? Id
         {
             get { return personid; }
@@ -122,7 +120,6 @@ namespace Console
             set { btnBack = value; }
         }
 
->>>>>>> Stashed changes
         public Guna2Button BTNReturn
         {
             get { return btnReturn; }

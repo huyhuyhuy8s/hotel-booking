@@ -48,6 +48,7 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.ucShowroom1 = new Console.UCShowroom();
             this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
             this.ccAvaliable = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -55,7 +56,6 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pbPicture = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.ucShowroom1 = new Console.UCShowroom();
             this.ucTerminal1 = new Console.UCTerminal();
             this.ccTop.SuspendLayout();
             this.ccDescription.SuspendLayout();
@@ -164,9 +164,8 @@
             this.lblDescription.Location = new System.Drawing.Point(10, 16);
             this.lblDescription.MaximumSize = new System.Drawing.Size(200, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(199, 240);
+            this.lblDescription.Size = new System.Drawing.Size(0, 20);
             this.lblDescription.TabIndex = 10;
-            this.lblDescription.Text = resources.GetString("lblDescription.Text");
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ccNear
@@ -333,6 +332,27 @@
             this.flowPanel.Size = new System.Drawing.Size(1075, 305);
             this.flowPanel.TabIndex = 25;
             // 
+            // ucShowroom1
+            // 
+            this.ucShowroom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.ucShowroom1.LblHotelId = null;
+            this.ucShowroom1.LblHotelName = null;
+            this.ucShowroom1.LblInterior1 = null;
+            this.ucShowroom1.LblInterior2 = null;
+            this.ucShowroom1.LblInterior3 = null;
+            this.ucShowroom1.LblInterior4 = null;
+            this.ucShowroom1.LblInterior5 = null;
+            this.ucShowroom1.LblInterior6 = null;
+            this.ucShowroom1.LblRoomBed = null;
+            this.ucShowroom1.LblRoomName = null;
+            this.ucShowroom1.LblRoomPerson = null;
+            this.ucShowroom1.LblRoomPrice = null;
+            this.ucShowroom1.Location = new System.Drawing.Point(13, 3);
+            this.ucShowroom1.Name = "ucShowroom1";
+            this.ucShowroom1.PbRoomPic = null;
+            this.ucShowroom1.Size = new System.Drawing.Size(1051, 278);
+            this.ucShowroom1.TabIndex = 0;
+            // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -424,27 +444,6 @@
             this.pbPicture.TabStop = false;
             this.pbPicture.UseTransparentBackground = true;
             // 
-            // ucShowroom1
-            // 
-            this.ucShowroom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.ucShowroom1.LblHotelId = null;
-            this.ucShowroom1.LblHotelName = null;
-            this.ucShowroom1.LblInterior1 = null;
-            this.ucShowroom1.LblInterior2 = null;
-            this.ucShowroom1.LblInterior3 = null;
-            this.ucShowroom1.LblInterior4 = null;
-            this.ucShowroom1.LblInterior5 = null;
-            this.ucShowroom1.LblInterior6 = null;
-            this.ucShowroom1.LblRoomBed = null;
-            this.ucShowroom1.LblRoomName = null;
-            this.ucShowroom1.LblRoomPerson = null;
-            this.ucShowroom1.LblRoomPrice = null;
-            this.ucShowroom1.Location = new System.Drawing.Point(13, 3);
-            this.ucShowroom1.Name = "ucShowroom1";
-            this.ucShowroom1.PbRoomPic = null;
-            this.ucShowroom1.Size = new System.Drawing.Size(1051, 278);
-            this.ucShowroom1.TabIndex = 0;
-            // 
             // ucTerminal1
             // 
             this.ucTerminal1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
@@ -527,4 +526,3 @@
         private UCTerminal ucTerminal1;
     }
 }
-
