@@ -66,6 +66,9 @@
             this.lblHotelName = new System.Windows.Forms.Label();
             this.lblRoomDetails = new System.Windows.Forms.Label();
             this.ccPrice = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblTotalPrices = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -565,6 +568,42 @@
             this.ccPrice.TabIndex = 4;
             this.ccPrice.Text = "guna2ContainerControl1";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(881, 180);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "VND";
+            this.label3.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(882, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "VND";
+            this.label2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(882, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "%";
+            this.label1.Visible = false;
+            // 
             // lblTotalPrices
             // 
             this.lblTotalPrices.AutoSize = true;
@@ -686,9 +725,9 @@
             this.pnCenter.BorderThickness = 2;
             this.pnCenter.Controls.Add(this.lblBooking);
             this.pnCenter.Controls.Add(this.fpnCenter);
-            this.pnCenter.Location = new System.Drawing.Point(235, 137);
+            this.pnCenter.Location = new System.Drawing.Point(235, 120);
             this.pnCenter.Name = "pnCenter";
-            this.pnCenter.Size = new System.Drawing.Size(1113, 708);
+            this.pnCenter.Size = new System.Drawing.Size(1113, 642);
             this.pnCenter.TabIndex = 2;
             // 
             // lblBooking
@@ -704,6 +743,7 @@
             // 
             // FBookingRoom
             // 
+            this.AcceptButton = this.btBookNow;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
