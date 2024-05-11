@@ -22,5 +22,6 @@ namespace Console.Model
         public string Location4 { get; set; }
         public string Location5 { get; set; }
         public string Location6 { get; set; }
+        public Nullable<int> Times { get; set; }
     }
 }

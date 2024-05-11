@@ -32,18 +32,19 @@
             this.lblCheckDate = new System.Windows.Forms.Label();
             this.lblHotelName = new System.Windows.Forms.Label();
             this.lblCheckIn = new System.Windows.Forms.Label();
-            this.pbRoomPicture = new System.Windows.Forms.PictureBox();
             this.lblCanceled = new System.Windows.Forms.Label();
             this.btnManageBooking = new Guna.UI2.WinForms.Guna2Button();
             this.lblCheckoutDate = new System.Windows.Forms.Label();
             this.lblCheckOut = new System.Windows.Forms.Label();
             this.lblCheckinDate = new System.Windows.Forms.Label();
             this.ccManageRoom = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.ccInfor = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.lblOrderId = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRoomPicture)).BeginInit();
+            this.ccInfor = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.pbRoomPicture = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblRoomName = new System.Windows.Forms.Label();
             this.ccManageRoom.SuspendLayout();
             this.ccInfor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRoomPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProvince
@@ -88,20 +89,11 @@
             this.lblCheckIn.BackColor = System.Drawing.Color.Transparent;
             this.lblCheckIn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblCheckIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.lblCheckIn.Location = new System.Drawing.Point(60, 63);
+            this.lblCheckIn.Location = new System.Drawing.Point(60, 88);
             this.lblCheckIn.Name = "lblCheckIn";
             this.lblCheckIn.Size = new System.Drawing.Size(64, 20);
             this.lblCheckIn.TabIndex = 3;
             this.lblCheckIn.Text = "Check in";
-            // 
-            // pbRoomPicture
-            // 
-            this.pbRoomPicture.Location = new System.Drawing.Point(38, 102);
-            this.pbRoomPicture.Name = "pbRoomPicture";
-            this.pbRoomPicture.Size = new System.Drawing.Size(203, 240);
-            this.pbRoomPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbRoomPicture.TabIndex = 4;
-            this.pbRoomPicture.TabStop = false;
             // 
             // lblCanceled
             // 
@@ -139,7 +131,7 @@
             this.lblCheckoutDate.BackColor = System.Drawing.Color.Transparent;
             this.lblCheckoutDate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblCheckoutDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.lblCheckoutDate.Location = new System.Drawing.Point(463, 93);
+            this.lblCheckoutDate.Location = new System.Drawing.Point(463, 118);
             this.lblCheckoutDate.Name = "lblCheckoutDate";
             this.lblCheckoutDate.Size = new System.Drawing.Size(50, 20);
             this.lblCheckoutDate.TabIndex = 6;
@@ -152,7 +144,7 @@
             this.lblCheckOut.BackColor = System.Drawing.Color.Transparent;
             this.lblCheckOut.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblCheckOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.lblCheckOut.Location = new System.Drawing.Point(463, 63);
+            this.lblCheckOut.Location = new System.Drawing.Point(463, 88);
             this.lblCheckOut.Name = "lblCheckOut";
             this.lblCheckOut.Size = new System.Drawing.Size(74, 20);
             this.lblCheckOut.TabIndex = 5;
@@ -164,7 +156,7 @@
             this.lblCheckinDate.BackColor = System.Drawing.Color.Transparent;
             this.lblCheckinDate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblCheckinDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.lblCheckinDate.Location = new System.Drawing.Point(60, 93);
+            this.lblCheckinDate.Location = new System.Drawing.Point(60, 118);
             this.lblCheckinDate.Name = "lblCheckinDate";
             this.lblCheckinDate.Size = new System.Drawing.Size(50, 20);
             this.lblCheckinDate.TabIndex = 4;
@@ -179,8 +171,8 @@
             this.ccManageRoom.Controls.Add(this.lblOrderId);
             this.ccManageRoom.Controls.Add(this.lblProvince);
             this.ccManageRoom.Controls.Add(this.lblCheckDate);
-            this.ccManageRoom.Controls.Add(this.pbRoomPicture);
             this.ccManageRoom.Controls.Add(this.ccInfor);
+            this.ccManageRoom.Controls.Add(this.pbRoomPicture);
             this.ccManageRoom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ccManageRoom.Location = new System.Drawing.Point(0, 0);
             this.ccManageRoom.Name = "ccManageRoom";
@@ -188,23 +180,6 @@
             this.ccManageRoom.TabIndex = 6;
             this.ccManageRoom.Text = "guna2ContainerControl1";
             this.ccManageRoom.UseTransparentBackground = true;
-            // 
-            // ccInfor
-            // 
-            this.ccInfor.BorderRadius = 10;
-            this.ccInfor.Controls.Add(this.lblCanceled);
-            this.ccInfor.Controls.Add(this.btnManageBooking);
-            this.ccInfor.Controls.Add(this.lblCheckoutDate);
-            this.ccInfor.Controls.Add(this.lblCheckOut);
-            this.ccInfor.Controls.Add(this.lblCheckinDate);
-            this.ccInfor.Controls.Add(this.lblHotelName);
-            this.ccInfor.Controls.Add(this.lblCheckIn);
-            this.ccInfor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.ccInfor.Location = new System.Drawing.Point(273, 102);
-            this.ccInfor.Name = "ccInfor";
-            this.ccInfor.Size = new System.Drawing.Size(638, 240);
-            this.ccInfor.TabIndex = 6;
-            this.ccInfor.Text = "guna2ContainerControl2";
             // 
             // lblOrderId
             // 
@@ -219,6 +194,48 @@
             this.lblOrderId.Text = "OrderId";
             this.lblOrderId.Visible = false;
             // 
+            // ccInfor
+            // 
+            this.ccInfor.BorderRadius = 10;
+            this.ccInfor.Controls.Add(this.lblRoomName);
+            this.ccInfor.Controls.Add(this.lblCanceled);
+            this.ccInfor.Controls.Add(this.btnManageBooking);
+            this.ccInfor.Controls.Add(this.lblCheckoutDate);
+            this.ccInfor.Controls.Add(this.lblCheckOut);
+            this.ccInfor.Controls.Add(this.lblCheckinDate);
+            this.ccInfor.Controls.Add(this.lblHotelName);
+            this.ccInfor.Controls.Add(this.lblCheckIn);
+            this.ccInfor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.ccInfor.Location = new System.Drawing.Point(273, 102);
+            this.ccInfor.Name = "ccInfor";
+            this.ccInfor.Size = new System.Drawing.Size(638, 240);
+            this.ccInfor.TabIndex = 6;
+            this.ccInfor.Text = "guna2ContainerControl2";
+            // 
+            // pbRoomPicture
+            // 
+            this.pbRoomPicture.BorderRadius = 10;
+            this.pbRoomPicture.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.pbRoomPicture.ImageRotate = 0F;
+            this.pbRoomPicture.Location = new System.Drawing.Point(38, 102);
+            this.pbRoomPicture.Name = "pbRoomPicture";
+            this.pbRoomPicture.Size = new System.Drawing.Size(203, 240);
+            this.pbRoomPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRoomPicture.TabIndex = 8;
+            this.pbRoomPicture.TabStop = false;
+            // 
+            // lblRoomName
+            // 
+            this.lblRoomName.AutoSize = true;
+            this.lblRoomName.BackColor = System.Drawing.Color.Transparent;
+            this.lblRoomName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.lblRoomName.Location = new System.Drawing.Point(61, 55);
+            this.lblRoomName.Name = "lblRoomName";
+            this.lblRoomName.Size = new System.Drawing.Size(52, 21);
+            this.lblRoomName.TabIndex = 9;
+            this.lblRoomName.Text = "label2";
+            // 
             // UCManageRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,11 +243,11 @@
             this.Controls.Add(this.ccManageRoom);
             this.Name = "UCManageRoom";
             this.Size = new System.Drawing.Size(937, 366);
-            ((System.ComponentModel.ISupportInitialize)(this.pbRoomPicture)).EndInit();
             this.ccManageRoom.ResumeLayout(false);
             this.ccManageRoom.PerformLayout();
             this.ccInfor.ResumeLayout(false);
             this.ccInfor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRoomPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -241,7 +258,6 @@
         private System.Windows.Forms.Label lblCheckDate;
         private System.Windows.Forms.Label lblHotelName;
         private System.Windows.Forms.Label lblCheckIn;
-        private System.Windows.Forms.PictureBox pbRoomPicture;
         private System.Windows.Forms.Label lblCheckoutDate;
         private System.Windows.Forms.Label lblCheckOut;
         private System.Windows.Forms.Label lblCheckinDate;
@@ -250,5 +266,7 @@
         private Guna.UI2.WinForms.Guna2ContainerControl ccManageRoom;
         private Guna.UI2.WinForms.Guna2ContainerControl ccInfor;
         private System.Windows.Forms.Label lblOrderId;
+        private Guna.UI2.WinForms.Guna2PictureBox pbRoomPicture;
+        private System.Windows.Forms.Label lblRoomName;
     }
 }

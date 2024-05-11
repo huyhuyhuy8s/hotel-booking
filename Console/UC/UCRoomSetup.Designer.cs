@@ -1,6 +1,6 @@
 ﻿namespace Console
 {
-    partial class ucRoomSetup
+    partial class UCRoomSetup
     {
         /// <summary> 
         /// Required designer variable.
@@ -54,10 +54,12 @@
             this.lblArea = new System.Windows.Forms.Label();
             this.ccContent2 = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.btnBrowse = new Guna.UI2.WinForms.Guna2Button();
+            this.pbPicture = new System.Windows.Forms.PictureBox();
             this.lblPicture = new System.Windows.Forms.Label();
             this.lblContent = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.pbPicture = new System.Windows.Forms.PictureBox();
+            this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgView)).BeginInit();
             this.ccOccurpancy.SuspendLayout();
             this.ccOccurpancy2.SuspendLayout();
@@ -65,13 +67,14 @@
             this.ccContent.SuspendLayout();
             this.ccContent2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
+            this.guna2ContainerControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(27, 21);
+            this.lblTitle.Location = new System.Drawing.Point(3, 21);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(153, 32);
             this.lblTitle.TabIndex = 0;
@@ -92,10 +95,12 @@
             // dtgView
             // 
             this.dtgView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgView.BackgroundColor = System.Drawing.Color.White;
             this.dtgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgView.Location = new System.Drawing.Point(33, 459);
+            this.dtgView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.dtgView.Location = new System.Drawing.Point(15, 52);
             this.dtgView.Name = "dtgView";
-            this.dtgView.Size = new System.Drawing.Size(841, 148);
+            this.dtgView.Size = new System.Drawing.Size(809, 76);
             this.dtgView.TabIndex = 29;
             // 
             // ccOccurpancy
@@ -107,7 +112,7 @@
             this.ccOccurpancy.Controls.Add(this.ccOccurpancy2);
             this.ccOccurpancy.Controls.Add(this.label7);
             this.ccOccurpancy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.ccOccurpancy.Location = new System.Drawing.Point(474, 73);
+            this.ccOccurpancy.Location = new System.Drawing.Point(450, 73);
             this.ccOccurpancy.Name = "ccOccurpancy";
             this.ccOccurpancy.Size = new System.Drawing.Size(400, 352);
             this.ccOccurpancy.TabIndex = 32;
@@ -337,7 +342,7 @@
             this.ccOverral.Controls.Add(this.lblNo);
             this.ccOverral.Controls.Add(this.txtType);
             this.ccOverral.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.ccOverral.Location = new System.Drawing.Point(33, 73);
+            this.ccOverral.Location = new System.Drawing.Point(9, 73);
             this.ccOverral.Name = "ccOverral";
             this.ccOverral.Size = new System.Drawing.Size(400, 352);
             this.ccOverral.TabIndex = 30;
@@ -371,7 +376,7 @@
             this.ccContent.Controls.Add(this.ccContent2);
             this.ccContent.Controls.Add(this.lblContent);
             this.ccContent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.ccContent.Location = new System.Drawing.Point(925, 73);
+            this.ccContent.Location = new System.Drawing.Point(901, 73);
             this.ccContent.Name = "ccContent";
             this.ccContent.Size = new System.Drawing.Size(400, 443);
             this.ccContent.TabIndex = 33;
@@ -453,6 +458,16 @@
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
+            // pbPicture
+            // 
+            this.pbPicture.BackColor = System.Drawing.Color.DarkGray;
+            this.pbPicture.Location = new System.Drawing.Point(14, 55);
+            this.pbPicture.Name = "pbPicture";
+            this.pbPicture.Size = new System.Drawing.Size(340, 122);
+            this.pbPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPicture.TabIndex = 15;
+            this.pbPicture.TabStop = false;
+            // 
             // lblPicture
             // 
             this.lblPicture.AutoSize = true;
@@ -487,24 +502,38 @@
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(1145, 562);
+            this.btnSave.Location = new System.Drawing.Point(1121, 562);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(180, 45);
             this.btnSave.TabIndex = 34;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // pbPicture
+            // guna2ContainerControl1
             // 
-            this.pbPicture.BackColor = System.Drawing.Color.DarkGray;
-            this.pbPicture.Location = new System.Drawing.Point(14, 55);
-            this.pbPicture.Name = "pbPicture";
-            this.pbPicture.Size = new System.Drawing.Size(340, 122);
-            this.pbPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbPicture.TabIndex = 15;
-            this.pbPicture.TabStop = false;
+            this.guna2ContainerControl1.BorderRadius = 10;
+            this.guna2ContainerControl1.Controls.Add(this.label2);
+            this.guna2ContainerControl1.Controls.Add(this.dtgView);
+            this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.guna2ContainerControl1.Location = new System.Drawing.Point(9, 459);
+            this.guna2ContainerControl1.Name = "guna2ContainerControl1";
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(841, 148);
+            this.guna2ContainerControl1.TabIndex = 35;
+            this.guna2ContainerControl1.Text = "guna2ContainerControl1";
             // 
-            // ucRoomSetup
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.label2.Location = new System.Drawing.Point(350, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 21);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Rooms Previews";
+            // 
+            // UCRoomSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -512,12 +541,11 @@
             this.Controls.Add(this.ccContent);
             this.Controls.Add(this.ccOccurpancy);
             this.Controls.Add(this.ccOverral);
-            this.Controls.Add(this.dtgView);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnSave);
-            this.Name = "ucRoomSetup";
-            this.Size = new System.Drawing.Size(1391, 647);
-            this.Load += new System.EventHandler(this.RoomSetup_Load);
+            this.Controls.Add(this.guna2ContainerControl1);
+            this.Name = "UCRoomSetup";
+            this.Size = new System.Drawing.Size(1310, 647);
             ((System.ComponentModel.ISupportInitialize)(this.dtgView)).EndInit();
             this.ccOccurpancy.ResumeLayout(false);
             this.ccOccurpancy.PerformLayout();
@@ -530,6 +558,8 @@
             this.ccContent2.ResumeLayout(false);
             this.ccContent2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
+            this.guna2ContainerControl1.ResumeLayout(false);
+            this.guna2ContainerControl1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -567,5 +597,7 @@
         private System.Windows.Forms.Label lblContent;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2ComboBox txtType;
+        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
+        private System.Windows.Forms.Label label2;
     }
 }

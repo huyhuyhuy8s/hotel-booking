@@ -22,6 +22,9 @@ namespace Console
     {
         SearchFunction fc = new SearchFunction();
         string outsideCommand;
+        string originCommand;
+        string typeCommand = "";
+        string starCommand = "";
 
         public FSearchForm()
         {
@@ -34,7 +37,7 @@ namespace Console
             Guna2Button btn = (Guna2Button)sender;
             UCShowHotel2 ucshowhotel = (UCShowHotel2)btn.Parent.Parent;
             FDisplayForm fdisplayForm = this.Parent.Parent as FDisplayForm;
-            fdisplayForm.ShowRoom_Load(ucshowhotel.LblHotelId);
+            fdisplayForm.ShowRoom_Load(ucshowhotel.LblHotelId, Terminal.CBProvince.SelectedItem.ToString(), Terminal.DTCheckIn.Value, Terminal.DTCheckOut.Value);
         }
 
         public void InsertData(string location, DateTime checkin, DateTime checkout)
@@ -42,16 +45,57 @@ namespace Console
             ucTerminal.CBProvince.SelectedItem = location;
             ucTerminal.DTCheckIn.Value = checkin;
             ucTerminal.DTCheckOut.Value = checkout;
-            string query = String.Format("SELECT HotelId, HotelName, HotelImage, HotelAddress, HotelHotline, HotelDescription, COUNT(1) OVER () AS Id " +
-                "FROM Hotel " +
-                "WHERE Hotel.HotelProvince = '{0}';", location);
+            string stringHotel = string.Format("");
+            SqlDataReader reader = CodeEdit.SqlRead(string.Format("SELECT HotelId FROM Hotel WHERE HotelProvince = '{0}'", location));
+            bool stringHotelCheck = false;
+            while (reader.Read())
+            {
+                if (!stringHotelCheck)
+                {
+                    stringHotelCheck = true;
+                    stringHotel += "WHERE HotelId = " + reader.GetInt32(0).ToString();
+                }
+                else
+                {
+                    stringHotel += " OR HotelId = " + reader.GetInt32(0).ToString();
+                }
+            }
+            SqlConnection connection = new SqlConnection(Properties.Settings.Default.conn);
+            connection.Close();
 
-            outsideCommand = query;
+            string query = String.Format("SELECT Hotel.HotelId, HotelName, HotelImage, HotelAddress, HotelHotline, HotelDescription, HotelStar, " +
+                "(SELECT MIN(RoomPrice) FROM Room WHERE Hotel.HotelId = (RoomId / POWER (10, DATALENGTH (CAST (RoomNo AS VARCHAR(MAX)))))) AS Mini, " +
+                "COUNT(1) OVER () AS Id, HotelType , t3.HotelId " +
+                "FROM Hotel JOIN (" +
+                    "SELECT DISTINCT HotelId FROM (" +
+                        "SELECT PersonOrder.OrderId, PersonOrder.OrderEnd, PersonOrder.OrderStart, Room.RoomNo, t1.RoomId, Hotel.HotelId " +
+                        "FROM Room " +
+                            "LEFT JOIN PersonOrder ON Room.RoomId = PersonOrder.RoomId " +
+                            "JOIN Hotel ON Hotel.HotelId = (Room.RoomId / POWER (10, DATALENGTH (CAST (RoomNo AS VARCHAR(MAX))))) " +
+                            "JOIN (" +
+                                "SELECT DISTINCT Room.RoomId, OrderEnd, OrderStart " +
+                                "FROM Room " +
+                                    "LEFT JOIN PersonOrder ON Room.RoomId = PersonOrder.RoomId " +
+                                "WHERE Room.RoomId IN " +
+                                    "(SELECT RoomId FROM Room JOIN Hotel ON HotelId = (RoomId / POWER (10, DATALENGTH (CAST (RoomNo AS VARCHAR(MAX))))) {1}) " +
+                                    "AND ( NOT (OrderEnd > '{3}' AND OrderStart < '{4}' AND OrderStatus = 1) OR OrderEnd IS NULL)" +
+                        ") as t1 ON Room.RoomId = t1.RoomId " +
+                    "WHERE Room.RoomId IN " +
+                        "(SELECT RoomId FROM Room JOIN Hotel ON HotelId = (RoomId / POWER (10, DATALENGTH (CAST (RoomNo AS VARCHAR(MAX))))) " +
+                        "{2})" +
+                    ") AS t2 " +
+                    "WHERE RoomId IS NOT NULL" +
+                ") as t3 ON Hotel.HotelId = t3.HotelId WHERE Hotel.HotelProvince = '{0}'", location, stringHotel, stringHotel, checkin.ToString("yyyy/MM/dd"), checkout.ToString("yyyy/MM/dd")) ;
+
+            originCommand = outsideCommand = query;
         }
 
         public void Control()
         {
-            string query = (outsideCommand == null) ? "SELECT HotelId, HotelName, HotelImage, HotelAddress, HotelHotline, HotelDescription, COUNT(1) OVER () AS Id FROM Hotel" : outsideCommand;
+            flowPanel.Controls.Clear();
+            string query = (outsideCommand == null) ? "SELECT HotelId, HotelName, HotelImage, HotelAddress, HotelHotline, HotelDescription, HotelStar, (SELECT MIN(RoomPrice) FROM Room WHERE HotelId = (RoomId / POWER (10, DATALENGTH (CAST (RoomNo AS VARCHAR(MAX)))))) AS Mini, COUNT(1) OVER () AS Id, HotelType FROM Hotel" : outsideCommand;
+            query += typeCommand + starCommand;
+            if (outsideCommand == null) originCommand = query;
             DataSet dt = fc.GetData(query);
 
             SqlDataReader reader = fc.getForCombo(query);
@@ -60,59 +104,79 @@ namespace Console
             conn.Open();
             SqlCommand command = new SqlCommand(query, conn);
             SqlDataReader tempReader = command.ExecuteReader();
-            tempReader.Read();
-            int numberOfHotel = Int32.Parse(tempReader["Id"].ToString());
-            conn.Close();
-
-            flowPanel.Controls.Clear();
-            UCShowHotel2[] uc = new UCShowHotel2[numberOfHotel];
-
-
-            System.Drawing.Image[] pbroompic = new System.Drawing.Image[numberOfHotel];
-            string[] HotelId = new string[numberOfHotel];
-            string[] HotelName = new string[numberOfHotel];
-            string[] HotelAddress = new string[numberOfHotel];
-            string[] HotelHotline = new string[numberOfHotel];
-            string[] HotelDescription = new string[numberOfHotel];
-
-            int index = 0;
-            while (reader.Read() && index < HotelName.Length)
+            if (tempReader.Read())
             {
-                if (!reader.IsDBNull(reader.GetOrdinal("HotelImage")))
+                int numberOfHotel = Int32.Parse(tempReader["Id"].ToString());
+                conn.Close();
+
+                UCShowHotel2[] uc = new UCShowHotel2[numberOfHotel];
+
+
+                System.Drawing.Image[] pbroompic = new System.Drawing.Image[numberOfHotel];
+                string[] HotelId = new string[numberOfHotel];
+                string[] HotelName = new string[numberOfHotel];
+                string[] HotelAddress = new string[numberOfHotel];
+                string[] HotelHotline = new string[numberOfHotel];
+                string[] HotelDescription = new string[numberOfHotel];
+                string[] HotelStar = new string[numberOfHotel];
+                string[] HotelPrice = new string[numberOfHotel];
+                string[] HotelType = new string[numberOfHotel];
+
+                int index = 0;
+                while (reader.Read() && index < HotelName.Length)
                 {
-                    byte[] pic = (byte[])reader["HotelImage"];
-                    using (var stream = new MemoryStream(pic))
+                    if (!reader.IsDBNull(reader.GetOrdinal("HotelImage")))
                     {
-                        pbroompic[index] = System.Drawing.Image.FromStream(stream);
+                        byte[] pic = (byte[])reader["HotelImage"];
+                        using (var stream = new MemoryStream(pic))
+                        {
+                            pbroompic[index] = System.Drawing.Image.FromStream(stream);
+                        }
                     }
+
+                    HotelId[index] = reader["HotelId"].ToString();
+                    HotelName[index] = reader["HotelName"].ToString();
+                    HotelAddress[index] = reader["HotelAddress"].ToString();
+                    HotelHotline[index] = reader["HotelHotline"].ToString();
+                    HotelDescription[index] = reader["HotelDescription"].ToString();
+                    HotelStar[index] = reader["HotelStar"].ToString() + " stars ";
+                    HotelType[index] = reader["HotelType"].ToString();
+                    if (!reader.IsDBNull(7)) HotelPrice[index] = reader["Mini"].ToString();
+                    else HotelPrice[index] = "";
+                    index++;
                 }
 
-                HotelId[index] = reader["HotelId"].ToString();
-                HotelName[index] = reader["HotelName"].ToString();
-                HotelAddress[index] = reader["HotelAddress"].ToString();
-                HotelHotline[index] = reader["HotelHotline"].ToString();
-                HotelDescription[index] = reader["HotelDescription"].ToString();
-                index++;
-            }
+                for (int i = 0; i < uc.Length; i++)
+                {
 
-            for (int i = 0; i < uc.Length; i++)
+                    uc[i] = new UCShowHotel2();
+                    uc[i].LblHotelId = HotelId[i];
+                    uc[i].LblHotelName = HotelName[i];
+                    uc[i].PbRoomPic = pbroompic[i];
+                    uc[i].LblHotelAddress = HotelAddress[i];
+                    uc[i].LblHotelHotline = HotelHotline[i];
+                    uc[i].LblHotelDescription = HotelDescription[i];
+                    uc[i].LblHotelStar.Text = HotelStar[i];
+                    uc[i].LblType.Text = CodeEdit.TypeHotel(Int32.Parse(HotelType[i]));
+                    if (HotelPrice[i] == "")
+                    {
+                        uc[i].LblHotelPrice.Visible = false;
+                        uc[i].LblOnly.Visible = false;
+                    }
+                    else uc[i].LblHotelPrice.Text = HotelPrice[i] + "000 VND";
+                    //Add click button event to the Show Hotel Button
+                    uc[i].ShowHotel.Click += new EventHandler(ShowHotel_Click);
+
+
+                    flowPanel.Controls.Add(uc[i]);
+                }
+                reader.Close();
+            }
+            else
             {
-
-                uc[i] = new UCShowHotel2();
-                uc[i].LblHotelId = HotelId[i];
-                uc[i].LblHotelName = HotelName[i];
-                uc[i].PbRoomPic = pbroompic[i];
-                uc[i].LblHotelAddress = HotelAddress[i];
-                uc[i].LblHotelHotline = HotelHotline[i];
-                uc[i].LblHotelDescription = HotelDescription[i];
-                //Add click button event to the Show Hotel Button
-                uc[i].ShowHotel.Click += new EventHandler(ShowHotel_Click);
-
-
-                flowPanel.Controls.Add(uc[i]);
+                conn.Close();
+                reader.Close();
             }
-            reader.Close();
-
         }
 
         #region Login SignUp
@@ -152,6 +216,11 @@ namespace Console
             get { return ucTerminal; }
             set { ucTerminal = value; }
         }
+        public Guna2Button Return
+        {
+            get { return btnReturn; }
+            set { btnReturn = value; }
+        }
         public Guna2Button SignIn
         {
             get { return btnSignIn; } 
@@ -166,6 +235,97 @@ namespace Console
         {
             get { return flowPanel; }
             set {  flowPanel = value; }
+        }
+        #endregion
+
+        #region Filters
+        private void clearFilter(object sender, EventArgs e)
+        {
+            typeCommand = "";
+            foreach (Control c in panelType.Controls)
+                if (c is Guna2CheckBox && ((Guna2CheckBox)c).Checked) ((Guna2CheckBox)c).Checked = false;
+            starCommand = "";
+            foreach (Control c in panelStar.Controls)
+                if (c is Guna2CheckBox && ((Guna2CheckBox)c).Checked) ((Guna2CheckBox)c).Checked = false;
+            MessageBox.Show("Clear filters successed!");
+        }
+        private void checkType(object sender, EventArgs e)
+        {
+            string query = " AND (";
+            bool firstCheck = true;
+            foreach (Control c in panelType.Controls)
+            {
+                if (c is Guna2CheckBox && ((Guna2CheckBox)c).Checked)
+                {
+                    if (firstCheck) firstCheck = false;
+                    else query += " OR";
+                    switch (c.Text)
+                    {
+                        case "Hotel":
+                            query += " HotelType = 1";
+                            break;
+                        case "Motel":
+                            query += " HotelType = 2";
+                            break;
+                        case "Camping":
+                            query += " HotelType = 3";
+                            break;
+                        case "B&B":
+                            query += " HotelType = 4";
+                            break;
+                        case "Guest House":
+                            query += " HotelType = 5";
+                            break;
+                        case "Homestay":
+                            query += " HotelType = 6";
+                            break;
+                        case "Villa":
+                            query += " HotelType = 7";
+                            break;
+                        case "Apartment":
+                            query += " HotelType = 8";
+                            break;
+                    }
+                }
+            }
+            query += ")";
+            typeCommand = (firstCheck) ? "" : query;
+            Control();
+        }
+
+        private void checkStar(object sender, EventArgs e)
+        {
+            string query = " AND (";
+            bool firstCheck = true;
+            foreach (Control c in panelStar.Controls)
+            {
+                if (c is Guna2CheckBox && ((Guna2CheckBox)c).Checked)
+                {
+                    if (firstCheck) firstCheck = false;
+                    else query += " OR";
+                    switch (c.Text)
+                    {
+                        case "1 star":
+                            query += " HotelStar = 1";
+                            break;
+                        case "2 stars":
+                            query += " HotelStar = 2";
+                            break;
+                        case "3 stars":
+                            query += " HotelStar = 3";
+                            break;
+                        case "4 stars":
+                            query += " HotelStar = 4";
+                            break;
+                        case "5 stars":
+                            query += " HotelStar = 5";
+                            break;
+                    }
+                }
+            }
+            query += ")";
+            starCommand = (firstCheck) ? "" : query;
+            Control();
         }
         #endregion
     }

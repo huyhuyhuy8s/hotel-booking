@@ -30,7 +30,7 @@
         {
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblSubTitle = new System.Windows.Forms.Label();
-            this.tablePanel = new System.Windows.Forms.TableLayoutPanel();
+            this.tablePanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -55,17 +55,10 @@
             // 
             // tablePanel
             // 
-            this.tablePanel.ColumnCount = 2;
-            this.tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tablePanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tablePanel.Location = new System.Drawing.Point(0, 60);
             this.tablePanel.Name = "tablePanel";
-            this.tablePanel.RowCount = 1;
-            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tablePanel.Size = new System.Drawing.Size(1320, 198);
-            this.tablePanel.TabIndex = 2;
+            this.tablePanel.Size = new System.Drawing.Size(1304, 198);
+            this.tablePanel.TabIndex = 3;
             // 
             // UCPromotion
             // 
@@ -76,7 +69,7 @@
             this.Controls.Add(this.lblSubTitle);
             this.Controls.Add(this.lblTitle);
             this.Name = "UCPromotion";
-            this.Size = new System.Drawing.Size(1320, 258);
+            this.Size = new System.Drawing.Size(1304, 258);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,6 +79,6 @@
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblSubTitle;
-        public System.Windows.Forms.TableLayoutPanel tablePanel;
+        private System.Windows.Forms.FlowLayoutPanel tablePanel;
     }
 }

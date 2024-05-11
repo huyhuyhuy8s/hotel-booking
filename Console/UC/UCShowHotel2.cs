@@ -40,6 +40,26 @@ namespace Console
             set { htname = value; lblHotelName.Text = value; }
 
         }
+        public Label LblHotelStar
+        {
+            get { return lblStar; }
+            set { lblStar = value; }
+        }
+        public Label LblHotelPrice
+        {
+            get { return lblPrice; }
+            set { lblPrice = value; }
+        }
+        public Label LblOnly
+        {
+            get { return lblOnly; }
+            set { lblOnly = value; }
+        }
+        public Label LblType
+        {
+            get { return lblType; }
+            set { lblType = value; }
+        }
         public string LblHotelAddress
         {
             get { return htaddress; }

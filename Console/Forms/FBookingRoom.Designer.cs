@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBookingRoom));
             this.pnTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.cbClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ccTop = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.btnReturn = new Guna.UI2.WinForms.Guna2Button();
             this.lblBrand = new System.Windows.Forms.Label();
             this.fpnCenter = new System.Windows.Forms.FlowLayoutPanel();
@@ -66,9 +66,6 @@
             this.lblHotelName = new System.Windows.Forms.Label();
             this.lblRoomDetails = new System.Windows.Forms.Label();
             this.ccPrice = new Guna.UI2.WinForms.Guna2ContainerControl();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblTotalPrices = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -79,9 +76,11 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblPriceDetails = new System.Windows.Forms.Label();
             this.btBookNow = new Guna.UI2.WinForms.Guna2Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnCenter = new Guna.UI2.WinForms.Guna2Panel();
             this.lblBooking = new System.Windows.Forms.Label();
-            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.pnTop.SuspendLayout();
             this.ccTop.SuspendLayout();
             this.fpnCenter.SuspendLayout();
@@ -99,25 +98,12 @@
             // pnTop
             // 
             this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pnTop.Controls.Add(this.cbClose);
             this.pnTop.Controls.Add(this.ccTop);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1584, 165);
             this.pnTop.TabIndex = 0;
-            // 
-            // cbClose
-            // 
-            this.cbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbClose.BackColor = System.Drawing.Color.Transparent;
-            this.cbClose.BorderRadius = 5;
-            this.cbClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.cbClose.IconColor = System.Drawing.Color.White;
-            this.cbClose.Location = new System.Drawing.Point(1539, 0);
-            this.cbClose.Name = "cbClose";
-            this.cbClose.Size = new System.Drawing.Size(45, 29);
-            this.cbClose.TabIndex = 25;
             // 
             // ccTop
             // 
@@ -130,6 +116,23 @@
             this.ccTop.Size = new System.Drawing.Size(1326, 125);
             this.ccTop.TabIndex = 27;
             this.ccTop.Text = "ccTop";
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.BorderRadius = 10;
+            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBack.FillColor = System.Drawing.Color.White;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
+            this.btnBack.Location = new System.Drawing.Point(1090, 13);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(117, 50);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Text = "Back to Show rooms";
             // 
             // btnReturn
             // 
@@ -171,10 +174,10 @@
             this.fpnCenter.Controls.Add(this.ccRoomDetail);
             this.fpnCenter.Controls.Add(this.ccPrice);
             this.fpnCenter.Controls.Add(this.btBookNow);
-            this.fpnCenter.Location = new System.Drawing.Point(53, 74);
+            this.fpnCenter.Location = new System.Drawing.Point(53, 57);
             this.fpnCenter.Name = "fpnCenter";
             this.fpnCenter.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.fpnCenter.Size = new System.Drawing.Size(1009, 549);
+            this.fpnCenter.Size = new System.Drawing.Size(1009, 577);
             this.fpnCenter.TabIndex = 1;
             // 
             // ccWelcome
@@ -422,11 +425,11 @@
             // 
             this.lblContact.AutoSize = true;
             this.lblContact.BackColor = System.Drawing.Color.Transparent;
-            this.lblContact.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContact.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblContact.Location = new System.Drawing.Point(6, 9);
             this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(167, 28);
+            this.lblContact.Size = new System.Drawing.Size(180, 32);
             this.lblContact.TabIndex = 0;
             this.lblContact.Text = "Contact Details";
             // 
@@ -563,11 +566,11 @@
             // 
             this.lblRoomDetails.AutoSize = true;
             this.lblRoomDetails.BackColor = System.Drawing.Color.Transparent;
-            this.lblRoomDetails.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomDetails.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblRoomDetails.Location = new System.Drawing.Point(6, 9);
             this.lblRoomDetails.Name = "lblRoomDetails";
-            this.lblRoomDetails.Size = new System.Drawing.Size(148, 28);
+            this.lblRoomDetails.Size = new System.Drawing.Size(158, 32);
             this.lblRoomDetails.TabIndex = 0;
             this.lblRoomDetails.Text = "Room Details";
             // 
@@ -590,42 +593,6 @@
             this.ccPrice.Size = new System.Drawing.Size(962, 210);
             this.ccPrice.TabIndex = 4;
             this.ccPrice.Text = "guna2ContainerControl1";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.label3.Location = new System.Drawing.Point(881, 180);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 20);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "VND";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.label2.Location = new System.Drawing.Point(882, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 20);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "VND";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.label1.Location = new System.Drawing.Point(882, 128);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 20);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "%";
             // 
             // lblTotalPrices
             // 
@@ -658,7 +625,7 @@
             this.panel1.Size = new System.Drawing.Size(920, 2);
             this.panel1.TabIndex = 6;
             // 
-            // llbPriceDiscount
+            // lblPriceDiscount
             // 
             this.lblPriceDiscount.AutoSize = true;
             this.lblPriceDiscount.BackColor = System.Drawing.Color.Transparent;
@@ -748,6 +715,42 @@
             this.btBookNow.Text = "Book Now!";
             this.btBookNow.Click += new System.EventHandler(this.btBookNow_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.label3.Location = new System.Drawing.Point(881, 180);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "VND";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.label2.Location = new System.Drawing.Point(882, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "VND";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.label1.Location = new System.Drawing.Point(882, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "%";
+            // 
             // pnCenter
             // 
             this.pnCenter.BackColor = System.Drawing.Color.Transparent;
@@ -756,9 +759,9 @@
             this.pnCenter.BorderThickness = 2;
             this.pnCenter.Controls.Add(this.lblBooking);
             this.pnCenter.Controls.Add(this.fpnCenter);
-            this.pnCenter.Location = new System.Drawing.Point(235, 120);
+            this.pnCenter.Location = new System.Drawing.Point(235, 95);
             this.pnCenter.Name = "pnCenter";
-            this.pnCenter.Size = new System.Drawing.Size(1113, 642);
+            this.pnCenter.Size = new System.Drawing.Size(1113, 654);
             this.pnCenter.TabIndex = 2;
             // 
             // lblBooking
@@ -766,28 +769,11 @@
             this.lblBooking.AutoSize = true;
             this.lblBooking.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblBooking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.lblBooking.Location = new System.Drawing.Point(48, 31);
+            this.lblBooking.Location = new System.Drawing.Point(48, 24);
             this.lblBooking.Name = "lblBooking";
             this.lblBooking.Size = new System.Drawing.Size(316, 30);
             this.lblBooking.TabIndex = 2;
             this.lblBooking.Text = "Your Accommodation Booking";
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnBack.BorderRadius = 10;
-            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBack.FillColor = System.Drawing.Color.White;
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.btnBack.Location = new System.Drawing.Point(1090, 13);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(117, 50);
-            this.btnBack.TabIndex = 9;
-            this.btnBack.Text = "Back to Searching";
             // 
             // FBookingRoom
             // 
@@ -801,7 +787,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FBookingRoom";
             this.Text = "FBookingRoom";
-            this.Load += new System.EventHandler(this.FRequestBooking_Load);
+            this.Load += new System.EventHandler(this.FBookingForm_Load);
             this.pnTop.ResumeLayout(false);
             this.ccTop.ResumeLayout(false);
             this.ccTop.PerformLayout();
@@ -870,7 +856,6 @@
         private System.Windows.Forms.Label lblRoomDetails;
         private System.Windows.Forms.Label lblRName;
         private System.Windows.Forms.Label lblAddress;
-        private Guna.UI2.WinForms.Guna2ControlBox cbClose;
         private Guna.UI2.WinForms.Guna2Button btBookNow;
         private Guna.UI2.WinForms.Guna2Panel pnCenter;
         private System.Windows.Forms.Label lblBooking;

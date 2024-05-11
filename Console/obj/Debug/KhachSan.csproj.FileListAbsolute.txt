@@ -34,8 +34,6 @@ C:\Users\DELL\Source\Repos\huyhuyhuy8s\hotel-booking\Console\obj\Debug\Console.F
 C:\Users\DELL\Source\Repos\huyhuyhuy8s\hotel-booking\Console\obj\Debug\Console.FManageRoom.resources
 C:\Users\DELL\Source\Repos\huyhuyhuy8s\hotel-booking\Console\obj\Debug\Console.FOrder.resources
 C:\Users\DELL\Source\Repos\huyhuyhuy8s\hotel-booking\Console\obj\Debug\Console.FBookingRoom.resources
-<<<<<<< Updated upstream
-=======
 C:\Users\DELL\Source\Repos\huyhuyhuy8s\hotel-booking\Console\bin\Debug\EntityFramework.dll
 C:\Users\DELL\Source\Repos\huyhuyhuy8s\hotel-booking\Console\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\DELL\Source\Repos\huyhuyhuy8s\hotel-booking\Console\bin\Debug\EntityFramework.xml
@@ -43,11 +41,6 @@ C:\Users\DELL\Source\Repos\huyhuyhuy8s\hotel-booking\Console\bin\Debug\EntityFra
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\bin\Debug\Console.exe.config
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\bin\Debug\Console.exe
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\bin\Debug\Console.pdb
-C:\Users\DELL\Desktop\Github\hotel-booking\Console\bin\Debug\EntityFramework.dll
-C:\Users\DELL\Desktop\Github\hotel-booking\Console\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\DELL\Desktop\Github\hotel-booking\Console\bin\Debug\Guna.UI2.dll
-C:\Users\DELL\Desktop\Github\hotel-booking\Console\bin\Debug\RJCodeAdvance.RJControls.dll
-C:\Users\DELL\Desktop\Github\hotel-booking\Console\bin\Debug\System.Data.SqlClient.dll
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\bin\Debug\EntityFramework.xml
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\bin\Debug\System.Data.SqlClient.xml
@@ -80,9 +73,11 @@ C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\KhachSan.csproj.Cor
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\KhachSan.csproj.Up2Date
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.exe
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.pdb
-C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.FOrderReason.resources
-C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.UCFavoriteProvince.resources
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.UCShowHotel2.resources
-C:\Users\DELL\Desktop\Github\hotel-booking\Console\bin\Debug\Guna.Charts.WinForms.dll
 C:\Users\DELL\Desktop\Github\hotel-booking\Console\bin\Debug\Guna.Charts.WinForms.xml
->>>>>>> Stashed changes
+C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.FOrderReason.resources
+C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.UC.UCRoomManage.resources
+C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.UC.UCRoomManageValue.resources
+C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.UC.UCHotelSetting.resources
+C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.UCStatisticRoom.resources
+C:\Users\DELL\Desktop\Github\hotel-booking\Console\obj\Debug\Console.UCFavoriteProvince.resources

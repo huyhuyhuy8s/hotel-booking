@@ -1,9 +1,11 @@
-﻿using Guna.UI2.WinForms;
+﻿using Console.Model;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -21,8 +23,11 @@ namespace Console
     {
         SearchFunction fc = new SearchFunction();
         int roomid = 412;
+        int discount = 0;
 
         int? personid = CodeEdit.id;
+        DateTime start = CodeEdit.start;
+        DateTime end = CodeEdit.end;
 
         public FBookingRoom()
         {
@@ -34,32 +39,41 @@ namespace Console
         public void InsertData(int roomid)
         {
             this.roomid = roomid;
+            FBookingForm_ReLoad();
         }
 
-        private void FRequestBooking_Load(object sender, EventArgs e)
+        public void FBookingForm_ReLoad()
         {
+            personid = CodeEdit.id;
+            start = CodeEdit.start;
+            end = CodeEdit.end;
             if (personid != null)
             {
-                string query = string.Format("SELECT PersonName, PersonEmail, PersonNumberphone" +
+                string query = string.Format("SELECT PersonName, PersonEmail, PersonPhonenumber" +
                     " FROM Person WHERE PersonId = {0}", personid);
                 DataSet dt = fc.GetData(query);
+
                 if (dt.Tables[0].Rows.Count > 0)
                 {
                     DataRow row = dt.Tables[0].Rows[0];
                     txtName.Text = row["PersonName"].ToString();
                     txtEmail.Text = row["PersonEmail"].ToString();
-                    txtPhone.Text = row["PersonNumberphone"].ToString();
-
+                    txtPhone.Text = row["PersonPhonenumber"].ToString();
                 }
             }
             GetData();
         }
 
+        private void FBookingForm_Load(object sender, EventArgs e)
+        {
+            FBookingForm_ReLoad();
+        }
+
         private void GetData()
         {
-            string sqlStr = string.Format("SELECT Room.RoomId, Room.RoomPrice, Room.RoomName, hotel.HotelName, hotel.HotelAddress" +
-                " FROM (Room " +
-                "JOIN hotel ON HotelId = (RoomId / POWER (10, DATALENGTH (CAST (RoomNo AS VARCHAR(MAX))))))" +
+            string sqlStr = string.Format("SELECT Room.RoomId, Room.RoomPrice, Room.RoomName, hotel.HotelName, hotel.HotelAddress " +
+                "FROM (Room " +
+                "JOIN hotel ON HotelId = (RoomId / POWER (10, DATALENGTH (CAST (RoomNo AS VARCHAR(MAX)))))) " +
                 "WHERE Room.RoomId = {0}", roomid);
             DataSet dt = fc.GetData(sqlStr);
 
@@ -71,10 +85,13 @@ namespace Console
                 lblHotelName.Text = row["HotelName"].ToString();
                 lblAddress.Text = row["HotelAddress"].ToString();
                 lblRName.Text = row["RoomName"].ToString();
-                lblCInDay.Text = CodeEdit.start.ToShortDateString();
-                lblCOutDay.Text = CodeEdit.end.ToShortDateString();
-                lblRoomPrice.Text = row["RoomPrice"].ToString();
+                lblCInDay.Text = start.ToShortDateString();
+                lblCOutDay.Text = end.ToShortDateString();
+                lblRoomPrice.Text = row["RoomPrice"].ToString() + "000 VND";
                 lblRoomType.Text = row["RoomName"].ToString();
+                lblPriceDiscount.Text = discount.ToString();
+                int temp = (int)row["RoomPrice"];
+                lblTotalPrices.Text = (temp - temp * discount / 100).ToString() + "000 VND";
             }
         }
 
@@ -92,7 +109,7 @@ namespace Console
                 connection.Close();
 
 
-                string sqlStr = string.Format("INSERT INTO PersonOrder(PersonId, RoomId, OrderStart, OrderEnd) VALUES ({0}, {1}, '{2}', '{3}')", personid, roomid, CodeEdit.start.ToShortDateString(), CodeEdit.end.ToShortDateString());
+                string sqlStr = string.Format("INSERT INTO PersonOrder(PersonId, RoomId, OrderStart, OrderEnd) VALUES ({0}, {1}, '{2}', '{3}')", personid, roomid, start.ToShortDateString(), end.ToShortDateString());
                 fc.setData(sqlStr, "Da Them Phong");
             }
 
@@ -103,23 +120,21 @@ namespace Console
             get { return personid; }
             set { personid = value; }
         }
-        //public DateTime Start
-        //{
-        //    get { return start; }
-        //    set { start = value; }
-        //}
-        //public DateTime End
-        //{
-        //    get { return end; }
-        //    set { end = value; }
-        //}
-
+        public DateTime Start
+        {
+            get { return start; }
+            set { start = value; }
+        }
+        public DateTime End
+        {
+            get { return end; }
+            set { end = value; }
+        }
         public Guna2Button Back
         {
             get { return btnBack; }
             set { btnBack = value; }
         }
-
         public Guna2Button BTNReturn
         {
             get { return btnReturn; }
@@ -129,8 +144,5 @@ namespace Console
     }
 }
 
-
-       
-    
 
 

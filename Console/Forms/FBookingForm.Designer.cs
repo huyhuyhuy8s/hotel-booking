@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBookingForm));
             this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.btnUserManage = new Guna.UI2.WinForms.Guna2Button();
             this.btnSignIn = new Guna.UI2.WinForms.Guna2Button();
             this.btnSignUp = new Guna.UI2.WinForms.Guna2Button();
             this.btnAbility4 = new Guna.UI2.WinForms.Guna2Button();
@@ -44,9 +45,10 @@
             this.panelBottom = new System.Windows.Forms.Panel();
             this.ucPeople1 = new Console.UCPeople();
             this.ucTerminal = new Console.UCTerminal();
-            this.btnUserManage = new Guna.UI2.WinForms.Guna2Button();
+            this.miniFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTop.SuspendLayout();
             this.guna2ContainerControl1.SuspendLayout();
+            this.flowPanel.SuspendLayout();
             this.panelBottom.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +80,24 @@
             this.guna2ContainerControl1.Size = new System.Drawing.Size(1326, 125);
             this.guna2ContainerControl1.TabIndex = 1;
             this.guna2ContainerControl1.Text = "ccTop";
+            // 
+            // btnUserManage
+            // 
+            this.btnUserManage.BackColor = System.Drawing.Color.Transparent;
+            this.btnUserManage.BorderRadius = 10;
+            this.btnUserManage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserManage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserManage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUserManage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUserManage.FillColor = System.Drawing.Color.White;
+            this.btnUserManage.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
+            this.btnUserManage.Location = new System.Drawing.Point(966, 13);
+            this.btnUserManage.Name = "btnUserManage";
+            this.btnUserManage.Size = new System.Drawing.Size(122, 50);
+            this.btnUserManage.TabIndex = 9;
+            this.btnUserManage.Text = "User Manage";
+            this.btnUserManage.Visible = false;
             // 
             // btnSignIn
             // 
@@ -226,11 +246,12 @@
             // flowPanel
             // 
             this.flowPanel.AutoScroll = true;
+            this.flowPanel.Controls.Add(this.miniFlow);
             this.flowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowPanel.Location = new System.Drawing.Point(132, 88);
+            this.flowPanel.Location = new System.Drawing.Point(132, 51);
             this.flowPanel.Name = "flowPanel";
             this.flowPanel.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.flowPanel.Size = new System.Drawing.Size(1326, 376);
+            this.flowPanel.Size = new System.Drawing.Size(1326, 408);
             this.flowPanel.TabIndex = 4;
             this.flowPanel.WrapContents = false;
             // 
@@ -262,23 +283,12 @@
             this.ucTerminal.TabIndex = 3;
             this.ucTerminal.Load += new System.EventHandler(this.ucTerminal1_Load);
             // 
-            // btnUserManage
+            // miniFlow
             // 
-            this.btnUserManage.BackColor = System.Drawing.Color.Transparent;
-            this.btnUserManage.BorderRadius = 10;
-            this.btnUserManage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUserManage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUserManage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUserManage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUserManage.FillColor = System.Drawing.Color.White;
-            this.btnUserManage.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.btnUserManage.Location = new System.Drawing.Point(966, 13);
-            this.btnUserManage.Name = "btnUserManage";
-            this.btnUserManage.Size = new System.Drawing.Size(122, 50);
-            this.btnUserManage.TabIndex = 9;
-            this.btnUserManage.Text = "User Manage";
-            this.btnUserManage.Visible = false;
+            this.miniFlow.Location = new System.Drawing.Point(3, 3);
+            this.miniFlow.Name = "miniFlow";
+            this.miniFlow.Size = new System.Drawing.Size(1323, 258);
+            this.miniFlow.TabIndex = 0;
             // 
             // FBookingForm
             // 
@@ -298,6 +308,7 @@
             this.panelTop.PerformLayout();
             this.guna2ContainerControl1.ResumeLayout(false);
             this.guna2ContainerControl1.PerformLayout();
+            this.flowPanel.ResumeLayout(false);
             this.panelBottom.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -320,5 +331,6 @@
         public System.Windows.Forms.FlowLayoutPanel flowPanel;
         private UCTerminal ucTerminal;
         private Guna.UI2.WinForms.Guna2Button btnUserManage;
+        private System.Windows.Forms.FlowLayoutPanel miniFlow;
     }
 }

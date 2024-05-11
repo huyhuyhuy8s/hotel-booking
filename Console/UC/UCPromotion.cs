@@ -38,7 +38,7 @@ namespace Console.UC
         //    get { return _tablepanel; }
         //    set { _tablepanel = value; }
         //}
-        public TableLayoutPanel TablePanel
+        public FlowLayoutPanel TablePanel
         {
             get { return tablePanel; }
             set { tablePanel = value; }

@@ -9,6 +9,10 @@ using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using System.ComponentModel;
 using System.Reflection;
+using System.Data.SqlClient;
+using System.Diagnostics;
+using System.IO;
+using System.Data;
 
 namespace Console
 {
@@ -57,6 +61,52 @@ namespace Console
         public static int? id;
         public static DateTime start;
         public static DateTime end;
+
+        public static void displayPicture(SqlDataReader reader, int id, PictureBox pbPicture)
+        {
+            if (!reader.IsDBNull(id))
+            {
+                byte[] pic = (byte[])reader.GetValue(id);
+                using (var stream = new MemoryStream(pic))
+                {
+                    pbPicture.Image = System.Drawing.Image.FromStream(stream);
+                }
+            }
+        }
+
+        public static void addPic(string para, PictureBox pb, SqlParameterCollection parameter)
+        {
+            if (pb.Image != null)
+            {
+                MemoryStream ms = new MemoryStream();
+                pb.Image.Save(ms, pb.Image.RawFormat);
+                parameter.AddWithValue(para, ms.ToArray());
+            }
+            else
+            {
+                SqlParameter imageParameter = new SqlParameter(para, SqlDbType.Image);
+                imageParameter.Value = DBNull.Value;
+                parameter.Add(imageParameter);
+            }
+        }
+
+        public static void updatePic(SqlParameter para, PictureBox pb, SqlParameterCollection parameter)
+        {
+            if (pb.Image != null)
+            {
+                MemoryStream ms = new MemoryStream();
+                pb.Image.Save(ms, pb.Image.RawFormat);
+                para.Value = ms.ToArray();
+                parameter.Add(para);
+            }
+            else
+            {
+                para.Value = DBNull.Value;
+                parameter.Add(para);
+            }
+        }
+
+        #region Interior
         public static Bitmap InteriorPicture(int j)
         {
             switch (j)
@@ -129,6 +179,115 @@ namespace Console
                     return "";
             }
         }
+        #endregion
+
+        #region Type
+        public static int Reverse_RoomType(string roomtype)
+        {
+            switch(roomtype)
+            {
+                case "Standard":
+                    return 1;
+                case "Superior":
+                    return 2;
+                case "Deluxe":
+                    return 3;
+                case "Connection Room":
+                    return 4;
+                case "Mini Suite":
+                    return 5;
+                case "Studio Room":
+                    return 6;
+                case "Suite":
+                    return 7;
+                case "Queen Room":
+                    return 8;
+                case "King Room":
+                    return 9;
+                case "President Room":
+                    return 10;
+                default:
+                    return 0;
+            }
+        }
+        public static string RoomType(int roomid)
+        {
+            switch(roomid)
+            {
+                case 1:
+                    return "Standard";
+                case 2:
+                    return "Superior";
+                case 3:
+                    return "Deluxe";
+                case 4:
+                    return "Connection Room";
+                case 5:
+                    return "Mini Suite";
+                case 6:
+                    return "Studio Room";
+                case 7:
+                    return "Suite";
+                case 8:
+                    return "Queen Room";
+                case 9:
+                    return "King Room";
+                case 10:
+                    return "President Room";
+                default:
+                    return "";
+            }
+        }
+        public static int Reverse_TypeHotel(string hoteltype)
+        {
+            switch (hoteltype)
+            {
+                case "Hotel":
+                    return 1;
+                case "Motel":
+                    return 2;
+                case "Camping":
+                    return 3;
+                case "B&B":
+                    return 4;
+                case "Guest House":
+                    return 5;
+                case "Homestay":
+                    return 6;
+                case "Villa":
+                    return 7;
+                case "Apartment":
+                    return 8;
+                default:
+                    return 0;
+            }
+        }
+        public static string TypeHotel(int hoteltype)
+        {
+            switch (hoteltype)
+            {
+                case 1:
+                    return "Hotel";
+                case 2:
+                    return "Motel";
+                case 3:
+                    return "Camping";
+                case 4:
+                    return "B&B";
+                case 5:
+                    return "Guest House";
+                case 6:
+                    return "Homestay";
+                case 7:
+                    return "Villa";
+                case 8:
+                    return "Apartment";
+                default:
+                    return "";
+            }
+        }
+        #endregion
+
         public static void LabelChangeInt(System.Windows.Forms.Label lbl, int a)
         {
             lbl.Text = a.ToString();
@@ -152,6 +311,51 @@ namespace Console
             EventHandlerList list = (EventHandlerList)pi.GetValue(b, null);
             list.RemoveHandler(obj, list[obj]);
         }
-    }
 
+        #region SQL Query
+        public static SqlDataReader SqlRead(string query)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            return cmd.ExecuteReader();
+        }
+        public static int SqlUpdate(string query)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            int a = cmd.ExecuteNonQuery();
+            conn.Close();
+            return a;
+        }
+        public static int SqlScalar(string query)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
+            int o;
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = query;
+                o = (int)cmd.ExecuteScalar();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return o;
+        }
+        #endregion
+    }
 }

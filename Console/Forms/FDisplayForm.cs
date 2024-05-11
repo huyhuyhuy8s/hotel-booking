@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using Console.UC;
+using Guna.UI2.WinForms;
 using RJCodeAdvance.RJControls;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,12 @@ namespace Console
         FManageRoom fmanageRoom = new FManageRoom();
         HotelAssignmentForm hotelForm = new HotelAssignmentForm();
         FBookingRoom fBookingRoom = new FBookingRoom();
+
+        //<Manager Form INSIDE
+        UCRoomManage roomManage = new UCRoomManage();
+        UCRoomSetup roomSetup = new UCRoomSetup();
+        UCHotelSetting hotelSetting = new UCHotelSetting();
+        UCStatisticRoom statisticRoom = new UCStatisticRoom();
         #endregion
 
         #region Necessary Functions
@@ -39,16 +46,24 @@ namespace Console
         {
             InitializeComponent();
             BookingForm_Load();
+            roomManage.AddRoom.Click += new EventHandler(MF_RoomSetup_Click);
+            statisticRoom.DTDateFrom.Value = DateTime.Now.AddYears(-1);
+            statisticRoom.DTDateTo.Value = DateTime.Now;
+            statisticRoom.SearchValue();
             //LoadForm(fshowRoom, panelShow);
         }
 
         #region Booking Room
+        private void BookingRoom_ShowRoom(object sender, EventArgs e)
+        {
+            LoadForm(fshowRoom, panelShow);
+        }
         private void BookingRoom_Click(object sender, EventArgs e)
         {
             Guna2Button btn = sender as Guna2Button;
             UCShowroom uc = btn.Parent.Parent as UCShowroom;
             fBookingRoom.InsertData(Int32.Parse(uc.LblHotelId)); //Room ID
-            fBookingRoom.Back.Click += new EventHandler(SearchForm_SearchClick);
+            fBookingRoom.Back.Click += new EventHandler(BookingRoom_ShowRoom);
             fBookingRoom.BTNReturn.Click += new EventHandler(BookingForm_Click);
             LoadForm(fBookingRoom, panelShow);
         }
@@ -81,14 +96,33 @@ namespace Console
         #endregion
 
         #region Show Room
-        public void ShowRoom_Load(string hotelId)
+        public void ShowRoom_SearchForm(object sender, EventArgs e)
         {
-            fshowRoom.InsertData(hotelId);
-            fshowRoom.Back.Click += new EventHandler(SearchForm_SearchClick);
+            if (fshowRoom.Terminal.CBProvince.SelectedItem == null) { MessageBox.Show("Please select Location"); return; }
+            else if (fshowRoom.Terminal.DTCheckIn.Value.Date < DateTime.Now.Date || fshowRoom.Terminal.DTCheckOut.Value.Date < DateTime.Now.Date) { MessageBox.Show("Your Check in/out date are in the pass\n Please check again"); return; }
+            else if (fshowRoom.Terminal.DTCheckOut.Value.Date < fshowRoom.Terminal.DTCheckIn.Value.Date) { MessageBox.Show("Check in date are larger check out date!"); return; }
+            fsearchForm.InsertData(fshowRoom.Terminal.CBProvince.SelectedItem.ToString(), fshowRoom.Terminal.DTCheckIn.Value, fshowRoom.Terminal.DTCheckOut.Value);
+            fsearchForm.Control();
+            CodeEdit.start = fshowRoom.Terminal.DTCheckIn.Value.Date;
+            CodeEdit.end = fshowRoom.Terminal.DTCheckOut.Value.Date;
+            if (logged) SearchForm_Signed();
+            SearchForm_Load();
+        }
+        public void ShowRoom_Inserted()
+        {
             foreach (UCShowroom uc in fshowRoom.FlowPanel.Controls)
             {
                 uc.ShowHotel.Click += new EventHandler(BookingRoom_Click);
             }
+        }
+        public void ShowRoom_Load(string hotelId, string location, DateTime checkin, DateTime checkout)
+        {
+            //Terminal in Show room
+            fshowRoom.InsertData(hotelId, location, checkin, checkout);
+            fshowRoom.Terminal.BTNSearch.Click += new EventHandler(ShowRoom_SearchForm);
+
+            fshowRoom.Back.Click += new EventHandler(SearchForm_SearchClick);
+            ShowRoom_Inserted();
             fshowRoom.Return.Click += new EventHandler(BookingForm_Click);
             LoadForm(fshowRoom, panelShow);
         }
@@ -100,6 +134,7 @@ namespace Console
             if (logged) SearchForm_Signed();
             else fsearchForm.CreateSignIn(); //SignIn and SignUp button rebuild
             fsearchForm.Terminal.BTNSearch.Click += new System.EventHandler(SearchForm_SearchClick);
+            fsearchForm.Return.Click += new EventHandler(BookingForm_Click);
             LoadForm(fsearchForm, panelShow);
         }
         private void SearchForm_LogOut(object sender, EventArgs e)
@@ -121,10 +156,12 @@ namespace Console
         public void SearchForm_SearchClick(object sender, EventArgs e)
         {
             if (fsearchForm.Terminal.CBProvince.SelectedItem == null) { MessageBox.Show("Please select Location"); return; }
-            if (fsearchForm.Terminal.DTCheckIn.Value.Date < DateTime.Now.Date || fsearchForm.Terminal.DTCheckOut.Value.Date < DateTime.Now.Date) { MessageBox.Show("Your Check in/out date are in the pass\n Please check again"); return; }
-            if (fsearchForm.Terminal.DTCheckOut.Value.Date < fsearchForm.Terminal.DTCheckIn.Value.Date) { MessageBox.Show("Check in date are larger check out date!"); return; }
+            else if (fsearchForm.Terminal.DTCheckIn.Value.Date < DateTime.Now.Date || fsearchForm.Terminal.DTCheckOut.Value.Date < DateTime.Now.Date) { MessageBox.Show("Your Check in/out date are in the pass\n Please check again"); return; }
+            else if (fsearchForm.Terminal.DTCheckOut.Value.Date < fsearchForm.Terminal.DTCheckIn.Value.Date) { MessageBox.Show("Check in date are larger check out date!"); return; }
             fsearchForm.InsertData(fsearchForm.Terminal.CBProvince.SelectedItem.ToString(), fsearchForm.Terminal.DTCheckIn.Value, fsearchForm.Terminal.DTCheckOut.Value);
             fsearchForm.Control();
+            CodeEdit.start = fsearchForm.Terminal.DTCheckIn.Value.Date;
+            CodeEdit.end = fsearchForm.Terminal.DTCheckOut.Value.Date;
             if (logged) SearchForm_Signed();
             LoadForm(fsearchForm, panelShow);
         }
@@ -134,9 +171,9 @@ namespace Console
         private void BookingForm_SearchClick(object sender, EventArgs e)
         {
             if (fbookingForm.Terminal.CBProvince.SelectedItem == null) { MessageBox.Show("Please select Location"); return; }
-            if (fbookingForm.Terminal.DTCheckIn.Value.Date < DateTime.Now.Date || fbookingForm.Terminal.DTCheckOut.Value.Date < DateTime.Now.Date) { MessageBox.Show("Your Check in/out date are in the pass\n Please check again"); return; }
-            if (fbookingForm.Terminal.DTCheckOut.Value.Date < fbookingForm.Terminal.DTCheckIn.Value.Date) { MessageBox.Show("Check in date are larger check out date!"); return; }
-            fsearchForm.InsertData(fbookingForm.Terminal.CBProvince.SelectedItem.ToString(), fbookingForm.Terminal.DTCheckIn.Value, fbookingForm.Terminal.DTCheckOut.Value);
+            else if (fbookingForm.Terminal.DTCheckIn.Value.Date < DateTime.Now.Date || fbookingForm.Terminal.DTCheckOut.Value.Date < DateTime.Now.Date) { MessageBox.Show("Your Check in/out date are in the pass\n Please check again"); return; }
+            else if (fbookingForm.Terminal.DTCheckOut.Value.Date < fbookingForm.Terminal.DTCheckIn.Value.Date) { MessageBox.Show("Check in date are larger check out date!"); return; }
+            fsearchForm.InsertData(fbookingForm.Terminal.CBProvince.Texts.ToString(), fbookingForm.Terminal.DTCheckIn.Value, fbookingForm.Terminal.DTCheckOut.Value);
             fsearchForm.Control();
             CodeEdit.start = fbookingForm.Terminal.DTCheckIn.Value.Date;
             CodeEdit.end = fbookingForm.Terminal.DTCheckOut.Value.Date;
@@ -155,6 +192,7 @@ namespace Console
         private void BookingForm_Click(object sender, EventArgs e)
         {
             if (logged) BookingForm_Signed();
+            else BookingForm_LoggedOut();
             LoadForm(fbookingForm,panelShow);
         }
         //Signed
@@ -175,22 +213,32 @@ namespace Console
             fbookingForm.ReLoad();
             fbookingForm.UserManage.Click += new EventHandler(ManageRoom_Click);
         }
-        private void BookingForm_LogOut(object sender, EventArgs e)
+        private void BookingForm_LoggedOut()
         {
             logged = false;
             id = null;
             BookingForm_Load();
         }
+        private void BookingForm_LogOut(object sender, EventArgs e)
+        {
+            BookingForm_LoggedOut();
+        }
         #endregion
 
         #region Manager Form
+        private void ManagerForm_ButtonReset(Guna2Button btn)
+        {
+            foreach (Control c in fmanagerForm.CCTop.Controls)
+            {
+                if (c is Guna2Button)
+                {
+                    if (!c.Enabled && (Guna2Button)c != btn) c.Enabled = true;
+                    if ((Guna2Button)c == btn) c.Enabled = false;
+                }
+            }
+        }
         //Manager
         private void ManagerForm_Load()
-        {
-            fmanagerForm.Back.Click += new System.EventHandler(BookingForm_Click);
-            LoadForm(fmanagerForm, panelShow);
-        }
-        private void ManagerForm_Click(object sender, EventArgs e)
         {
             try
             {
@@ -213,10 +261,51 @@ namespace Console
             {
                 connection.Close();
             }
+            roomSetup.HotelUpdate();
+            hotelSetting.HotelUpdate();
+            statisticRoom.InsertData();
+            statisticRoom.UCStatisticRoom_ReLoad();
+
             fmanagerForm.Back.Click += new System.EventHandler(BookingForm_Click);
+            fmanagerForm.RoomManage.Click += new EventHandler(MF_RoomManage_Click);
+            fmanagerForm.HotelSetting.Click += new EventHandler(MF_HotelSetting_Click);
+            fmanagerForm.RoomSetup.Click += new EventHandler(MF_RoomSetup_Click);
+            fmanagerForm.Home.Click += new EventHandler(ManagerForm_Click);
+
+            ManagerForm_ButtonReset(fmanagerForm.Home);
+            fmanagerForm.PanelManager.Controls.Clear();
+            fmanagerForm.PanelManager.Controls.Add(statisticRoom);
             LoadForm(fmanagerForm, panelShow);
+        }
+        private void ManagerForm_Click(object sender, EventArgs e)
+        {
+            ManagerForm_Load();
         }
         #endregion
 
+        #region Manage INSIDE
+        private void MF_RoomManage_Click(object sender, EventArgs e)
+        {
+            ManagerForm_ButtonReset(fmanagerForm.RoomManage);
+            fmanagerForm.PanelManager.Controls.Clear();
+            fmanagerForm.PanelManager.Controls.Add(roomManage);
+            roomManage.RoomManage_Load();
+        }
+
+        private void MF_HotelSetting_Click(Object sender, EventArgs e)
+        {
+            ManagerForm_ButtonReset(fmanagerForm.HotelSetting);
+            fmanagerForm.PanelManager.Controls.Clear();
+            fmanagerForm.PanelManager.Controls.Add(hotelSetting);
+            hotelSetting.HotelSetting_Load();
+        }
+        private void MF_RoomSetup_Click(Object sender, EventArgs e)
+        {
+            ManagerForm_ButtonReset(fmanagerForm.RoomSetup);
+            fmanagerForm.PanelManager.Controls.Clear();
+            fmanagerForm.PanelManager.Controls.Add(roomSetup);
+            roomSetup.RoomSetup_Load();
+        }
+        #endregion
     }
 }

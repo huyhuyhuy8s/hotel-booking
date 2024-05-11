@@ -52,6 +52,7 @@
             this.pbInterior1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pbRoomPic = new System.Windows.Forms.PictureBox();
             this.lblHotelId = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelInfor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoomBed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoomPerson)).BeginInit();
@@ -69,7 +70,7 @@
             this.lblHotelName.AutoSize = true;
             this.lblHotelName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblHotelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.lblHotelName.Location = new System.Drawing.Point(27, 6);
+            this.lblHotelName.Location = new System.Drawing.Point(14, 6);
             this.lblHotelName.Name = "lblHotelName";
             this.lblHotelName.Size = new System.Drawing.Size(65, 25);
             this.lblHotelName.TabIndex = 0;
@@ -121,6 +122,7 @@
             // panelInfor
             // 
             this.panelInfor.BackColor = System.Drawing.Color.White;
+            this.panelInfor.Controls.Add(this.label1);
             this.panelInfor.Controls.Add(this.lblPrice);
             this.panelInfor.Controls.Add(this.panel2);
             this.panelInfor.Controls.Add(this.btnShowHotel);
@@ -141,7 +143,7 @@
             this.panelInfor.Controls.Add(this.lblInterior2);
             this.panelInfor.Controls.Add(this.pbInterior1);
             this.panelInfor.Controls.Add(this.lblInterior1);
-            this.panelInfor.Location = new System.Drawing.Point(241, 43);
+            this.panelInfor.Location = new System.Drawing.Point(228, 43);
             this.panelInfor.Name = "panelInfor";
             this.panelInfor.Size = new System.Drawing.Size(768, 199);
             this.panelInfor.TabIndex = 16;
@@ -316,7 +318,7 @@
             // pbRoomPic
             // 
             this.pbRoomPic.BackColor = System.Drawing.Color.White;
-            this.pbRoomPic.Location = new System.Drawing.Point(34, 43);
+            this.pbRoomPic.Location = new System.Drawing.Point(21, 43);
             this.pbRoomPic.Name = "pbRoomPic";
             this.pbRoomPic.Size = new System.Drawing.Size(158, 199);
             this.pbRoomPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -327,12 +329,23 @@
             // 
             this.lblHotelId.AutoSize = true;
             this.lblHotelId.Enabled = false;
-            this.lblHotelId.Location = new System.Drawing.Point(974, 11);
+            this.lblHotelId.Location = new System.Drawing.Point(961, 11);
             this.lblHotelId.Name = "lblHotelId";
             this.lblHotelId.Size = new System.Drawing.Size(35, 13);
             this.lblHotelId.TabIndex = 17;
             this.lblHotelId.Text = "label1";
             this.lblHotelId.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.label1.Location = new System.Drawing.Point(644, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 20);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Special Offer";
             // 
             // UCShowroom
             // 
@@ -344,7 +357,7 @@
             this.Controls.Add(this.pbRoomPic);
             this.Controls.Add(this.lblHotelName);
             this.Name = "UCShowroom";
-            this.Size = new System.Drawing.Size(1051, 257);
+            this.Size = new System.Drawing.Size(1021, 257);
             this.panelInfor.ResumeLayout(false);
             this.panelInfor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoomBed)).EndInit();
@@ -387,5 +400,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblHotelId;
+        private System.Windows.Forms.Label label1;
     }
 }

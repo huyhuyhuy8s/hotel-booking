@@ -9,9 +9,12 @@ using System.Linq;
 using System.Management;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static System.Windows.Forms.MonthCalendar;
+using Image = System.Drawing.Image;
 
 namespace Console
 {
@@ -65,6 +68,28 @@ namespace Console
             {
                 connection.Close();
             }
+
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "SELECT Name FROM Province;";
+                cmd.Connection = connection;
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    cbProvince.Items.Add(dr[0]);
+                }
+
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         #region SIGNUP
@@ -72,7 +97,7 @@ namespace Console
         {
             try
             {
-                if (txtName.Text == "" || cbType.SelectedItem == null || txtDescription.Text == "" 
+                if (txtName.Text == "" || cbType.SelectedItem == null || txtDescription.Text == "" || cbStar.SelectedItem == null 
                     || cbProvince.SelectedItem == null || txtAddress.Text == "" || txtHotline.Text == "") return;
                 // Ket noi
                 connection.Open();
@@ -80,26 +105,22 @@ namespace Console
                 cmd.Connection = connection;
                 cmd.CommandText = "DECLARE @id INT = (SELECT count(1) FROM Hotel);" +
                     "SELECT @id = SUM (@id + 1);" +
-                    "INSERT INTO Hotel VALUES (@id, @name, @address, @province, @description, @type, @image, @hotline)" +
+                    "INSERT INTO Hotel VALUES (@id, @name, @address, @province, @description, @type, @image, @image2, @image3, @image4, @image5, @hotline, @star)" +
                     "INSERT INTO HotelOwn VALUES (@person, @id);" +
                     "UPDATE Person SET PersonManager = 1 WHERE PersonId = @person";
 
                 SqlParameterCollection parameter = cmd.Parameters;
 
-                if (pbPicture.Image != null)
-                {
-                    MemoryStream ms = new MemoryStream();
-                    pbPicture.Image.Save(ms, pbPicture.Image.RawFormat);
-                    parameter.AddWithValue("@image", ms.ToArray());
-                }
-                else
-                {
-                    parameter.AddWithValue("@image", null);
-                }
+                CodeEdit.addPic("@image", pbPicture, parameter);
+                CodeEdit.addPic("@image2", pbPicture2, parameter);
+                CodeEdit.addPic("@image3", pbPicture3, parameter);
+                CodeEdit.addPic("@image4", pbPicture4, parameter);
+                CodeEdit.addPic("@image5", pbPicture5, parameter);
 
                 parameter.AddWithValue("@person", CodeEdit.id);
                 parameter.AddWithValue("@name", txtName.Text);
                 parameter.AddWithValue("@type", Int32.Parse(cbType.SelectedIndex.ToString()) + 1);
+                parameter.AddWithValue("@star", Int32.Parse(cbStar.SelectedIndex.ToString()) + 1);
                 parameter.AddWithValue("@description", txtDescription.Text);
                 parameter.AddWithValue("@address", txtAddress.Text);
                 parameter.AddWithValue("@province", cbProvince.SelectedItem.ToString());
@@ -126,12 +147,31 @@ namespace Console
         #region Browse Image
         private void btnBrowse_Click(object sender, EventArgs e)
         {
-            OpenFileDialog opf = new OpenFileDialog();
-            opf.Filter = "Select Image(*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Please select upto 5 hotel images";
+            ofd.Multiselect = true;
+            ofd.Filter = "Select Image(*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
+            DialogResult dr = ofd.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
             {
-                if ((opf.ShowDialog() == DialogResult.OK))
+                string[]files = ofd.FileNames;
+                int count = 0;
+                foreach (string filename in files)
                 {
-                    pbPicture.Image = Image.FromFile(opf.FileName);
+                    switch (count)
+                    {
+                        case 0:
+                            pbPicture.Image = Image.FromFile(filename); break;
+                        case 1:
+                            pbPicture2.Image = Image.FromFile(filename); break;
+                        case 2:
+                            pbPicture3.Image = Image.FromFile(filename); break;
+                        case 3:
+                            pbPicture4.Image = Image.FromFile(filename); break;
+                        case 4:
+                            pbPicture5.Image = Image.FromFile(filename); break;
+                    }
+                    count++;
                 }
             }
         }

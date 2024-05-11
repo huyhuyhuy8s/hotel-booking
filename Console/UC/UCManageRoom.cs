@@ -19,6 +19,11 @@ namespace Console
         }
 
         #region GET & SET
+        public Label RoomName
+        {
+            get { return lblRoomName; }
+            set { lblRoomName = value; }
+        }
         public Label Order
         {
             get { return lblOrderId; }
@@ -54,7 +59,7 @@ namespace Console
             get { return lblCanceled; }
             set { lblCanceled = value; }
         }
-        public PictureBox PBPictureBox
+        public Guna2PictureBox PBPictureBox
         {
             get { return pbRoomPicture; }
             set { pbRoomPicture = value; }

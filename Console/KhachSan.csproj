@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C5BADC5A-2D34-4964-9014-5DFB0EDBA5F6}</ProjectGuid>
@@ -27,6 +29,8 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,27 +54,34 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Guna.Charts.WinForms, Version=1.0.9.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.Charts.WinForms.1.0.9\lib\net472\Guna.Charts.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -109,6 +120,12 @@
     <Compile Include="Forms\FManageRoom.designer.cs">
       <DependentUpon>FManageRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FOrderReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FOrderReason.Designer.cs">
+      <DependentUpon>FOrderReason.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FSearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,11 +157,82 @@
     <Compile Include="Forms\FOrder.Designer.cs">
       <DependentUpon>FOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Hotel.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KhachSanModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KhachSanModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KhachSanModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KhachSanModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KhachSanModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Person.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PersonOrder.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Province.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Room.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagram.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TypeHotel.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TypeRoom.cs">
+      <DependentUpon>KhachSanModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="UC\UCFavoriteProvince.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCFavoriteProvince.Designer.cs">
+      <DependentUpon>UCFavoriteProvince.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCHotelSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCHotelSetting.Designer.cs">
+      <DependentUpon>UCHotelSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCManageRoom.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\UCManageRoom.Designer.cs">
       <DependentUpon>UCManageRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCRoomManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCRoomManage.Designer.cs">
+      <DependentUpon>UCRoomManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCRoomManageValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCRoomManageValue.Designer.cs">
+      <DependentUpon>UCRoomManageValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCShowHotel2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCShowHotel2.Designer.cs">
+      <DependentUpon>UCShowHotel2.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCShowroom.cs">
       <SubType>UserControl</SubType>
@@ -214,6 +302,12 @@
     <Compile Include="UC\UCPeople.Designer.cs">
       <DependentUpon>UCPeople.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCStatisticRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCStatisticRoom.Designer.cs">
+      <DependentUpon>UCStatisticRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCTerminal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -232,6 +326,9 @@
     <EmbeddedResource Include="Forms\FManageRoom.resx">
       <DependentUpon>FManageRoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FOrderReason.resx">
+      <DependentUpon>FOrderReason.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FSearchForm.resx">
       <DependentUpon>FSearchForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,8 +344,45 @@
     <EmbeddedResource Include="Forms\FOrder.resx">
       <DependentUpon>FOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Console.FBookingForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.FBookingRoom.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.FDisplayForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.FManagerForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.FManageRoom.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.FOrder.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.FOrderReason.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.FSearchForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.FShowRoom.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.HotelAssignmentForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.SignIn.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.SignUp.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.UC.UCExplore.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.UC.UCExploreValue.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.UC.UCPromotion.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.UC.UCPromotionValue.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.UCLocation.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.UCManageRoom.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.UCPeople.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.UCRoomSetup.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.UCShowhotel.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.UCShowHotel2.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.UCShowroom.resources" />
+    <EmbeddedResource Include="obj\Debug\Console.UCTerminal.resources" />
+    <EmbeddedResource Include="UC\UCFavoriteProvince.resx">
+      <DependentUpon>UCFavoriteProvince.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCHotelSetting.resx">
+      <DependentUpon>UCHotelSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCManageRoom.resx">
       <DependentUpon>UCManageRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCRoomManage.resx">
+      <DependentUpon>UCRoomManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCRoomManageValue.resx">
+      <DependentUpon>UCRoomManageValue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCShowhotel.resx">
       <DependentUpon>UCShowhotel.cs</DependentUpon>
@@ -290,14 +424,87 @@
     <EmbeddedResource Include="UC\UCPeople.resx">
       <DependentUpon>UCPeople.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCShowHotel2.resx">
+      <DependentUpon>UCShowHotel2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCShowroom.resx">
       <DependentUpon>UCShowroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCStatisticRoom.resx">
+      <DependentUpon>UCStatisticRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCTerminal.resx">
       <DependentUpon>UCTerminal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />
+    <None Include="bin\Debug\Console.exe.config" />
+    <EntityDeploy Include="Model\KhachSanModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KhachSanModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\KhachSanModel.edmx.diagram">
+      <DependentUpon>KhachSanModel.edmx</DependentUpon>
+    </None>
+    <None Include="obj\Debug\Console.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\Console.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Console.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\Console.csproj.Up2Date" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\Model\KhachSanModel.csdl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\Model\KhachSanModel.msl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\Model\KhachSanModel.ssdl" />
+    <None Include="obj\Debug\KhachSan.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\KhachSan.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\KhachSan.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\KhachSan.csproj.Up2Date" />
+    <None Include="obj\Release\Console.csproj.AssemblyReference.cache" />
+    <None Include="obj\Release\KhachSan.csproj.AssemblyReference.cache" />
     <None Include="packages.config" />
+    <None Include="packages\EntityFramework.6.4.4\.signature.p7s" />
+    <None Include="packages\EntityFramework.6.4.4\buildTransitive\EntityFramework.props" />
+    <None Include="packages\EntityFramework.6.4.4\buildTransitive\EntityFramework.targets" />
+    <None Include="packages\EntityFramework.6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props" />
+    <None Include="packages\EntityFramework.6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.targets" />
+    <None Include="packages\EntityFramework.6.4.4\build\EntityFramework.DefaultItems.props" />
+    <None Include="packages\EntityFramework.6.4.4\build\EntityFramework.props" />
+    <None Include="packages\EntityFramework.6.4.4\build\EntityFramework.targets" />
+    <None Include="packages\EntityFramework.6.4.4\build\netcoreapp3.0\EntityFramework.props" />
+    <None Include="packages\EntityFramework.6.4.4\build\netcoreapp3.0\EntityFramework.targets" />
+    <None Include="packages\EntityFramework.6.4.4\content\net40\App.config.install.xdt" />
+    <None Include="packages\EntityFramework.6.4.4\content\net40\App.config.transform" />
+    <None Include="packages\EntityFramework.6.4.4\content\net40\Web.config.install.xdt" />
+    <None Include="packages\EntityFramework.6.4.4\content\net40\Web.config.transform" />
+    <None Include="packages\EntityFramework.6.4.4\EntityFramework.6.4.4.nupkg" />
+    <None Include="packages\EntityFramework.6.4.4\tools\EntityFramework6.PS2.psd1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\EntityFramework6.PS2.psm1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\EntityFramework6.psd1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\EntityFramework6.psm1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\init.ps1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\install.ps1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\netcoreapp3.0\any\ef6.runtimeconfig.json" />
+    <None Include="packages\Guna.Charts.WinForms.1.0.9\.signature.p7s" />
+    <None Include="packages\Guna.Charts.WinForms.1.0.9\Guna.Charts.WinForms.1.0.9.nupkg" />
+    <None Include="packages\Guna.Charts.WinForms.1.0.9\README.md" />
+    <None Include="packages\Guna.UI2.WinForms.2.0.4.6\.signature.p7s" />
+    <None Include="packages\Guna.UI2.WinForms.2.0.4.6\Guna.UI2.WinForms.2.0.4.6.nupkg" />
+    <None Include="packages\Guna.UI2.WinForms.2.0.4.6\README.md" />
+    <None Include="packages\RJCodeAdvance.RJControls.1.0.0\.signature.p7s" />
+    <None Include="packages\RJCodeAdvance.RJControls.1.0.0\RJCodeAdvance.RJControls.1.0.0.nupkg" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\.signature.p7s" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\lib\MonoAndroid10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\lib\MonoTouch10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\lib\xamarinios10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\lib\xamarinmac20\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\lib\xamarintvos10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\lib\xamarinwatchos10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\ref\MonoAndroid10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\ref\MonoTouch10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\ref\xamarinios10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\ref\xamarinmac20\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\ref\xamarintvos10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\ref\xamarinwatchos10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.6\System.Data.SqlClient.4.8.6.nupkg" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -328,6 +535,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Release\" />
     <Folder Include="Database\" />
   </ItemGroup>
   <ItemGroup>
@@ -402,5 +610,176 @@
   <ItemGroup>
     <None Include="Resources\Hotel 7.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Console.exe" />
+    <Content Include="bin\Debug\Console.pdb" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\Guna.Charts.WinForms.dll" />
+    <Content Include="bin\Debug\Guna.Charts.WinForms.xml" />
+    <Content Include="bin\Debug\Guna.UI2.dll" />
+    <Content Include="bin\Debug\RJCodeAdvance.RJControls.dll" />
+    <Content Include="bin\Debug\System.Data.SqlClient.dll" />
+    <Content Include="bin\Debug\System.Data.SqlClient.xml" />
+    <Content Include="Model\KhachSanModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KhachSanModel.edmx</DependentUpon>
+      <LastGenOutput>KhachSanModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\KhachSanModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KhachSanModel.edmx</DependentUpon>
+      <LastGenOutput>KhachSanModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="obj\Debug\Console.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Console.exe" />
+    <Content Include="obj\Debug\Console.pdb" />
+    <Content Include="obj\Debug\KhachSan.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TempPE\Database.RoomsDataSet.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\DBContext.Context.cs.dll" />
+    <Content Include="obj\Debug\TempPE\DBContext.cs.dll" />
+    <Content Include="obj\Debug\TempPE\DBContext.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Model.KhachSanModel.Context.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Model.KhachSanModel.Context1.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Model.KhachSanModel.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Model.KhachSanModel.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Model.KhachSanModel1.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Model.KhachSanModel1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Model.TypeRoom.Context.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Model.TypeRoom.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Model.TypeRoom1.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\RoomsDataSet.Designer.cs.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\build\Microsoft.Data.Entity.Build.Tasks.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\Icon.png" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net40\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net40\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net40\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net40\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net45\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\netstandard2.1\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\netstandard2.1\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\netstandard2.1\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\netstandard2.1\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\about_EntityFramework6.help.txt" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net40\any\ef6.exe" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net40\any\ef6.pdb" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net40\win-x86\ef6.exe" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net40\win-x86\ef6.pdb" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net45\any\ef6.exe" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net45\any\ef6.pdb" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net45\win-x86\ef6.exe" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net45\win-x86\ef6.pdb" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\netcoreapp3.0\any\ef6.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\netcoreapp3.0\any\ef6.pdb" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\icon.png" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net40\Guna.Charts.WinForms.dll" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net40\Guna.Charts.WinForms.xml" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net45\Guna.Charts.WinForms.dll" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net45\Guna.Charts.WinForms.xml" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net461\Guna.Charts.WinForms.dll" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net461\Guna.Charts.WinForms.xml" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net472\Guna.Charts.WinForms.dll" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net472\Guna.Charts.WinForms.xml" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net48\Guna.Charts.WinForms.dll" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net48\Guna.Charts.WinForms.xml" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net6.0-windows7.0\Guna.Charts.WinForms.dll" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net6.0-windows7.0\Guna.Charts.WinForms.xml" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net7.0-windows7.0\Guna.Charts.WinForms.dll" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\net7.0-windows7.0\Guna.Charts.WinForms.xml" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\netcoreapp3.1\Guna.Charts.WinForms.dll" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\lib\netcoreapp3.1\Guna.Charts.WinForms.xml" />
+    <Content Include="packages\Guna.Charts.WinForms.1.0.9\LICENSE.txt" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.6\icon.png" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.6\lib\net40\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.6\lib\net45\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.6\lib\net461\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.6\lib\net6.0-windows7.0\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.6\lib\net7.0-windows7.0\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.6\lib\netcoreapp3.1\Guna.UI2.dll" />
+    <Content Include="packages\Guna.UI2.WinForms.2.0.4.6\LICENSE.txt" />
+    <Content Include="packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\Icon.png" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\lib\net451\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\lib\net46\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\lib\netstandard1.2\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\lib\netstandard1.2\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\lib\netstandard1.3\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\LICENSE.TXT" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\net451\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\net461\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\net461\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\net46\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.2\de\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.2\es\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.2\fr\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.2\it\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.2\ja\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.2\ko\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.2\ru\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.2\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.2\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.2\zh-hans\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.2\zh-hant\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.3\de\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.3\es\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.3\fr\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.3\it\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.3\ja\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.3\ko\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.3\ru\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.3\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.3\zh-hans\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard1.3\zh-hant\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\ref\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\win\lib\net451\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\win\lib\net461\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\win\lib\net461\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\win\lib\net46\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Data.SqlClient.4.8.6\version.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

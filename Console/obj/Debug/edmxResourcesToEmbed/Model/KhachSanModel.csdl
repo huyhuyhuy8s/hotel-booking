@@ -54,6 +54,7 @@
     <Property Name="Location4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Location5" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Location6" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Times" Type="Int32" />
   </EntityType>
   <EntityType Name="Room">
     <Key>
@@ -70,6 +71,16 @@
     <Property Name="RoomPicture" Type="Binary" MaxLength="Max" FixedLength="false" />
     <NavigationProperty Name="PersonOrders" Relationship="Self.FK__PersonOrd__RoomI__0880433F" FromRole="Room" ToRole="PersonOrder" />
     <NavigationProperty Name="TypeRoom" Relationship="Self.FK__Room__TypeId__45BE5BA9" FromRole="Room" ToRole="TypeRoom" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="TypeHotel">
     <Key>
@@ -159,6 +170,7 @@
     <EntitySet Name="PersonOrders" EntityType="Self.PersonOrder" />
     <EntitySet Name="Provinces" EntityType="Self.Province" />
     <EntitySet Name="Rooms" EntityType="Self.Room" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="TypeHotels" EntityType="Self.TypeHotel" />
     <EntitySet Name="TypeRooms" EntityType="Self.TypeRoom" />
     <AssociationSet Name="FK__Hotel__HotelType__58D1301D" Association="Self.FK__Hotel__HotelType__58D1301D">

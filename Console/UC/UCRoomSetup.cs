@@ -12,21 +12,27 @@ using System.Windows.Forms;
 
 namespace Console
 {
-    public partial class ucRoomSetup : UserControl
+    public partial class UCRoomSetup : UserControl
     {
         SqlConnection connection = new SqlConnection(Properties.Settings.Default.conn);
-        public ucRoomSetup()
+        int hotel;
+        public UCRoomSetup()
         {
             InitializeComponent();
         }
-        private void RoomSetup_Load(object sender, EventArgs e)
+        public void RoomSetup_Load()
         {
             DTG_LOAD();
             txtType_Load();
         }
-
+        public void HotelUpdate()
+        {
+            string hotelQuery = string.Format("SELECT HotelId FROM HotelOwn WHERE PersonId = {0}", CodeEdit.id);
+            hotel = CodeEdit.SqlScalar(hotelQuery);
+        }
         private void txtType_Load()
         {
+            txtType.Items.Clear();
             try
             {
                 connection.Open();
@@ -55,7 +61,9 @@ namespace Console
             try
             {
                 connection.Open();
-                string sqlStr = string.Format("SELECT * FROM Room");
+                string sqlStr = string.Format("SELECT TypeRoom.NameRoom, RoomNo, RoomName, RoomBed, RoomPerson, RoomPrice, RoomArea FROM " +
+                    "Room LEFT JOIN TypeRoom ON Room.TypeId = TypeRoom.TypeId " +
+                    "WHERE (RoomId / POWER (10, DATALENGTH (CAST (RoomNo AS VARCHAR(MAX))))) = {0}", hotel);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, connection);
                 DataTable dt = new DataTable();
@@ -79,10 +87,10 @@ namespace Console
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (txtType.SelectedItem == null || txtName.Text == "" || txtNo.Text == "" || txtBed.Text == "" || txtPerson.Text == "" || txtPrice.Text == ""
+                || txtArea.Text == "") return;
             try
             {
-                if (txtType.SelectedValue == null || txtName.Text == "" || txtNo.Text == "" || txtBed.Text == "" || txtPerson.Text == "" || txtPrice.Text == ""
-                    || txtArea.Text == "") return;
                 // Ket noi
                 connection.Open();
                 SqlCommand cmd = new SqlCommand();
@@ -102,7 +110,7 @@ namespace Console
                     parameter.AddWithValue("@image", null);
                 }
 
-                parameter.AddWithValue("@id", DateTime.Now.ToString("ss") + DateTime.Now.ToString("mm"));
+                parameter.AddWithValue("@id", hotel.ToString() + txtNo.Text);
                 parameter.AddWithValue("@type", Int32.Parse(txtType.SelectedIndex.ToString()) + 1);
                 parameter.AddWithValue("@name", txtName.Text);
                 parameter.AddWithValue("@no", txtNo.Text);
@@ -114,7 +122,6 @@ namespace Console
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     MessageBox.Show("Successfully added!");
-                    DTG_LOAD();
                 }
             }
             catch (Exception ex)
