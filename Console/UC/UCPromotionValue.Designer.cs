@@ -30,6 +30,7 @@ namespace Console.UC
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCPromotionValue));
             this.pbPromotion = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnFind = new Guna.UI2.WinForms.Guna2Button();
             this.lblSubTitle = new Console.GrowLabel();
@@ -42,11 +43,11 @@ namespace Console.UC
             this.pbPromotion.BackColor = System.Drawing.Color.Transparent;
             this.pbPromotion.BorderRadius = 10;
             this.pbPromotion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbPromotion.Image = global::Console.Properties.Resources.color_palette_2;
+            this.pbPromotion.Image = ((System.Drawing.Image)(resources.GetObject("pbPromotion.Image")));
             this.pbPromotion.ImageRotate = 0F;
             this.pbPromotion.Location = new System.Drawing.Point(0, 0);
             this.pbPromotion.Name = "pbPromotion";
-            this.pbPromotion.Size = new System.Drawing.Size(648, 190);
+            this.pbPromotion.Size = new System.Drawing.Size(611, 190);
             this.pbPromotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPromotion.TabIndex = 2;
             this.pbPromotion.TabStop = false;
@@ -73,7 +74,7 @@ namespace Console.UC
             // lblSubTitle
             // 
             this.lblSubTitle.AutoSize = true;
-            this.lblSubTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubTitle.BackColor = System.Drawing.Color.White;
             this.lblSubTitle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblSubTitle.Location = new System.Drawing.Point(17, 38);
@@ -85,7 +86,7 @@ namespace Console.UC
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.BackColor = System.Drawing.Color.White;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
             this.lblTitle.Location = new System.Drawing.Point(17, 17);
@@ -104,7 +105,7 @@ namespace Console.UC
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbPromotion);
             this.Name = "UCPromotionValue";
-            this.Size = new System.Drawing.Size(648, 190);
+            this.Size = new System.Drawing.Size(611, 190);
             ((System.ComponentModel.ISupportInitialize)(this.pbPromotion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -112,10 +113,9 @@ namespace Console.UC
         }
 
         #endregion
-
-        public System.Windows.Forms.Label lblTitle;
-        public System.Windows.Forms.Label lblSubTitle;
         public Guna.UI2.WinForms.Guna2PictureBox pbPromotion;
         public Guna.UI2.WinForms.Guna2Button btnFind;
+        public GrowLabel lblTitle;
+        public GrowLabel lblSubTitle;
     }
 }

@@ -17,7 +17,6 @@ namespace Console
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FDisplayForm());
-            //Application.Run(new FOrderReason());
         }
     }
 }

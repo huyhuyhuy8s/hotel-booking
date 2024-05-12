@@ -50,8 +50,12 @@
             this.btnReturn = new Guna.UI2.WinForms.Guna2Button();
             this.lblBrand = new System.Windows.Forms.Label();
             this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
+            this.ucManageRoom1 = new Console.UCManageRoom();
+            this.ucManageRoom2 = new Console.UCManageRoom();
+            this.ucManageRoom3 = new Console.UCManageRoom();
             this.ccUserInfor.SuspendLayout();
             this.ccBooking.SuspendLayout();
+            this.flowPanel.SuspendLayout();
             this.ccTop.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
@@ -374,9 +378,12 @@
             // 
             this.flowPanel.AutoScroll = true;
             this.flowPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.flowPanel.Controls.Add(this.ucManageRoom3);
+            this.flowPanel.Controls.Add(this.ucManageRoom2);
+            this.flowPanel.Controls.Add(this.ucManageRoom1);
             this.flowPanel.Location = new System.Drawing.Point(481, 160);
             this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Padding = new System.Windows.Forms.Padding(17);
+            this.flowPanel.Padding = new System.Windows.Forms.Padding(17, 0, 17, 17);
             this.flowPanel.Size = new System.Drawing.Size(977, 602);
             this.flowPanel.TabIndex = 9;
             // 
@@ -430,6 +437,27 @@
             this.panelTop.Size = new System.Drawing.Size(1584, 135);
             this.panelTop.TabIndex = 0;
             // 
+            // ucManageRoom1
+            // 
+            this.ucManageRoom1.Location = new System.Drawing.Point(20, 747);
+            this.ucManageRoom1.Name = "ucManageRoom1";
+            this.ucManageRoom1.Size = new System.Drawing.Size(937, 366);
+            this.ucManageRoom1.TabIndex = 0;
+            // 
+            // ucManageRoom2
+            // 
+            this.ucManageRoom2.Location = new System.Drawing.Point(20, 375);
+            this.ucManageRoom2.Name = "ucManageRoom2";
+            this.ucManageRoom2.Size = new System.Drawing.Size(937, 366);
+            this.ucManageRoom2.TabIndex = 1;
+            // 
+            // ucManageRoom3
+            // 
+            this.ucManageRoom3.Location = new System.Drawing.Point(20, 3);
+            this.ucManageRoom3.Name = "ucManageRoom3";
+            this.ucManageRoom3.Size = new System.Drawing.Size(937, 366);
+            this.ucManageRoom3.TabIndex = 2;
+            // 
             // FManageRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,6 +475,7 @@
             this.ccUserInfor.ResumeLayout(false);
             this.ccUserInfor.PerformLayout();
             this.ccBooking.ResumeLayout(false);
+            this.flowPanel.ResumeLayout(false);
             this.ccTop.ResumeLayout(false);
             this.ccTop.PerformLayout();
             this.panelTop.ResumeLayout(false);
@@ -477,5 +506,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private System.Windows.Forms.Label lblPassword;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtDOB;
+        private UCManageRoom ucManageRoom3;
+        private UCManageRoom ucManageRoom2;
+        private UCManageRoom ucManageRoom1;
     }
 }

@@ -29,25 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FSearchForm));
-            this.panelBudget = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbBudget = new System.Windows.Forms.Label();
             this.lbFilter = new System.Windows.Forms.Label();
-            this.trackBar = new System.Windows.Forms.TrackBar();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.checkboxPfilter4 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.checkboxPfilter3 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.checkboxPfilter2 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.checkboxPfilter1 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.lbPopularFilters = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.checkboxPType6 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.checkboxPType5 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.checkboxPType4 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.checkboxPType3 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.checkboxPType2 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.checkboxPType1 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panelStar = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbStar5 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbStar4 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbStar3 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbStar2 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbStar1 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.lblStar = new System.Windows.Forms.Label();
             this.panelChucnang = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnReturn = new Guna.UI2.WinForms.Guna2Button();
             this.btnSignIn = new Guna.UI2.WinForms.Guna2Button();
             this.btnSignUp = new Guna.UI2.WinForms.Guna2Button();
             this.btnAbility4 = new Guna.UI2.WinForms.Guna2Button();
@@ -55,327 +46,171 @@
             this.btnAbility2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnAbility1 = new Guna.UI2.WinForms.Guna2Button();
             this.lblBrand = new System.Windows.Forms.Label();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBox3 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBox4 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CheckBox5 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBox6 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBox7 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBox8 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnClear = new Guna.UI2.WinForms.Guna2Button();
+            this.panelType = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbType8 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbType7 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbType6 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbType5 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbType4 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbType3 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbType2 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.cbType1 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.lblHotelType = new System.Windows.Forms.Label();
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.ucTerminal = new Console.UCTerminal();
-            this.panelBudget.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
+            this.panelStar.SuspendLayout();
             this.panelChucnang.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
+            this.panelType.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelBudget
-            // 
-            this.panelBudget.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panelBudget.BorderThickness = 1;
-            this.panelBudget.Controls.Add(this.lbBudget);
-            this.panelBudget.Controls.Add(this.lbFilter);
-            this.panelBudget.Controls.Add(this.trackBar);
-            this.panelBudget.Location = new System.Drawing.Point(2, 2);
-            this.panelBudget.Margin = new System.Windows.Forms.Padding(2);
-            this.panelBudget.Name = "panelBudget";
-            this.panelBudget.Size = new System.Drawing.Size(232, 119);
-            this.panelBudget.TabIndex = 0;
-            // 
-            // lbBudget
-            // 
-            this.lbBudget.AutoSize = true;
-            this.lbBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbBudget.Location = new System.Drawing.Point(15, 31);
-            this.lbBudget.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbBudget.Name = "lbBudget";
-            this.lbBudget.Size = new System.Drawing.Size(101, 20);
-            this.lbBudget.TabIndex = 15;
-            this.lbBudget.Text = "Your budget:";
             // 
             // lbFilter
             // 
+            this.lbFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbFilter.AutoSize = true;
-            this.lbFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbFilter.Location = new System.Drawing.Point(16, 11);
+            this.lbFilter.BackColor = System.Drawing.Color.Transparent;
+            this.lbFilter.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbFilter.Location = new System.Drawing.Point(2, 0);
             this.lbFilter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbFilter.Name = "lbFilter";
-            this.lbFilter.Size = new System.Drawing.Size(68, 20);
+            this.lbFilter.Size = new System.Drawing.Size(99, 30);
             this.lbFilter.TabIndex = 14;
             this.lbFilter.Text = "Filter by:";
+            this.lbFilter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // trackBar
+            // panelStar
             // 
-            this.trackBar.LargeChange = 10;
-            this.trackBar.Location = new System.Drawing.Point(15, 63);
-            this.trackBar.Margin = new System.Windows.Forms.Padding(2);
-            this.trackBar.Maximum = 200;
-            this.trackBar.Minimum = 1;
-            this.trackBar.Name = "trackBar";
-            this.trackBar.Size = new System.Drawing.Size(182, 45);
-            this.trackBar.SmallChange = 5;
-            this.trackBar.TabIndex = 13;
-            this.trackBar.TabStop = false;
-            this.trackBar.TickFrequency = 5;
-            this.trackBar.Value = 200;
+            this.panelStar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelStar.BorderThickness = 1;
+            this.panelStar.Controls.Add(this.cbStar5);
+            this.panelStar.Controls.Add(this.cbStar4);
+            this.panelStar.Controls.Add(this.cbStar3);
+            this.panelStar.Controls.Add(this.cbStar2);
+            this.panelStar.Controls.Add(this.cbStar1);
+            this.panelStar.Controls.Add(this.lblStar);
+            this.panelStar.Location = new System.Drawing.Point(2, 263);
+            this.panelStar.Margin = new System.Windows.Forms.Padding(2);
+            this.panelStar.Name = "panelStar";
+            this.panelStar.Size = new System.Drawing.Size(232, 156);
+            this.panelStar.TabIndex = 1;
             // 
-            // guna2Panel2
+            // cbStar5
             // 
-            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.checkboxPfilter4);
-            this.guna2Panel2.Controls.Add(this.checkboxPfilter3);
-            this.guna2Panel2.Controls.Add(this.checkboxPfilter2);
-            this.guna2Panel2.Controls.Add(this.checkboxPfilter1);
-            this.guna2Panel2.Controls.Add(this.lbPopularFilters);
-            this.guna2Panel2.Location = new System.Drawing.Point(2, 254);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(232, 125);
-            this.guna2Panel2.TabIndex = 1;
+            this.cbStar5.AutoSize = true;
+            this.cbStar5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStar5.CheckedState.BorderRadius = 0;
+            this.cbStar5.CheckedState.BorderThickness = 0;
+            this.cbStar5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStar5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbStar5.Location = new System.Drawing.Point(31, 122);
+            this.cbStar5.Margin = new System.Windows.Forms.Padding(2);
+            this.cbStar5.Name = "cbStar5";
+            this.cbStar5.Size = new System.Drawing.Size(59, 19);
+            this.cbStar5.TabIndex = 5;
+            this.cbStar5.Text = "5 stars";
+            this.cbStar5.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar5.UncheckedState.BorderRadius = 0;
+            this.cbStar5.UncheckedState.BorderThickness = 0;
+            this.cbStar5.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar5.CheckedChanged += new System.EventHandler(this.checkStar);
             // 
-            // checkboxPfilter4
+            // cbStar4
             // 
-            this.checkboxPfilter4.AutoSize = true;
-            this.checkboxPfilter4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPfilter4.CheckedState.BorderRadius = 0;
-            this.checkboxPfilter4.CheckedState.BorderThickness = 0;
-            this.checkboxPfilter4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPfilter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.checkboxPfilter4.Location = new System.Drawing.Point(20, 101);
-            this.checkboxPfilter4.Margin = new System.Windows.Forms.Padding(2);
-            this.checkboxPfilter4.Name = "checkboxPfilter4";
-            this.checkboxPfilter4.Size = new System.Drawing.Size(113, 17);
-            this.checkboxPfilter4.TabIndex = 4;
-            this.checkboxPfilter4.Text = "Breakfast includes";
-            this.checkboxPfilter4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.checkboxPfilter4.UncheckedState.BorderRadius = 0;
-            this.checkboxPfilter4.UncheckedState.BorderThickness = 0;
-            this.checkboxPfilter4.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar4.AutoSize = true;
+            this.cbStar4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStar4.CheckedState.BorderRadius = 0;
+            this.cbStar4.CheckedState.BorderThickness = 0;
+            this.cbStar4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStar4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbStar4.Location = new System.Drawing.Point(31, 101);
+            this.cbStar4.Margin = new System.Windows.Forms.Padding(2);
+            this.cbStar4.Name = "cbStar4";
+            this.cbStar4.Size = new System.Drawing.Size(59, 19);
+            this.cbStar4.TabIndex = 4;
+            this.cbStar4.Text = "4 stars";
+            this.cbStar4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar4.UncheckedState.BorderRadius = 0;
+            this.cbStar4.UncheckedState.BorderThickness = 0;
+            this.cbStar4.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar4.CheckedChanged += new System.EventHandler(this.checkStar);
             // 
-            // checkboxPfilter3
+            // cbStar3
             // 
-            this.checkboxPfilter3.AutoSize = true;
-            this.checkboxPfilter3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPfilter3.CheckedState.BorderRadius = 0;
-            this.checkboxPfilter3.CheckedState.BorderThickness = 0;
-            this.checkboxPfilter3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPfilter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.checkboxPfilter3.Location = new System.Drawing.Point(20, 80);
-            this.checkboxPfilter3.Margin = new System.Windows.Forms.Padding(2);
-            this.checkboxPfilter3.Name = "checkboxPfilter3";
-            this.checkboxPfilter3.Size = new System.Drawing.Size(98, 17);
-            this.checkboxPfilter3.TabIndex = 3;
-            this.checkboxPfilter3.Text = "No prepayment";
-            this.checkboxPfilter3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.checkboxPfilter3.UncheckedState.BorderRadius = 0;
-            this.checkboxPfilter3.UncheckedState.BorderThickness = 0;
-            this.checkboxPfilter3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar3.AutoSize = true;
+            this.cbStar3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStar3.CheckedState.BorderRadius = 0;
+            this.cbStar3.CheckedState.BorderThickness = 0;
+            this.cbStar3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStar3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbStar3.Location = new System.Drawing.Point(31, 80);
+            this.cbStar3.Margin = new System.Windows.Forms.Padding(2);
+            this.cbStar3.Name = "cbStar3";
+            this.cbStar3.Size = new System.Drawing.Size(59, 19);
+            this.cbStar3.TabIndex = 3;
+            this.cbStar3.Text = "3 stars";
+            this.cbStar3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar3.UncheckedState.BorderRadius = 0;
+            this.cbStar3.UncheckedState.BorderThickness = 0;
+            this.cbStar3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar3.CheckedChanged += new System.EventHandler(this.checkStar);
             // 
-            // checkboxPfilter2
+            // cbStar2
             // 
-            this.checkboxPfilter2.AutoSize = true;
-            this.checkboxPfilter2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPfilter2.CheckedState.BorderRadius = 0;
-            this.checkboxPfilter2.CheckedState.BorderThickness = 0;
-            this.checkboxPfilter2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPfilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.checkboxPfilter2.Location = new System.Drawing.Point(20, 58);
-            this.checkboxPfilter2.Margin = new System.Windows.Forms.Padding(2);
-            this.checkboxPfilter2.Name = "checkboxPfilter2";
-            this.checkboxPfilter2.Size = new System.Drawing.Size(50, 17);
-            this.checkboxPfilter2.TabIndex = 2;
-            this.checkboxPfilter2.Text = "Villas";
-            this.checkboxPfilter2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.checkboxPfilter2.UncheckedState.BorderRadius = 0;
-            this.checkboxPfilter2.UncheckedState.BorderThickness = 0;
-            this.checkboxPfilter2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar2.AutoSize = true;
+            this.cbStar2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStar2.CheckedState.BorderRadius = 0;
+            this.cbStar2.CheckedState.BorderThickness = 0;
+            this.cbStar2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStar2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbStar2.Location = new System.Drawing.Point(31, 58);
+            this.cbStar2.Margin = new System.Windows.Forms.Padding(2);
+            this.cbStar2.Name = "cbStar2";
+            this.cbStar2.Size = new System.Drawing.Size(59, 19);
+            this.cbStar2.TabIndex = 2;
+            this.cbStar2.Text = "2 stars";
+            this.cbStar2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar2.UncheckedState.BorderRadius = 0;
+            this.cbStar2.UncheckedState.BorderThickness = 0;
+            this.cbStar2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar2.CheckedChanged += new System.EventHandler(this.checkStar);
             // 
-            // checkboxPfilter1
+            // cbStar1
             // 
-            this.checkboxPfilter1.AutoSize = true;
-            this.checkboxPfilter1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPfilter1.CheckedState.BorderRadius = 0;
-            this.checkboxPfilter1.CheckedState.BorderThickness = 0;
-            this.checkboxPfilter1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPfilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.checkboxPfilter1.Location = new System.Drawing.Point(20, 37);
-            this.checkboxPfilter1.Margin = new System.Windows.Forms.Padding(2);
-            this.checkboxPfilter1.Name = "checkboxPfilter1";
-            this.checkboxPfilter1.Size = new System.Drawing.Size(101, 17);
-            this.checkboxPfilter1.TabIndex = 1;
-            this.checkboxPfilter1.Text = "Swimming pools";
-            this.checkboxPfilter1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.checkboxPfilter1.UncheckedState.BorderRadius = 0;
-            this.checkboxPfilter1.UncheckedState.BorderThickness = 0;
-            this.checkboxPfilter1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar1.AutoSize = true;
+            this.cbStar1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStar1.CheckedState.BorderRadius = 0;
+            this.cbStar1.CheckedState.BorderThickness = 0;
+            this.cbStar1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStar1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbStar1.Location = new System.Drawing.Point(31, 37);
+            this.cbStar1.Margin = new System.Windows.Forms.Padding(2);
+            this.cbStar1.Name = "cbStar1";
+            this.cbStar1.Size = new System.Drawing.Size(54, 19);
+            this.cbStar1.TabIndex = 1;
+            this.cbStar1.Text = "1 star";
+            this.cbStar1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar1.UncheckedState.BorderRadius = 0;
+            this.cbStar1.UncheckedState.BorderThickness = 0;
+            this.cbStar1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbStar1.CheckedChanged += new System.EventHandler(this.checkStar);
             // 
-            // lbPopularFilters
+            // lblStar
             // 
-            this.lbPopularFilters.AutoSize = true;
-            this.lbPopularFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbPopularFilters.Location = new System.Drawing.Point(9, 11);
-            this.lbPopularFilters.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbPopularFilters.Name = "lbPopularFilters";
-            this.lbPopularFilters.Size = new System.Drawing.Size(114, 20);
-            this.lbPopularFilters.TabIndex = 0;
-            this.lbPopularFilters.Text = "Popular Filters:";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.checkboxPType6);
-            this.guna2Panel1.Controls.Add(this.checkboxPType5);
-            this.guna2Panel1.Controls.Add(this.checkboxPType4);
-            this.guna2Panel1.Controls.Add(this.checkboxPType3);
-            this.guna2Panel1.Controls.Add(this.checkboxPType2);
-            this.guna2Panel1.Controls.Add(this.checkboxPType1);
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Location = new System.Drawing.Point(2, 383);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(232, 154);
-            this.guna2Panel1.TabIndex = 2;
-            // 
-            // checkboxPType6
-            // 
-            this.checkboxPType6.AutoSize = true;
-            this.checkboxPType6.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPType6.CheckedState.BorderRadius = 0;
-            this.checkboxPType6.CheckedState.BorderThickness = 0;
-            this.checkboxPType6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPType6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.checkboxPType6.Location = new System.Drawing.Point(20, 133);
-            this.checkboxPType6.Margin = new System.Windows.Forms.Padding(2);
-            this.checkboxPType6.Name = "checkboxPType6";
-            this.checkboxPType6.Size = new System.Drawing.Size(62, 17);
-            this.checkboxPType6.TabIndex = 6;
-            this.checkboxPType6.Text = "Resorts";
-            this.checkboxPType6.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.checkboxPType6.UncheckedState.BorderRadius = 0;
-            this.checkboxPType6.UncheckedState.BorderThickness = 0;
-            this.checkboxPType6.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // checkboxPType5
-            // 
-            this.checkboxPType5.AutoSize = true;
-            this.checkboxPType5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPType5.CheckedState.BorderRadius = 0;
-            this.checkboxPType5.CheckedState.BorderThickness = 0;
-            this.checkboxPType5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPType5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.checkboxPType5.Location = new System.Drawing.Point(20, 112);
-            this.checkboxPType5.Margin = new System.Windows.Forms.Padding(2);
-            this.checkboxPType5.Name = "checkboxPType5";
-            this.checkboxPType5.Size = new System.Drawing.Size(78, 17);
-            this.checkboxPType5.TabIndex = 5;
-            this.checkboxPType5.Text = "Homestays";
-            this.checkboxPType5.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.checkboxPType5.UncheckedState.BorderRadius = 0;
-            this.checkboxPType5.UncheckedState.BorderThickness = 0;
-            this.checkboxPType5.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // checkboxPType4
-            // 
-            this.checkboxPType4.AutoSize = true;
-            this.checkboxPType4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPType4.CheckedState.BorderRadius = 0;
-            this.checkboxPType4.CheckedState.BorderThickness = 0;
-            this.checkboxPType4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPType4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.checkboxPType4.Location = new System.Drawing.Point(20, 91);
-            this.checkboxPType4.Margin = new System.Windows.Forms.Padding(2);
-            this.checkboxPType4.Name = "checkboxPType4";
-            this.checkboxPType4.Size = new System.Drawing.Size(56, 17);
-            this.checkboxPType4.TabIndex = 4;
-            this.checkboxPType4.Text = "Hotels";
-            this.checkboxPType4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.checkboxPType4.UncheckedState.BorderRadius = 0;
-            this.checkboxPType4.UncheckedState.BorderThickness = 0;
-            this.checkboxPType4.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // checkboxPType3
-            // 
-            this.checkboxPType3.AutoSize = true;
-            this.checkboxPType3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPType3.CheckedState.BorderRadius = 0;
-            this.checkboxPType3.CheckedState.BorderThickness = 0;
-            this.checkboxPType3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPType3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.checkboxPType3.Location = new System.Drawing.Point(20, 70);
-            this.checkboxPType3.Margin = new System.Windows.Forms.Padding(2);
-            this.checkboxPType3.Name = "checkboxPType3";
-            this.checkboxPType3.Size = new System.Drawing.Size(79, 17);
-            this.checkboxPType3.TabIndex = 3;
-            this.checkboxPType3.Text = "Apartments";
-            this.checkboxPType3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.checkboxPType3.UncheckedState.BorderRadius = 0;
-            this.checkboxPType3.UncheckedState.BorderThickness = 0;
-            this.checkboxPType3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // checkboxPType2
-            // 
-            this.checkboxPType2.AutoSize = true;
-            this.checkboxPType2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPType2.CheckedState.BorderRadius = 0;
-            this.checkboxPType2.CheckedState.BorderThickness = 0;
-            this.checkboxPType2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPType2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.checkboxPType2.Location = new System.Drawing.Point(20, 49);
-            this.checkboxPType2.Margin = new System.Windows.Forms.Padding(2);
-            this.checkboxPType2.Name = "checkboxPType2";
-            this.checkboxPType2.Size = new System.Drawing.Size(50, 17);
-            this.checkboxPType2.TabIndex = 2;
-            this.checkboxPType2.Text = "Villas";
-            this.checkboxPType2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.checkboxPType2.UncheckedState.BorderRadius = 0;
-            this.checkboxPType2.UncheckedState.BorderThickness = 0;
-            this.checkboxPType2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // checkboxPType1
-            // 
-            this.checkboxPType1.AutoSize = true;
-            this.checkboxPType1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPType1.CheckedState.BorderRadius = 0;
-            this.checkboxPType1.CheckedState.BorderThickness = 0;
-            this.checkboxPType1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxPType1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.checkboxPType1.Location = new System.Drawing.Point(20, 28);
-            this.checkboxPType1.Margin = new System.Windows.Forms.Padding(2);
-            this.checkboxPType1.Name = "checkboxPType1";
-            this.checkboxPType1.Size = new System.Drawing.Size(163, 17);
-            this.checkboxPType1.TabIndex = 1;
-            this.checkboxPType1.Text = "Entire homes and apartments";
-            this.checkboxPType1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.checkboxPType1.UncheckedState.BorderRadius = 0;
-            this.checkboxPType1.UncheckedState.BorderThickness = 0;
-            this.checkboxPType1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(11, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Property Type";
+            this.lblStar.AutoSize = true;
+            this.lblStar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblStar.Location = new System.Drawing.Point(20, 11);
+            this.lblStar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStar.Name = "lblStar";
+            this.lblStar.Size = new System.Drawing.Size(91, 21);
+            this.lblStar.TabIndex = 0;
+            this.lblStar.Text = "Hotel Stars";
             // 
             // panelChucnang
             // 
+            this.panelChucnang.Controls.Add(this.btnReturn);
             this.panelChucnang.Controls.Add(this.btnSignIn);
             this.panelChucnang.Controls.Add(this.btnSignUp);
             this.panelChucnang.Controls.Add(this.btnAbility4);
@@ -393,6 +228,23 @@
             this.panelChucnang.Name = "panelChucnang";
             this.panelChucnang.Size = new System.Drawing.Size(1584, 135);
             this.panelChucnang.TabIndex = 0;
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.Color.Transparent;
+            this.btnReturn.BorderRadius = 10;
+            this.btnReturn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReturn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReturn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReturn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReturn.FillColor = System.Drawing.Color.White;
+            this.btnReturn.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
+            this.btnReturn.Location = new System.Drawing.Point(1103, 25);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(113, 50);
+            this.btnReturn.TabIndex = 9;
+            this.btnReturn.Text = "Return to Booking";
             // 
             // btnSignIn
             // 
@@ -518,225 +370,227 @@
             this.lblBrand.TabIndex = 8;
             this.lblBrand.Text = "Travelgoda.com";
             // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.AutoScroll = true;
-            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Panel3.BorderThickness = 1;
-            this.guna2Panel3.Controls.Add(this.guna2CheckBox1);
-            this.guna2Panel3.Controls.Add(this.guna2CheckBox2);
-            this.guna2Panel3.Controls.Add(this.guna2CheckBox3);
-            this.guna2Panel3.Controls.Add(this.guna2CheckBox4);
-            this.guna2Panel3.Controls.Add(this.label1);
-            this.guna2Panel3.Location = new System.Drawing.Point(2, 541);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(232, 125);
-            this.guna2Panel3.TabIndex = 5;
-            // 
-            // guna2CheckBox1
-            // 
-            this.guna2CheckBox1.AutoSize = true;
-            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.guna2CheckBox1.Location = new System.Drawing.Point(20, 101);
-            this.guna2CheckBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CheckBox1.Name = "guna2CheckBox1";
-            this.guna2CheckBox1.Size = new System.Drawing.Size(96, 17);
-            this.guna2CheckBox1.TabIndex = 4;
-            this.guna2CheckBox1.Text = "Room services";
-            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // guna2CheckBox2
-            // 
-            this.guna2CheckBox2.AutoSize = true;
-            this.guna2CheckBox2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox2.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox2.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.guna2CheckBox2.Location = new System.Drawing.Point(20, 80);
-            this.guna2CheckBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CheckBox2.Name = "guna2CheckBox2";
-            this.guna2CheckBox2.Size = new System.Drawing.Size(81, 17);
-            this.guna2CheckBox2.TabIndex = 3;
-            this.guna2CheckBox2.Text = "Family room";
-            this.guna2CheckBox2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox2.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox2.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // guna2CheckBox3
-            // 
-            this.guna2CheckBox3.AutoSize = true;
-            this.guna2CheckBox3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox3.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox3.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.guna2CheckBox3.Location = new System.Drawing.Point(20, 58);
-            this.guna2CheckBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CheckBox3.Name = "guna2CheckBox3";
-            this.guna2CheckBox3.Size = new System.Drawing.Size(62, 17);
-            this.guna2CheckBox3.TabIndex = 2;
-            this.guna2CheckBox3.Text = "Parking";
-            this.guna2CheckBox3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox3.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox3.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // guna2CheckBox4
-            // 
-            this.guna2CheckBox4.AutoSize = true;
-            this.guna2CheckBox4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox4.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox4.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.guna2CheckBox4.Location = new System.Drawing.Point(20, 37);
-            this.guna2CheckBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CheckBox4.Name = "guna2CheckBox4";
-            this.guna2CheckBox4.Size = new System.Drawing.Size(101, 17);
-            this.guna2CheckBox4.TabIndex = 1;
-            this.guna2CheckBox4.Text = "Swimming pools";
-            this.guna2CheckBox4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox4.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox4.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox4.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(9, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Facilities";
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.panelBudget);
-            this.flowLayoutPanel1.Controls.Add(this.guna2Panel4);
-            this.flowLayoutPanel1.Controls.Add(this.guna2Panel2);
-            this.flowLayoutPanel1.Controls.Add(this.guna2Panel1);
-            this.flowLayoutPanel1.Controls.Add(this.guna2Panel3);
+            this.flowLayoutPanel1.Controls.Add(this.lbFilter);
+            this.flowLayoutPanel1.Controls.Add(this.btnClear);
+            this.flowLayoutPanel1.Controls.Add(this.panelType);
+            this.flowLayoutPanel1.Controls.Add(this.panelStar);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(128, 194);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(254, 568);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
-            // guna2Panel4
+            // btnClear
             // 
-            this.guna2Panel4.AutoScroll = true;
-            this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Panel4.BorderThickness = 1;
-            this.guna2Panel4.Controls.Add(this.guna2CheckBox5);
-            this.guna2Panel4.Controls.Add(this.guna2CheckBox6);
-            this.guna2Panel4.Controls.Add(this.guna2CheckBox7);
-            this.guna2Panel4.Controls.Add(this.guna2CheckBox8);
-            this.guna2Panel4.Controls.Add(this.label3);
-            this.guna2Panel4.Location = new System.Drawing.Point(2, 125);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(232, 125);
-            this.guna2Panel4.TabIndex = 6;
+            this.btnClear.BackColor = System.Drawing.Color.Transparent;
+            this.btnClear.BorderRadius = 10;
+            this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(106, 3);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(113, 27);
+            this.btnClear.TabIndex = 15;
+            this.btnClear.Text = "Clear Filter";
+            this.btnClear.Click += new System.EventHandler(this.clearFilter);
             // 
-            // guna2CheckBox5
+            // panelType
             // 
-            this.guna2CheckBox5.AutoSize = true;
-            this.guna2CheckBox5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox5.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox5.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.guna2CheckBox5.Location = new System.Drawing.Point(20, 101);
-            this.guna2CheckBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CheckBox5.Name = "guna2CheckBox5";
-            this.guna2CheckBox5.Size = new System.Drawing.Size(96, 17);
-            this.guna2CheckBox5.TabIndex = 4;
-            this.guna2CheckBox5.Text = "Room services";
-            this.guna2CheckBox5.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox5.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox5.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox5.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.panelType.AutoScroll = true;
+            this.panelType.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelType.BorderThickness = 1;
+            this.panelType.Controls.Add(this.cbType8);
+            this.panelType.Controls.Add(this.cbType7);
+            this.panelType.Controls.Add(this.cbType6);
+            this.panelType.Controls.Add(this.cbType5);
+            this.panelType.Controls.Add(this.cbType4);
+            this.panelType.Controls.Add(this.cbType3);
+            this.panelType.Controls.Add(this.cbType2);
+            this.panelType.Controls.Add(this.cbType1);
+            this.panelType.Controls.Add(this.lblHotelType);
+            this.panelType.Location = new System.Drawing.Point(2, 35);
+            this.panelType.Margin = new System.Windows.Forms.Padding(2);
+            this.panelType.Name = "panelType";
+            this.panelType.Size = new System.Drawing.Size(232, 224);
+            this.panelType.TabIndex = 6;
             // 
-            // guna2CheckBox6
+            // cbType8
             // 
-            this.guna2CheckBox6.AutoSize = true;
-            this.guna2CheckBox6.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox6.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox6.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.guna2CheckBox6.Location = new System.Drawing.Point(20, 80);
-            this.guna2CheckBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CheckBox6.Name = "guna2CheckBox6";
-            this.guna2CheckBox6.Size = new System.Drawing.Size(81, 17);
-            this.guna2CheckBox6.TabIndex = 3;
-            this.guna2CheckBox6.Text = "Family room";
-            this.guna2CheckBox6.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox6.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox6.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox6.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType8.AutoSize = true;
+            this.cbType8.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType8.CheckedState.BorderRadius = 0;
+            this.cbType8.CheckedState.BorderThickness = 0;
+            this.cbType8.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbType8.Location = new System.Drawing.Point(31, 188);
+            this.cbType8.Margin = new System.Windows.Forms.Padding(2);
+            this.cbType8.Name = "cbType8";
+            this.cbType8.Size = new System.Drawing.Size(83, 19);
+            this.cbType8.TabIndex = 8;
+            this.cbType8.Text = "Apartment";
+            this.cbType8.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType8.UncheckedState.BorderRadius = 0;
+            this.cbType8.UncheckedState.BorderThickness = 0;
+            this.cbType8.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType8.CheckedChanged += new System.EventHandler(this.checkType);
             // 
-            // guna2CheckBox7
+            // cbType7
             // 
-            this.guna2CheckBox7.AutoSize = true;
-            this.guna2CheckBox7.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox7.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox7.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.guna2CheckBox7.Location = new System.Drawing.Point(20, 58);
-            this.guna2CheckBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CheckBox7.Name = "guna2CheckBox7";
-            this.guna2CheckBox7.Size = new System.Drawing.Size(62, 17);
-            this.guna2CheckBox7.TabIndex = 2;
-            this.guna2CheckBox7.Text = "Parking";
-            this.guna2CheckBox7.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox7.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox7.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox7.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType7.AutoSize = true;
+            this.cbType7.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType7.CheckedState.BorderRadius = 0;
+            this.cbType7.CheckedState.BorderThickness = 0;
+            this.cbType7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbType7.Location = new System.Drawing.Point(31, 165);
+            this.cbType7.Margin = new System.Windows.Forms.Padding(2);
+            this.cbType7.Name = "cbType7";
+            this.cbType7.Size = new System.Drawing.Size(48, 19);
+            this.cbType7.TabIndex = 7;
+            this.cbType7.Text = "Villa";
+            this.cbType7.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType7.UncheckedState.BorderRadius = 0;
+            this.cbType7.UncheckedState.BorderThickness = 0;
+            this.cbType7.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType7.CheckedChanged += new System.EventHandler(this.checkType);
             // 
-            // guna2CheckBox8
+            // cbType6
             // 
-            this.guna2CheckBox8.AutoSize = true;
-            this.guna2CheckBox8.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox8.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox8.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox8.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.guna2CheckBox8.Location = new System.Drawing.Point(20, 37);
-            this.guna2CheckBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CheckBox8.Name = "guna2CheckBox8";
-            this.guna2CheckBox8.Size = new System.Drawing.Size(101, 17);
-            this.guna2CheckBox8.TabIndex = 1;
-            this.guna2CheckBox8.Text = "Swimming pools";
-            this.guna2CheckBox8.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox8.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox8.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox8.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType6.AutoSize = true;
+            this.cbType6.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType6.CheckedState.BorderRadius = 0;
+            this.cbType6.CheckedState.BorderThickness = 0;
+            this.cbType6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbType6.Location = new System.Drawing.Point(31, 143);
+            this.cbType6.Margin = new System.Windows.Forms.Padding(2);
+            this.cbType6.Name = "cbType6";
+            this.cbType6.Size = new System.Drawing.Size(80, 19);
+            this.cbType6.TabIndex = 6;
+            this.cbType6.Text = "Homestay";
+            this.cbType6.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType6.UncheckedState.BorderRadius = 0;
+            this.cbType6.UncheckedState.BorderThickness = 0;
+            this.cbType6.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType6.CheckedChanged += new System.EventHandler(this.checkType);
             // 
-            // label3
+            // cbType5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(9, 11);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Facilities";
+            this.cbType5.AutoSize = true;
+            this.cbType5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType5.CheckedState.BorderRadius = 0;
+            this.cbType5.CheckedState.BorderThickness = 0;
+            this.cbType5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbType5.Location = new System.Drawing.Point(31, 122);
+            this.cbType5.Margin = new System.Windows.Forms.Padding(2);
+            this.cbType5.Name = "cbType5";
+            this.cbType5.Size = new System.Drawing.Size(93, 19);
+            this.cbType5.TabIndex = 5;
+            this.cbType5.Text = "Guest House";
+            this.cbType5.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType5.UncheckedState.BorderRadius = 0;
+            this.cbType5.UncheckedState.BorderThickness = 0;
+            this.cbType5.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType5.CheckedChanged += new System.EventHandler(this.checkType);
+            // 
+            // cbType4
+            // 
+            this.cbType4.AutoSize = true;
+            this.cbType4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType4.CheckedState.BorderRadius = 0;
+            this.cbType4.CheckedState.BorderThickness = 0;
+            this.cbType4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbType4.Location = new System.Drawing.Point(31, 101);
+            this.cbType4.Margin = new System.Windows.Forms.Padding(2);
+            this.cbType4.Name = "cbType4";
+            this.cbType4.Size = new System.Drawing.Size(40, 19);
+            this.cbType4.TabIndex = 4;
+            this.cbType4.Text = "B&B";
+            this.cbType4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType4.UncheckedState.BorderRadius = 0;
+            this.cbType4.UncheckedState.BorderThickness = 0;
+            this.cbType4.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType4.CheckedChanged += new System.EventHandler(this.checkType);
+            // 
+            // cbType3
+            // 
+            this.cbType3.AutoSize = true;
+            this.cbType3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType3.CheckedState.BorderRadius = 0;
+            this.cbType3.CheckedState.BorderThickness = 0;
+            this.cbType3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbType3.Location = new System.Drawing.Point(31, 80);
+            this.cbType3.Margin = new System.Windows.Forms.Padding(2);
+            this.cbType3.Name = "cbType3";
+            this.cbType3.Size = new System.Drawing.Size(75, 19);
+            this.cbType3.TabIndex = 3;
+            this.cbType3.Text = "Camping";
+            this.cbType3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType3.UncheckedState.BorderRadius = 0;
+            this.cbType3.UncheckedState.BorderThickness = 0;
+            this.cbType3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType3.CheckedChanged += new System.EventHandler(this.checkType);
+            // 
+            // cbType2
+            // 
+            this.cbType2.AutoSize = true;
+            this.cbType2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType2.CheckedState.BorderRadius = 0;
+            this.cbType2.CheckedState.BorderThickness = 0;
+            this.cbType2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbType2.Location = new System.Drawing.Point(31, 58);
+            this.cbType2.Margin = new System.Windows.Forms.Padding(2);
+            this.cbType2.Name = "cbType2";
+            this.cbType2.Size = new System.Drawing.Size(57, 19);
+            this.cbType2.TabIndex = 2;
+            this.cbType2.Text = "Motel";
+            this.cbType2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType2.UncheckedState.BorderRadius = 0;
+            this.cbType2.UncheckedState.BorderThickness = 0;
+            this.cbType2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType2.CheckedChanged += new System.EventHandler(this.checkType);
+            // 
+            // cbType1
+            // 
+            this.cbType1.AutoSize = true;
+            this.cbType1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType1.CheckedState.BorderRadius = 0;
+            this.cbType1.CheckedState.BorderThickness = 0;
+            this.cbType1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbType1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbType1.Location = new System.Drawing.Point(31, 37);
+            this.cbType1.Margin = new System.Windows.Forms.Padding(2);
+            this.cbType1.Name = "cbType1";
+            this.cbType1.Size = new System.Drawing.Size(55, 19);
+            this.cbType1.TabIndex = 1;
+            this.cbType1.Text = "Hotel";
+            this.cbType1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType1.UncheckedState.BorderRadius = 0;
+            this.cbType1.UncheckedState.BorderThickness = 0;
+            this.cbType1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbType1.CheckedChanged += new System.EventHandler(this.checkType);
+            // 
+            // lblHotelType
+            // 
+            this.lblHotelType.AutoSize = true;
+            this.lblHotelType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblHotelType.Location = new System.Drawing.Point(20, 11);
+            this.lblHotelType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHotelType.Name = "lblHotelType";
+            this.lblHotelType.Size = new System.Drawing.Size(90, 21);
+            this.lblHotelType.TabIndex = 0;
+            this.lblHotelType.Text = "Hotel Type";
             // 
             // flowPanel
             // 
@@ -769,57 +623,34 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FSearchForm";
-            this.panelBudget.ResumeLayout(false);
-            this.panelBudget.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar)).EndInit();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            this.panelStar.ResumeLayout(false);
+            this.panelStar.PerformLayout();
             this.panelChucnang.ResumeLayout(false);
             this.panelChucnang.PerformLayout();
-            this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel3.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel4.PerformLayout();
+            this.flowLayoutPanel1.PerformLayout();
+            this.panelType.ResumeLayout(false);
+            this.panelType.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Panel panelBudget;
-        private System.Windows.Forms.TrackBar trackBar;
-        private System.Windows.Forms.Label lbPopularFilters;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Panel panelStar;
+        private System.Windows.Forms.Label lblStar;
         private System.Windows.Forms.Label lbFilter;
-        private System.Windows.Forms.Label lbBudget;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxPfilter1;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxPfilter4;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxPfilter3;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxPfilter2;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxPType6;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxPType5;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxPType4;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxPType3;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxPType2;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxPType1;
+        private Guna.UI2.WinForms.Guna2CheckBox cbStar1;
+        private Guna.UI2.WinForms.Guna2CheckBox cbStar4;
+        private Guna.UI2.WinForms.Guna2CheckBox cbStar3;
+        private Guna.UI2.WinForms.Guna2CheckBox cbStar2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel panelChucnang;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox2;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox3;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox5;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox6;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox7;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox8;
-        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Panel panelType;
+        private Guna.UI2.WinForms.Guna2CheckBox cbType4;
+        private Guna.UI2.WinForms.Guna2CheckBox cbType3;
+        private Guna.UI2.WinForms.Guna2CheckBox cbType2;
+        private Guna.UI2.WinForms.Guna2CheckBox cbType1;
+        private System.Windows.Forms.Label lblHotelType;
         private System.Windows.Forms.FlowLayoutPanel flowPanel;
         private UCTerminal ucTerminal;
         private System.Windows.Forms.Label lblBrand;
@@ -829,5 +660,12 @@
         private Guna.UI2.WinForms.Guna2Button btnAbility1;
         private Guna.UI2.WinForms.Guna2Button btnSignIn;
         private Guna.UI2.WinForms.Guna2Button btnSignUp;
+        private Guna.UI2.WinForms.Guna2Button btnReturn;
+        private Guna.UI2.WinForms.Guna2CheckBox cbType7;
+        private Guna.UI2.WinForms.Guna2CheckBox cbType6;
+        private Guna.UI2.WinForms.Guna2CheckBox cbType5;
+        private Guna.UI2.WinForms.Guna2CheckBox cbStar5;
+        private Guna.UI2.WinForms.Guna2CheckBox cbType8;
+        private Guna.UI2.WinForms.Guna2Button btnClear;
     }
 }

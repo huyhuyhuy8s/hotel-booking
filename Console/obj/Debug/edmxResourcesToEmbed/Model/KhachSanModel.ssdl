@@ -55,6 +55,7 @@
     <Property Name="Location4" Type="varchar(max)" />
     <Property Name="Location5" Type="varchar(max)" />
     <Property Name="Location6" Type="varchar(max)" />
+    <Property Name="Times" Type="int" />
   </EntityType>
   <EntityType Name="Room">
     <Key>
@@ -69,6 +70,16 @@
     <Property Name="RoomPrice" Type="int" Nullable="false" />
     <Property Name="RoomArea" Type="int" Nullable="false" />
     <Property Name="RoomPicture" Type="image" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="TypeHotel">
     <Key>
@@ -177,6 +188,7 @@
     <EntitySet Name="PersonOrder" EntityType="Self.PersonOrder" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Province" EntityType="Self.Province" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeHotel" EntityType="Self.TypeHotel" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeRoom" EntityType="Self.TypeRoom" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Hotel__HotelType__58D1301D" Association="Self.FK__Hotel__HotelType__58D1301D">

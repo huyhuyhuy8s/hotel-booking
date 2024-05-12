@@ -27,7 +27,7 @@ namespace Console
         {
             InitializeComponent();
         }
-        public FOrderReason(int orderid)
+        public FOrderReason(int? orderid)
         {
             this.orderid = orderid;
             InitializeComponent();
@@ -109,6 +109,7 @@ namespace Console
                 try
                 {
                     // Ket noi
+                    CodeEdit.SqlUpdate(string.Format("UPDATE PersonOrder SET CancelReason = '{0}' WHERE OrderId = {1}", (Reason1.Checked) ? "Change in Schedule" : (Reason2.Checked) ? "Financial Considerations" : (Reason3.Checked) ? "Business Commitments" : (Reason4.Checked) ? "Health Issues" : (Reason5.Checked) ? "Postponement or Indefinite Delay" : ReasonBox.Text, orderid));
                     connection.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = connection;
@@ -138,6 +139,11 @@ namespace Console
             {
                 MessageBox.Show("Please choose a reason!");
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

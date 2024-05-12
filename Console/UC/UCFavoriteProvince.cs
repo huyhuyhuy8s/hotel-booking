@@ -24,12 +24,16 @@ namespace Console
             get { return name; }
             set { name = value; lblNameProvince.Text= value; }
         }
-        public Image Picture
+        public PictureBox PicProvince
         {
-            get { return picture; }
-            set { picture = value; picProvince.Image = value; }
+            get { return picProvince; }
+            set { picProvince = value; }
+        }
+        public PictureBox PicProvince2
+        {
+            get { return picProvince2; }
+            set { picProvince2 = value; }
         }
 
-        
     }
 }

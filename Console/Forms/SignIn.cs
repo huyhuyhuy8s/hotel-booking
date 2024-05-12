@@ -55,7 +55,7 @@ namespace Console
                 // Ket noi
                 connection.Open();
                 SqlCommand cmd = new SqlCommand();
-                cmd.Connection = connection; //111111111
+                cmd.Connection = connection;
                 cmd.CommandText = "SELECT PersonId FROM Person WHERE (PersonPhonenumber = @phonenumber AND PersonPassword = @password)";
 
                 SqlParameterCollection parameter = cmd.Parameters;
@@ -89,6 +89,11 @@ namespace Console
         {
             SignUp signup = new SignUp();
             signup.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

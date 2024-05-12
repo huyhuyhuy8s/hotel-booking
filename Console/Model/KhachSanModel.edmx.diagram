@@ -4,12 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6709f2ff290a46d89ce99cde5cee3e2c" Name="Diagram1">
+      <Diagram DiagramId="60bf4ef2683e41b2b584f72398e25122" Name="Diagram1">
         <EntityTypeShape EntityType="KhachSanModel.Hotel" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="KhachSanModel.Person" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="KhachSanModel.PersonOrder" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="KhachSanModel.Province" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="KhachSanModel.Room" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KhachSanModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="KhachSanModel.TypeHotel" Width="1.5" PointX="1.5" PointY="11.375" IsExpanded="true" />
         <EntityTypeShape EntityType="KhachSanModel.TypeRoom" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="KhachSanModel.FK__Hotel__HotelType__58D1301D" ManuallyRouted="false" />

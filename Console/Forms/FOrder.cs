@@ -118,7 +118,7 @@ namespace Console
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            FOrderReason fOrderReason = new FOrderReason();
+            FOrderReason fOrderReason = new FOrderReason(orderid);
             if (fOrderReason.FOrderReason_Open(string.Format("UPDATE PersonOrder SET OrderStatus = {0} WHERE OrderId = {1}", 0, orderid)))
             {
                 check = true;
@@ -128,6 +128,11 @@ namespace Console
             {
                 MessageBox.Show("Cancelled Cancellation");
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

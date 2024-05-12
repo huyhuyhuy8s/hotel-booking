@@ -30,6 +30,10 @@
         {
             this.lblHotelId = new System.Windows.Forms.Label();
             this.panelInfor = new System.Windows.Forms.Panel();
+            this.lblType = new System.Windows.Forms.Label();
+            this.lblOnly = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblStar = new System.Windows.Forms.Label();
             this.btnShowHotel = new Guna.UI2.WinForms.Guna2Button();
             this.lblHotelAddress = new System.Windows.Forms.Label();
             this.lblHotelHotline = new System.Windows.Forms.Label();
@@ -72,6 +76,10 @@
             // panelInfor
             // 
             this.panelInfor.BackColor = System.Drawing.Color.White;
+            this.panelInfor.Controls.Add(this.lblType);
+            this.panelInfor.Controls.Add(this.lblOnly);
+            this.panelInfor.Controls.Add(this.lblPrice);
+            this.panelInfor.Controls.Add(this.lblStar);
             this.panelInfor.Controls.Add(this.btnShowHotel);
             this.panelInfor.Controls.Add(this.lblHotelAddress);
             this.panelInfor.Controls.Add(this.lblHotelHotline);
@@ -93,6 +101,55 @@
             this.panelInfor.Size = new System.Drawing.Size(768, 199);
             this.panelInfor.TabIndex = 20;
             // 
+            // lblType
+            // 
+            this.lblType.AutoSize = true;
+            this.lblType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblType.Location = new System.Drawing.Point(558, 52);
+            this.lblType.MaximumSize = new System.Drawing.Size(370, 0);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(54, 21);
+            this.lblType.TabIndex = 25;
+            this.lblType.Text = "label3";
+            // 
+            // lblOnly
+            // 
+            this.lblOnly.AutoSize = true;
+            this.lblOnly.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblOnly.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.lblOnly.Location = new System.Drawing.Point(644, 20);
+            this.lblOnly.MaximumSize = new System.Drawing.Size(370, 0);
+            this.lblOnly.Name = "lblOnly";
+            this.lblOnly.Size = new System.Drawing.Size(102, 25);
+            this.lblOnly.TabIndex = 24;
+            this.lblOnly.Text = "Only From";
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lblPrice.Location = new System.Drawing.Point(635, 52);
+            this.lblPrice.MaximumSize = new System.Drawing.Size(370, 0);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(65, 25);
+            this.lblPrice.TabIndex = 23;
+            this.lblPrice.Text = "label3";
+            this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblStar
+            // 
+            this.lblStar.AutoSize = true;
+            this.lblStar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblStar.ForeColor = System.Drawing.Color.Yellow;
+            this.lblStar.Location = new System.Drawing.Point(555, 16);
+            this.lblStar.MaximumSize = new System.Drawing.Size(370, 0);
+            this.lblStar.Name = "lblStar";
+            this.lblStar.Size = new System.Drawing.Size(65, 25);
+            this.lblStar.TabIndex = 22;
+            this.lblStar.Text = "label3";
+            // 
             // btnShowHotel
             // 
             this.btnShowHotel.BorderRadius = 10;
@@ -112,34 +169,34 @@
             // lblHotelAddress
             // 
             this.lblHotelAddress.AutoSize = true;
-            this.lblHotelAddress.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHotelAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblHotelAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.lblHotelAddress.Location = new System.Drawing.Point(44, 20);
+            this.lblHotelAddress.Location = new System.Drawing.Point(44, 18);
             this.lblHotelAddress.Name = "lblHotelAddress";
-            this.lblHotelAddress.Size = new System.Drawing.Size(50, 20);
+            this.lblHotelAddress.Size = new System.Drawing.Size(61, 25);
             this.lblHotelAddress.TabIndex = 2;
             this.lblHotelAddress.Text = "label1";
             // 
             // lblHotelHotline
             // 
             this.lblHotelHotline.AutoSize = true;
-            this.lblHotelHotline.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblHotelHotline.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblHotelHotline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.lblHotelHotline.Location = new System.Drawing.Point(44, 78);
+            this.lblHotelHotline.Location = new System.Drawing.Point(44, 52);
             this.lblHotelHotline.Name = "lblHotelHotline";
-            this.lblHotelHotline.Size = new System.Drawing.Size(50, 20);
+            this.lblHotelHotline.Size = new System.Drawing.Size(64, 25);
             this.lblHotelHotline.TabIndex = 3;
             this.lblHotelHotline.Text = "label2";
             // 
             // lblHotelDescription
             // 
             this.lblHotelDescription.AutoSize = true;
-            this.lblHotelDescription.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblHotelDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblHotelDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
-            this.lblHotelDescription.Location = new System.Drawing.Point(44, 135);
+            this.lblHotelDescription.Location = new System.Drawing.Point(44, 84);
             this.lblHotelDescription.MaximumSize = new System.Drawing.Size(370, 0);
             this.lblHotelDescription.Name = "lblHotelDescription";
-            this.lblHotelDescription.Size = new System.Drawing.Size(50, 20);
+            this.lblHotelDescription.Size = new System.Drawing.Size(64, 25);
             this.lblHotelDescription.TabIndex = 4;
             this.lblHotelDescription.Text = "label3";
             // 
@@ -271,7 +328,7 @@
             // 
             this.lblHotelName.AutoSize = true;
             this.lblHotelName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblHotelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(145)))), ((int)(((byte)(180)))));
+            this.lblHotelName.ForeColor = System.Drawing.Color.Black;
             this.lblHotelName.Location = new System.Drawing.Point(34, 13);
             this.lblHotelName.Name = "lblHotelName";
             this.lblHotelName.Size = new System.Drawing.Size(83, 32);
@@ -325,5 +382,9 @@
         private System.Windows.Forms.Label lblInterior1;
         private System.Windows.Forms.PictureBox pbHotelPic;
         private System.Windows.Forms.Label lblHotelName;
+        private System.Windows.Forms.Label lblOnly;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblStar;
+        private System.Windows.Forms.Label lblType;
     }
 }

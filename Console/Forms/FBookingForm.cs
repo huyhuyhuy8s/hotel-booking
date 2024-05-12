@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using System.Data.SqlClient;
 using System.Management;
+using System.IO;
 
 namespace Console
 {
@@ -41,24 +42,54 @@ namespace Console
             {
                 listPromotion[i] = new UCPromotionValue();
             }
-            listPromotion[0].Title = "New year, new adventures";
-            listPromotion[0].SubTitle = "Save 15% or more when you book and stay before April 1, 2024";
-            listPromotion[0].PbPromotion = Console.Properties.Resources.banana;
-            listPromotion[0].Dock = DockStyle.Left;
-            listPromotion[1].Title = "Seize the moment!";
-            listPromotion[1].SubTitle = "Save 15% or more when you book and stay before October 1, 2024";
-            listPromotion[1].PbPromotion = Console.Properties.Resources.banana;
-            listPromotion[1].Dock = DockStyle.Right;
+            //listPromotion[0].Title = "New year, new adventures";
+            //listPromotion[0].SubTitle = "Save 15% or more when you book and stay before April 1, 2024";
+            //listPromotion[0].PbPromotion = Console.Properties.Resources.banana;
+            //listPromotion[0].Dock = DockStyle.Left;
+            //listPromotion[1].Title = "Seize the moment!";
+            //listPromotion[1].SubTitle = "Save 15% or more when you book and stay before October 1, 2024";
+            //listPromotion[1].PbPromotion = Console.Properties.Resources.banana;
+            //listPromotion[1].Dock = DockStyle.Right;
             #endregion
 
             #region UCPromotion
-            flowPanel.Controls.Clear();
             UCPromotion promotion = new UCPromotion();
             //promotion.BackColor = Color.FromArgb(225, 231, 255);
             promotion.Title = "Offers and Promotions";
             promotion.SubTitle = "Promotions, deals, and special offers for you";
-            //promotion.TablePanel.Controls.Add(listPromotion[0], 0, 0);
-            //promotion.TablePanel.Controls.Add(listPromotion[1], 1, 0);
+            promotion.TablePanel.Controls.Add(listPromotion[0]);
+            promotion.TablePanel.Controls.Add(listPromotion[1]);
+            #endregion
+
+            #region UCFavoriteProvince
+            UCFavoriteProvince[] favprovince = new UCFavoriteProvince[1];
+            SearchFunction fc = new SearchFunction();
+
+            connection.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "updateProvinceTimes";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = connection;
+            cmd.ExecuteNonQuery();
+            connection.Close();
+
+            string query = "SELECT Top(1) Times, Name, HotelImage, HotelImage2 FROM (Province JOIN hotel ON hotel.HotelProvince=Province.Name) ORDER BY Times DESC";
+            DataSet dt = fc.GetData(query);
+            int count = 0;
+            SqlDataReader reader = fc.getForCombo(query);
+            while (reader.Read())
+            {
+                favprovince[count] = new UCFavoriteProvince();
+                CodeEdit.displayPicture(reader, 2, favprovince[count].PicProvince);
+                CodeEdit.displayPicture(reader, 3, favprovince[count].PicProvince2);
+                favprovince[count].Name = reader["Name"].ToString();
+                count++;
+            }
+            foreach(UCFavoriteProvince fp in favprovince)
+            {
+                miniFlow.Controls.Add(fp);
+            }
+
             #endregion
 
             UCExplore explore = new UCExplore();
@@ -68,6 +99,7 @@ namespace Console
             flowPanel.Controls.Add(explore);
             //flowPanel.Controls.SetChildIndex(promotion, flowPanel.Controls.GetChildIndex(explore) + 1);
         }
+
 
         #region Terminal_Events
         //private void btnLocation_Click(object sender, EventArgs e)

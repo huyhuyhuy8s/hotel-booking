@@ -60,6 +60,7 @@
           <Property Name="Location4" Type="varchar(max)" />
           <Property Name="Location5" Type="varchar(max)" />
           <Property Name="Location6" Type="varchar(max)" />
+          <Property Name="Times" Type="int" />
         </EntityType>
         <EntityType Name="Room">
           <Key>
@@ -74,6 +75,16 @@
           <Property Name="RoomPrice" Type="int" Nullable="false" />
           <Property Name="RoomArea" Type="int" Nullable="false" />
           <Property Name="RoomPicture" Type="image" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="TypeHotel">
           <Key>
@@ -182,6 +193,7 @@
           <EntitySet Name="PersonOrder" EntityType="Self.PersonOrder" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Province" EntityType="Self.Province" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TypeHotel" EntityType="Self.TypeHotel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TypeRoom" EntityType="Self.TypeRoom" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Hotel__HotelType__58D1301D" Association="Self.FK__Hotel__HotelType__58D1301D">
@@ -268,6 +280,7 @@
           <Property Name="Location4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Location5" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Location6" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Times" Type="Int32" />
         </EntityType>
         <EntityType Name="Room">
           <Key>
@@ -284,6 +297,16 @@
           <Property Name="RoomPicture" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="PersonOrders" Relationship="Self.FK__PersonOrd__RoomI__0880433F" FromRole="Room" ToRole="PersonOrder" />
           <NavigationProperty Name="TypeRoom" Relationship="Self.FK__Room__TypeId__45BE5BA9" FromRole="Room" ToRole="TypeRoom" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="TypeHotel">
           <Key>
@@ -373,6 +396,7 @@
           <EntitySet Name="PersonOrders" EntityType="Self.PersonOrder" />
           <EntitySet Name="Provinces" EntityType="Self.Province" />
           <EntitySet Name="Rooms" EntityType="Self.Room" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TypeHotels" EntityType="Self.TypeHotel" />
           <EntitySet Name="TypeRooms" EntityType="Self.TypeRoom" />
           <AssociationSet Name="FK__Hotel__HotelType__58D1301D" Association="Self.FK__Hotel__HotelType__58D1301D">
@@ -452,6 +476,7 @@
                 <ScalarProperty Name="Location4" ColumnName="Location4" />
                 <ScalarProperty Name="Location5" ColumnName="Location5" />
                 <ScalarProperty Name="Location6" ColumnName="Location6" />
+                <ScalarProperty Name="Times" ColumnName="Times" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -467,6 +492,17 @@
                 <ScalarProperty Name="RoomPrice" ColumnName="RoomPrice" />
                 <ScalarProperty Name="RoomArea" ColumnName="RoomArea" />
                 <ScalarProperty Name="RoomPicture" ColumnName="RoomPicture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="KhachSanModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

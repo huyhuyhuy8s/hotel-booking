@@ -26,10 +26,11 @@ namespace Console.Model
         }
     
         public virtual DbSet<Hotel> Hotels { get; set; }
-        public virtual DbSet<Person> Person { get; set; }
+        public virtual DbSet<Person> People { get; set; }
         public virtual DbSet<PersonOrder> PersonOrders { get; set; }
         public virtual DbSet<Province> Provinces { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TypeHotel> TypeHotels { get; set; }
         public virtual DbSet<TypeRoom> TypeRooms { get; set; }
     }

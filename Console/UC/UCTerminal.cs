@@ -19,6 +19,8 @@ namespace Console
         public UCTerminal()
         {
             InitializeComponent();
+            dtCheckin.Value = DateTime.Now.Date;
+            dtCheckout.Value = DateTime.Now.Date;
             CBProvince_Load();
         }
 
@@ -27,7 +29,7 @@ namespace Console
             try
             {
                 connection.Open();
-                string sqlStr = string.Format("SELECT HotelProvince FROM Hotel");
+                string sqlStr = string.Format("SELECT Name FROM Province");
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = connection;

@@ -1,5 +1,4 @@
-﻿using Console.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,11 +15,9 @@ namespace Console
     public partial class SignUp : Form
     {
         SqlConnection connection = new SqlConnection(Properties.Settings.Default.conn);
-        private KhachSanContext ksContext;
         public SignUp()
         {
             InitializeComponent();
-            ksContext = new KhachSanContext();
         }
 
 
@@ -48,41 +45,34 @@ namespace Console
             {
                 if (txtName.Text == "" || txtPhoneNumber.Text == "" || txtEmail.Text == "" || txtPassword.Text == "" 
                     || dtDOB.Value == null) return;
-
-                using (var db = new KhachSanContext())
-                {
-                    var person = new Person
-                    {
-                        PersonName = txtName.Text,
-                        PersonPhonenumber = txtPhoneNumber.Text,
-                        PersonEmail = txtEmail.Text,
-                        PersonPassword = txtPassword.Text,
-                        PersonDOB = dtDOB.Value,
-                    };
-                }
-                MessageBox.Show("Successfully Sign Up!");
-
                 // Ket noi
-                //connection.Open();
-                //SqlCommand cmd = new SqlCommand();
-                //cmd.Connection = connection;
-                //cmd.CommandText = "DECLARE @check INT = (SELECT PersonId FROM Person WHERE (PersonPhonenumber = @phonenumber));" +
-                //    "DECLARE @id INT = (SELECT count(1) FROM Person);" +
-                //    "SELECT @id = SUM (@id + 1);" +
-                //    "IF (@check >= 1) " +
-                //    "PRINT @id;" +
-                //    "ELSE " +
-                //    "INSERT INTO Person VALUES (@id, @name, @phonenumber, @email, @password, @dob, 0);";
+                connection.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = "DECLARE @check INT = (SELECT PersonId FROM Person WHERE (PersonPhonenumber = @phonenumber));" +
+                    "DECLARE @id INT = (SELECT count(1) FROM Person);" +
+                    "SELECT @id = SUM (@id + 1);" +
+                    "IF (@check >= 1) " +
+                    "PRINT @id;" +
+                    "ELSE " +
+                    "INSERT INTO Person VALUES (@id, @name, @phonenumber, @email, @password, @dob, 0);";
 
-                //SqlParameterCollection parameter = cmd.Parameters;
+                SqlParameterCollection parameter = cmd.Parameters;
 
-                //parameter.AddWithValue("@name", txtName.Text);
-                //parameter.AddWithValue("@phonenumber", txtPhoneNumber.Text);
-                //parameter.AddWithValue("@email", txtEmail.Text);
-                //parameter.AddWithValue("@password", txtPassword.Text);
-                //parameter.AddWithValue("@dob", dtDOB.Value);
+                parameter.AddWithValue("@name", txtName.Text);
+                parameter.AddWithValue("@phonenumber", txtPhoneNumber.Text);
+                parameter.AddWithValue("@email", txtEmail.Text);
+                parameter.AddWithValue("@password", txtPassword.Text);
+                parameter.AddWithValue("@dob", dtDOB.Value);
 
-
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Successfully Sign Up!");
+                }
+                else
+                {
+                    MessageBox.Show("Your account is already existed");
+                }
             }
             catch (Exception ex)
             {
@@ -98,6 +88,11 @@ namespace Console
         private void pbShowPassword_Click(object sender, EventArgs e)
         {
             txtPassword.PasswordChar = (txtPassword.PasswordChar == '*') ? '\0' : '*';
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

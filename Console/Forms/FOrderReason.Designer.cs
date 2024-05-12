@@ -43,6 +43,7 @@
             this.lblSubTitle = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.cbClose = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.panelSignIn.SuspendLayout();
             this.titleBar.SuspendLayout();
             this.SuspendLayout();
@@ -267,6 +268,7 @@
             this.titleBar.Controls.Add(this.lblSubTitle);
             this.titleBar.Controls.Add(this.lblTitle);
             this.titleBar.Controls.Add(this.cbClose);
+            this.titleBar.Controls.Add(this.btnClose);
             this.titleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.titleBar.Location = new System.Drawing.Point(0, 0);
             this.titleBar.Name = "titleBar";
@@ -310,12 +312,29 @@
             this.cbClose.Size = new System.Drawing.Size(45, 29);
             this.cbClose.TabIndex = 23;
             // 
+            // btnClose
+            // 
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(424, 4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(15, 18);
+            this.btnClose.TabIndex = 27;
+            this.btnClose.Text = "guna2Button1";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FOrderReason
             // 
             this.AcceptButton = this.btnSubmit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(451, 559);
             this.Controls.Add(this.panelSignIn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -346,5 +365,6 @@
         private Guna.UI2.WinForms.Guna2RadioButton rdReason4;
         private Guna.UI2.WinForms.Guna2RadioButton rdReason3;
         private Guna.UI2.WinForms.Guna2RadioButton rdReason2;
+        private Guna.UI2.WinForms.Guna2Button btnClose;
     }
 }

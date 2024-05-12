@@ -39,10 +39,14 @@ namespace Console
         public void InsertData(int roomid)
         {
             this.roomid = roomid;
+            FBookingForm_ReLoad();
         }
 
         public void FBookingForm_ReLoad()
         {
+            personid = CodeEdit.id;
+            start = CodeEdit.start;
+            end = CodeEdit.end;
             if (personid != null)
             {
                 string query = string.Format("SELECT PersonName, PersonEmail, PersonPhonenumber" +
@@ -57,6 +61,7 @@ namespace Console
                     txtPhone.Text = row["PersonPhonenumber"].ToString();
                 }
             }
+            GetData();
         }
 
         private void FBookingForm_Load(object sender, EventArgs e)
@@ -79,14 +84,14 @@ namespace Console
                 roomid = int.Parse(row["RoomId"].ToString());
                 lblHotelName.Text = row["HotelName"].ToString();
                 lblAddress.Text = row["HotelAddress"].ToString();
-                lblRType.Text = row["RoomName"].ToString();
+                lblRName.Text = row["RoomName"].ToString();
                 lblCInDay.Text = start.ToShortDateString();
                 lblCOutDay.Text = end.ToShortDateString();
-                lblRoomPrice.Text = row["RoomPrice"].ToString();
+                lblRoomPrice.Text = row["RoomPrice"].ToString() + "000 VND";
                 lblRoomType.Text = row["RoomName"].ToString();
                 lblPriceDiscount.Text = discount.ToString();
-                int temp = Int32.Parse(lblRoomPrice.Text);
-                lblTotalPrices.Text = (temp - temp * discount / 100).ToString();
+                int temp = (int)row["RoomPrice"];
+                lblTotalPrices.Text = (temp - temp * discount / 100).ToString() + "000 VND";
             }
         }
 
@@ -125,7 +130,11 @@ namespace Console
             get { return end; }
             set { end = value; }
         }
-
+        public Guna2Button Back
+        {
+            get { return btnBack; }
+            set { btnBack = value; }
+        }
         public Guna2Button BTNReturn
         {
             get { return btnReturn; }
@@ -135,8 +144,5 @@ namespace Console
     }
 }
 
-
-       
-    
 
 

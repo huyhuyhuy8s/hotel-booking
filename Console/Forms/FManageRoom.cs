@@ -59,20 +59,47 @@ namespace Console
                     dtDOB.Value = reader.GetDateTime(5);
                     user_check = true;
                 }
-                DateTime end = reader.GetDateTime(11);
-                if (!btnBooked.Enabled && DateTime.Now.Date > end.Date || btnBooked.Enabled && DateTime.Now.Date <= end.Date)
+
+                DateTime end = reader.GetDateTime(11).Date;
+                bool status = reader.GetBoolean(12);
+                DateTime now = DateTime.Now.Date;
+                //if (!btnBooked.Enabled && DateTime.Now.Date > end.Date || btnBooked.Enabled && DateTime.Now.Date <= end.Date
+                if (!btnBooked.Enabled && (now > end && !status || now > end && status || now <= end && !status) || btnBooked.Enabled && now <= end && status)
                 {
                     UCManageRoom uc = new UCManageRoom();
                     uc.Order.Text = reader.GetValue(7).ToString();
-                    uc.Province.Text = reader.GetString(25);
+                    uc.Province.Text = reader.GetString(27);
                     uc.CheckDate.Text = end.ToLongDateString();
-                    uc.HotelName.Text = reader.GetString(23);
-                    byte[] roompic = (byte[])reader.GetValue(21);
-                    using (var stream = new MemoryStream(roompic))
+                    uc.HotelName.Text = reader.GetString(25);
+                    uc.RoomName.Text = reader.GetString(17);
+                    if (!reader.IsDBNull(23))
                     {
-                        uc.PBPictureBox.Image = System.Drawing.Image.FromStream(stream);
+                        byte[] roompic = (byte[])reader.GetValue(23);
+                        using (var stream = new MemoryStream(roompic))
+                        {
+                            uc.PBPictureBox.Image = System.Drawing.Image.FromStream(stream);
+                        }
                     }
-                    uc.Status.Text = (reader.GetBoolean(12)) ? "Booked" : "Cancelled";
+
+                    //Status updating
+                    if (!btnBooked.Enabled) //Check if in Booked option
+                    {
+                        if (now <= end && !status || !reader.IsDBNull(13)) uc.Status.Text = "Cancelled"; //Case day isn't passed but status is cancelled
+                        else //other case
+                        {
+                            if (now > end && status) //Case day is passed but the status isn't cancelled -> update status into booked (same as cancelled)
+                            {
+                                int order = (Int32)reader.GetValue(7);
+                                connection.Close();
+                                CodeEdit.SqlUpdate(string.Format("UPDATE PersonOrder SET OrderStatus = 0 WHERE OrderId = {0}", order));
+                                Panel_Load();
+                                return;
+                            }
+                            uc.Status.Text = "Booked"; //Both case are booked cuz in the pass
+                        }
+                    }
+                    else uc.Status.Text = "Booking"; //Booking option have only 1 case so their status must be booking
+
                     uc.CheckIn.Text = reader.GetDateTime(10).ToLongDateString();
                     uc.CheckOut.Text = end.ToLongDateString();
                     uc.ManageBooking.Click += new EventHandler(ManageBooking_Click);
@@ -108,7 +135,7 @@ namespace Console
 
         private void btnBooking_Click(object sender, EventArgs e)
         {
-            btnBooked.Enabled = true ;
+            btnBooked.Enabled = true;
             btnBooking.Enabled = false;
         }
 
@@ -129,7 +156,7 @@ namespace Console
                     MessageBox.Show("Nothing was updated");
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show("False\n" + ex.Message);
             }
